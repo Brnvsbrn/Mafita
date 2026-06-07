@@ -26,13 +26,13 @@ class YorubaVoiceGenerator:
             self.keys = [api_key]
         else:
             raw_keys = [
-                os.environ.get("SPITCH_API_KEY2"),
+                os.environ.get("SPITCH_API_KEY4"),
                 os.environ.get("SPITCH_API_KEY3"),
+                os.environ.get("SPITCH_API_KEY2"),
+                os.environ.get("SPITCH_API_KEY1"),
+                os.environ.get("SPITCH_API_KEY"),
             ]
             self.keys = [k for k in raw_keys if k]
-            if not self.keys:
-                fallback_keys = [os.environ.get("SPITCH_API_KEY"), os.environ.get("SPITCH_API_KEY1")]
-                self.keys = [k for k in fallback_keys if k]
                 
         if not self.keys:
             raise ValueError(
