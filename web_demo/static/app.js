@@ -171,6 +171,29 @@ function setAllWordsActive(wrapper) {
   });
 }
 
+function animateWordsWithoutAudio(wrapper) {
+  const wordSpans = wrapper.querySelectorAll(".transcription-word");
+  if (wordSpans.length === 0) return;
+  // Reset all words to greyed out
+  wordSpans.forEach(span => {
+    span.className = "transcription-word";
+  });
+  const msPerWord = Math.max(30, Math.min(60, 2500 / wordSpans.length));
+  let idx = 0;
+  const interval = setInterval(() => {
+    if (idx > 0) {
+      wordSpans[idx - 1].className = "transcription-word word-active";
+    }
+    if (idx < wordSpans.length) {
+      wordSpans[idx].className = "transcription-word word-current";
+      idx++;
+      scrollToBottom();
+    } else {
+      clearInterval(interval);
+    }
+  }, msPerWord);
+}
+
 function createMessage(role, text, options = {}) {
   activateConversation();
   const wrapper = document.createElement("article");
@@ -211,8 +234,14 @@ function createMessage(role, text, options = {}) {
     
     listen.addEventListener("click", () => playMessageAudio(text, listen, wrapper, options.audio || null));
 
-    // Automatically trigger audio playback for all assistant responses
-    window.setTimeout(() => playMessageAudio(text, listen, wrapper, options.audio || null), 100);
+    // Automatically trigger audio playback, or animate words if TTS is known broken
+    const preAudio = options.audio || null;
+    if (preAudio && preAudio.error && !preAudio.audio_url) {
+      // TTS failed server-side — skip audio, animate words instead
+      window.setTimeout(() => animateWordsWithoutAudio(wrapper), 100);
+    } else {
+      window.setTimeout(() => playMessageAudio(text, listen, wrapper, preAudio), 100);
+    }
   }
 
   messagesEl.appendChild(wrapper);
@@ -351,8 +380,8 @@ async function playMessageAudio(text, button, wrapper, preloadedAudio = null) {
     await audio.play().catch(() => {});
     scrollToBottom();
   } catch (error) {
-    if (note) note.textContent = "Ohùn ko lọ";
-    setAllWordsActive(wrapper);
+    if (note) note.textContent = "";
+    animateWordsWithoutAudio(wrapper);
   } finally {
     button.disabled = false;
     if (!wrapper._audio || wrapper._audio.paused) {
