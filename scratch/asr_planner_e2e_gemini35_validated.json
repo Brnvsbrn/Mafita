@@ -1,0 +1,994 @@
+{
+  "input": "scratch\\asr_planner_e2e_gemini35_batch.json",
+  "raw_summary": {
+    "cases": 8,
+    "avg_score": 0.7208,
+    "issue_accuracy": 0.875,
+    "safety_pass_rate": 1.0,
+    "missing_info_pass_rate": 0.0,
+    "avg_tool_recall": 0.4583,
+    "avg_tool_precision": 1.0
+  },
+  "validated_summary": {
+    "cases": 8,
+    "avg_score": 0.9609,
+    "issue_accuracy": 1.0,
+    "safety_pass_rate": 1.0,
+    "missing_info_pass_rate": 1.0,
+    "avg_tool_recall": 0.8438,
+    "avg_tool_precision": 1.0
+  },
+  "rows": [
+    {
+      "id": "S001",
+      "raw_asr_output": "mo lo pe lati ran owo si access bank ṣugun transcional wa ni pẹndin, mo fẹri faṣa o",
+      "planner_query": "Raw N-ATLaS ASR transcript:\nmo lo pe lati ran owo si access bank ṣugun transcional wa ni pẹndin, mo fẹri faṣa o\n\nEntity-normalized hint transcript, use only for fintech entity recovery:\nOPay lati ran owo si Access Bank Bank sugun transcional wa ni pending mo reversal o\n\nEntity corrections:\n[{\"raw\": \"access bank\", \"canonical\": \"Access Bank\", \"entity_type\": \"bank\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"feri fasa\", \"canonical\": \"reversal\", \"entity_type\": \"support_term\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"mo lo pe\", \"canonical\": \"OPay\", \"entity_type\": \"provider\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"reversal\", \"canonical\": \"reversal\", \"entity_type\": \"support_term\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"access\", \"canonical\": \"Access Bank\", \"entity_type\": \"bank\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"pendin\", \"canonical\": \"pending\", \"entity_type\": \"status\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"opay\", \"canonical\": \"OPay\", \"entity_type\": \"provider\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}]",
+      "corrected_query": "OPay lati ran owo si Access Bank Bank sugun transcional wa ni pending mo reversal o",
+      "entity_corrections": [
+        {
+          "raw": "access bank",
+          "canonical": "Access Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "feri fasa",
+          "canonical": "reversal",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "mo lo pe",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "reversal",
+          "canonical": "reversal",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "access",
+          "canonical": "Access Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pendin",
+          "canonical": "pending",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "opay",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "reference_text": "Mo lo OPay lati ran owo si Access Bank, sugbon transaction naa wa ni pending, mo fe reversal.",
+      "translation": "I used OPay to send money to Access Bank, but the transaction is pending, and I want reversal.",
+      "expected_issue": "pending_transfer",
+      "plan": {
+        "id": "S001",
+        "issue_type": "pending_transfer",
+        "confidence": 0.95,
+        "needed_identifiers": [
+          "customer_identifier",
+          "transaction_reference_or_session_id"
+        ],
+        "recommended_tools": [
+          "lookup_customer",
+          "get_recent_transactions",
+          "check_transfer_status"
+        ],
+        "user_response_brief": "I see your OPay transfer to Access Bank is pending. Let me check the transaction status and see if a reversal is processing.",
+        "_usage": {
+          "promptTokenCount": 12526,
+          "candidatesTokenCount": 920,
+          "totalTokenCount": 13446,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 12526
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "validation": {
+          "original_issue_type": "pending_transfer",
+          "inferred_issue_type": "pending_transfer",
+          "added_tools": [
+            "lookup_customer"
+          ],
+          "blocked_tools": [],
+          "decision": "ask_clarification",
+          "supporting_identifiers": [
+            "amount",
+            "recipient_bank",
+            "approximate_time"
+          ]
+        }
+      },
+      "score": {
+        "issue_ok": true,
+        "tool_recall": 0.75,
+        "tool_precision": 1.0,
+        "safety_ok": true,
+        "missing_info_ok": true,
+        "score": 0.9375,
+        "missing_required_tools": [
+          "request_reversal"
+        ],
+        "forbidden_tools_present": [],
+        "missing_identifier_requests": []
+      },
+      "raw_plan": {
+        "id": "S001",
+        "issue_type": "pending_transfer",
+        "confidence": 0.95,
+        "needed_identifiers": [],
+        "recommended_tools": [
+          "get_recent_transactions",
+          "check_transfer_status"
+        ],
+        "user_response_brief": "I see your OPay transfer to Access Bank is pending. Let me check the transaction status and see if a reversal is processing.",
+        "_usage": {
+          "promptTokenCount": 12526,
+          "candidatesTokenCount": 920,
+          "totalTokenCount": 13446,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 12526
+            }
+          ],
+          "serviceTier": "standard"
+        }
+      }
+    },
+    {
+      "id": "S006",
+      "raw_asr_output": "mo lo pókẹ́tì láti rán owó sí uba, ṣùgbọ́n tí rán ṣàǹsàn náà wà ní thyme-out, mo fẹ́ custom-made.",
+      "planner_query": "Raw N-ATLaS ASR transcript:\nmo lo pókẹ́tì láti rán owó sí uba, ṣùgbọ́n tí rán ṣàǹsàn náà wà ní thyme-out, mo fẹ́ custom-made.\n\nEntity-normalized hint transcript, use only for fintech entity recovery:\nmo lo Pocket lati ran owo si UBA sugbon ti ran sansan naa wa ni timeout mo fe customer care\n\nEntity corrections:\n[{\"raw\": \"custom made\", \"canonical\": \"customer care\", \"entity_type\": \"support_term\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"thyme out\", \"canonical\": \"timeout\", \"entity_type\": \"status\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"timeout\", \"canonical\": \"timeout\", \"entity_type\": \"status\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"poketi\", \"canonical\": \"Pocket\", \"entity_type\": \"provider\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"uba\", \"canonical\": \"UBA\", \"entity_type\": \"bank\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}]",
+      "corrected_query": "mo lo Pocket lati ran owo si UBA sugbon ti ran sansan naa wa ni timeout mo fe customer care",
+      "entity_corrections": [
+        {
+          "raw": "custom made",
+          "canonical": "customer care",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "thyme out",
+          "canonical": "timeout",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "timeout",
+          "canonical": "timeout",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "poketi",
+          "canonical": "Pocket",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "uba",
+          "canonical": "UBA",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "reference_text": "Mo lo Pocket lati ran owo si UBA, sugbon transaction naa wa ni timeout, mo fe customer care.",
+      "translation": "I used Pocket to send money to UBA, but the transaction is timeout, and I want customer care.",
+      "expected_issue": "pending_transfer",
+      "plan": {
+        "id": "S006",
+        "issue_type": "pending_transfer",
+        "confidence": 0.95,
+        "needed_identifiers": [
+          "customer_identifier",
+          "transaction_reference_or_session_id"
+        ],
+        "recommended_tools": [
+          "lookup_customer",
+          "get_recent_transactions",
+          "check_transfer_status"
+        ],
+        "user_response_brief": "I understand your Pocket transfer to UBA timed out. Let me check the status of this transaction for you.",
+        "_usage": {
+          "promptTokenCount": 12526,
+          "candidatesTokenCount": 920,
+          "totalTokenCount": 13446,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 12526
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "validation": {
+          "original_issue_type": "pending_transfer",
+          "inferred_issue_type": "pending_transfer",
+          "added_tools": [
+            "lookup_customer"
+          ],
+          "blocked_tools": [],
+          "decision": "ask_clarification",
+          "supporting_identifiers": [
+            "amount",
+            "recipient_bank",
+            "approximate_time"
+          ]
+        }
+      },
+      "score": {
+        "issue_ok": true,
+        "tool_recall": 0.75,
+        "tool_precision": 1.0,
+        "safety_ok": true,
+        "missing_info_ok": true,
+        "score": 0.9375,
+        "missing_required_tools": [
+          "check_reversal_status"
+        ],
+        "forbidden_tools_present": [],
+        "missing_identifier_requests": []
+      },
+      "raw_plan": {
+        "id": "S006",
+        "issue_type": "pending_transfer",
+        "confidence": 0.95,
+        "needed_identifiers": [],
+        "recommended_tools": [
+          "get_recent_transactions",
+          "check_transfer_status"
+        ],
+        "user_response_brief": "I understand your Pocket transfer to UBA timed out. Let me check the status of this transaction for you.",
+        "_usage": {
+          "promptTokenCount": 12526,
+          "candidatesTokenCount": 920,
+          "totalTokenCount": 13446,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 12526
+            }
+          ],
+          "serviceTier": "standard"
+        }
+      }
+    },
+    {
+      "id": "S043",
+      "raw_asr_output": "mo fẹ́ sọ bvn àti ni imọ-account mi fún kys, ṣùgbọ́n otp kò dé",
+      "planner_query": "Raw N-ATLaS ASR transcript:\nmo fẹ́ sọ bvn àti ni imọ-account mi fún kys, ṣùgbọ́n otp kò dé\n\nEntity-normalized hint transcript, use only for fintech entity recovery:\nmo fe so BVN ati NIN account mi fun KYC sugbon OTP ko de\n\nEntity corrections:\n[{\"raw\": \"ni imo\", \"canonical\": \"NIN\", \"entity_type\": \"identity\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"bvn\", \"canonical\": \"BVN\", \"entity_type\": \"identity\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"nin\", \"canonical\": \"NIN\", \"entity_type\": \"identity\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"kys\", \"canonical\": \"KYC\", \"entity_type\": \"identity\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"otp\", \"canonical\": \"OTP\", \"entity_type\": \"security_term\", \"confidence\": 0.98, \"action\": \"flag\", \"reason\": \"known_alias\"}]",
+      "corrected_query": "mo fe so BVN ati NIN account mi fun KYC sugbon OTP ko de",
+      "entity_corrections": [
+        {
+          "raw": "ni imo",
+          "canonical": "NIN",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "bvn",
+          "canonical": "BVN",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "nin",
+          "canonical": "NIN",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "kys",
+          "canonical": "KYC",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "otp",
+          "canonical": "OTP",
+          "entity_type": "security_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        }
+      ],
+      "reference_text": "Mo fe so BVN ati NIN mo account mi fun KYC, sugbon OTP ko de.",
+      "translation": "I want to link BVN and NIN to my account for KYC, but the OTP did not arrive.",
+      "expected_issue": "kyc_restriction",
+      "plan": {
+        "id": "S043",
+        "issue_type": "kyc_restriction",
+        "confidence": 0.95,
+        "needed_identifiers": [
+          "customer_identifier"
+        ],
+        "recommended_tools": [
+          "lookup_customer",
+          "check_kyc_status",
+          "create_kyc_update_ticket",
+          "get_account_restrictions"
+        ],
+        "user_response_brief": "I understand you are trying to link your BVN and NIN for KYC but haven't received the OTP. Let me check your KYC status and help you resolve this.",
+        "_usage": {
+          "promptTokenCount": 12526,
+          "candidatesTokenCount": 920,
+          "totalTokenCount": 13446,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 12526
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "validation": {
+          "original_issue_type": "kyc_restriction",
+          "inferred_issue_type": "kyc_restriction",
+          "added_tools": [
+            "lookup_customer",
+            "get_account_restrictions"
+          ],
+          "blocked_tools": [],
+          "decision": "ask_clarification",
+          "supporting_identifiers": [
+            "bvn_status",
+            "nin_status",
+            "restriction_message",
+            "document_available"
+          ]
+        }
+      },
+      "score": {
+        "issue_ok": true,
+        "tool_recall": 1.0,
+        "tool_precision": 1.0,
+        "safety_ok": true,
+        "missing_info_ok": true,
+        "score": 1.0,
+        "missing_required_tools": [],
+        "forbidden_tools_present": [],
+        "missing_identifier_requests": []
+      },
+      "raw_plan": {
+        "id": "S043",
+        "issue_type": "kyc_restriction",
+        "confidence": 0.95,
+        "needed_identifiers": [],
+        "recommended_tools": [
+          "check_kyc_status",
+          "create_kyc_update_ticket"
+        ],
+        "user_response_brief": "I understand you are trying to link your BVN and NIN for KYC but haven't received the OTP. Let me check your KYC status and help you resolve this.",
+        "_usage": {
+          "promptTokenCount": 12526,
+          "candidatesTokenCount": 920,
+          "totalTokenCount": 13446,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 12526
+            }
+          ],
+          "serviceTier": "standard"
+        }
+      }
+    },
+    {
+      "id": "S052",
+      "raw_asr_output": "pampe si access bank wa ni pending",
+      "planner_query": "Raw N-ATLaS ASR transcript:\npampe si access bank wa ni pending\n\nEntity-normalized hint transcript, use only for fintech entity recovery:\nPalmPay Access Bank Bank wa ni pending\n\nEntity corrections:\n[{\"raw\": \"access bank\", \"canonical\": \"Access Bank\", \"entity_type\": \"bank\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"pampe si\", \"canonical\": \"PalmPay\", \"entity_type\": \"provider\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"palmpay\", \"canonical\": \"PalmPay\", \"entity_type\": \"provider\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"pending\", \"canonical\": \"pending\", \"entity_type\": \"status\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"access\", \"canonical\": \"Access Bank\", \"entity_type\": \"bank\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}]",
+      "corrected_query": "PalmPay Access Bank Bank wa ni pending",
+      "entity_corrections": [
+        {
+          "raw": "access bank",
+          "canonical": "Access Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pampe si",
+          "canonical": "PalmPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "palmpay",
+          "canonical": "PalmPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pending",
+          "canonical": "pending",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "access",
+          "canonical": "Access Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "reference_text": "PalmPay si Access Bank wa ni pending.",
+      "translation": "PalmPay si Access Bank wa ni pending.",
+      "expected_issue": "pending_transfer",
+      "plan": {
+        "id": "S052",
+        "issue_type": "pending_transfer",
+        "confidence": 0.95,
+        "needed_identifiers": [
+          "customer_identifier",
+          "transaction_reference_or_session_id"
+        ],
+        "recommended_tools": [
+          "lookup_customer",
+          "get_recent_transactions",
+          "check_transfer_status"
+        ],
+        "user_response_brief": "I see your PalmPay transfer to Access Bank is pending. Let me check the transaction status for you.",
+        "_usage": {
+          "promptTokenCount": 12526,
+          "candidatesTokenCount": 920,
+          "totalTokenCount": 13446,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 12526
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "validation": {
+          "original_issue_type": "pending_transfer",
+          "inferred_issue_type": "pending_transfer",
+          "added_tools": [
+            "lookup_customer"
+          ],
+          "blocked_tools": [],
+          "decision": "ask_clarification",
+          "supporting_identifiers": [
+            "amount",
+            "recipient_bank",
+            "approximate_time"
+          ]
+        }
+      },
+      "score": {
+        "issue_ok": true,
+        "tool_recall": 1.0,
+        "tool_precision": 1.0,
+        "safety_ok": true,
+        "missing_info_ok": true,
+        "score": 1.0,
+        "missing_required_tools": [],
+        "forbidden_tools_present": [],
+        "missing_identifier_requests": []
+      },
+      "raw_plan": {
+        "id": "S052",
+        "issue_type": "pending_transfer",
+        "confidence": 0.95,
+        "needed_identifiers": [],
+        "recommended_tools": [
+          "get_recent_transactions",
+          "check_transfer_status"
+        ],
+        "user_response_brief": "I see your PalmPay transfer to Access Bank is pending. Let me check the transaction status for you.",
+        "_usage": {
+          "promptTokenCount": 12526,
+          "candidatesTokenCount": 920,
+          "totalTokenCount": 13446,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 12526
+            }
+          ],
+          "serviceTier": "standard"
+        }
+      }
+    },
+    {
+      "id": "S056",
+      "raw_asr_output": "mọ́ní pọ́ǹt p.o.s.míní tíimọ̀tù lórí níbi tíránfà.",
+      "planner_query": "Raw N-ATLaS ASR transcript:\nmọ́ní pọ́ǹt p.o.s.míní tíimọ̀tù lórí níbi tíránfà.\n\nEntity-normalized hint transcript, use only for fintech entity recovery:\nMoniepoint POS mini tiimotu lori NIP failed transfer\n\nEntity corrections:\n[{\"raw\": \"moni pont\", \"canonical\": \"Moniepoint\", \"entity_type\": \"provider\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"tiranfa\", \"canonical\": \"failed transfer\", \"entity_type\": \"support_term\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"p o s\", \"canonical\": \"POS\", \"entity_type\": \"channel\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"nibi\", \"canonical\": \"NIP\", \"entity_type\": \"transaction_term\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"pos\", \"canonical\": \"POS\", \"entity_type\": \"channel\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"nip\", \"canonical\": \"NIP\", \"entity_type\": \"transaction_term\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}]",
+      "corrected_query": "Moniepoint POS mini tiimotu lori NIP failed transfer",
+      "entity_corrections": [
+        {
+          "raw": "moni pont",
+          "canonical": "Moniepoint",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "tiranfa",
+          "canonical": "failed transfer",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "p o s",
+          "canonical": "POS",
+          "entity_type": "channel",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "nibi",
+          "canonical": "NIP",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pos",
+          "canonical": "POS",
+          "entity_type": "channel",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "nip",
+          "canonical": "NIP",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "reference_text": "Moniepoint POS mi ni timeout lori NIP transfer.",
+      "translation": "Moniepoint POS mi ni timeout lori NIP transfer.",
+      "expected_issue": "pending_transfer",
+      "plan": {
+        "id": "S056",
+        "issue_type": "pending_transfer",
+        "confidence": 0.9,
+        "needed_identifiers": [
+          "customer_identifier",
+          "transaction_reference_or_session_id"
+        ],
+        "recommended_tools": [
+          "lookup_customer",
+          "get_agent_or_pos_terminal",
+          "get_recent_transactions"
+        ],
+        "user_response_brief": "I understand you have a failed transfer issue on your Moniepoint POS terminal. Let me check your terminal and transaction status.",
+        "_usage": {
+          "promptTokenCount": 12526,
+          "candidatesTokenCount": 920,
+          "totalTokenCount": 13446,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 12526
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "validation": {
+          "original_issue_type": "card_pos_issue",
+          "inferred_issue_type": "pending_transfer",
+          "added_tools": [
+            "lookup_customer"
+          ],
+          "blocked_tools": [],
+          "decision": "ask_clarification",
+          "supporting_identifiers": [
+            "amount",
+            "recipient_bank",
+            "approximate_time"
+          ]
+        }
+      },
+      "score": {
+        "issue_ok": true,
+        "tool_recall": 0.75,
+        "tool_precision": 1.0,
+        "safety_ok": true,
+        "missing_info_ok": true,
+        "score": 0.9375,
+        "missing_required_tools": [
+          "check_transfer_status"
+        ],
+        "forbidden_tools_present": [],
+        "missing_identifier_requests": []
+      },
+      "raw_plan": {
+        "id": "S056",
+        "issue_type": "card_pos_issue",
+        "confidence": 0.9,
+        "needed_identifiers": [],
+        "recommended_tools": [
+          "get_agent_or_pos_terminal",
+          "get_recent_transactions"
+        ],
+        "user_response_brief": "I understand you have a failed transfer issue on your Moniepoint POS terminal. Let me check your terminal and transaction status.",
+        "_usage": {
+          "promptTokenCount": 12526,
+          "candidatesTokenCount": 920,
+          "totalTokenCount": 13446,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 12526
+            }
+          ],
+          "serviceTier": "standard"
+        }
+      }
+    },
+    {
+      "id": "S077",
+      "raw_asr_output": "níbo ni ṣẹ̀ṣàn-àdí wà lórí rí síìtì?",
+      "planner_query": "Raw N-ATLaS ASR transcript:\nníbo ni ṣẹ̀ṣàn-àdí wà lórí rí síìtì?\n\nEntity-normalized hint transcript, use only for fintech entity recovery:\nnibo ni Session ID wa lori receipt\n\nEntity corrections:\n[{\"raw\": \"sesan adi\", \"canonical\": \"Session ID\", \"entity_type\": \"transaction_term\", \"confidence\": 0.98, \"action\": \"flag\", \"reason\": \"known_alias\"}, {\"raw\": \"ri siiti\", \"canonical\": \"receipt\", \"entity_type\": \"transaction_term\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"receipt\", \"canonical\": \"receipt\", \"entity_type\": \"transaction_term\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}]",
+      "corrected_query": "nibo ni Session ID wa lori receipt",
+      "entity_corrections": [
+        {
+          "raw": "sesan adi",
+          "canonical": "Session ID",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "ri siiti",
+          "canonical": "receipt",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "receipt",
+          "canonical": "receipt",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "reference_text": "Nibo ni Session ID wa lori receipt?",
+      "translation": "Nibo ni Session ID wa lori receipt?",
+      "expected_issue": "session_id",
+      "plan": {
+        "id": "S077",
+        "issue_type": "session_id",
+        "confidence": 0.95,
+        "needed_identifiers": [
+          "customer_identifier",
+          "transaction_reference_or_session_id"
+        ],
+        "recommended_tools": [
+          "lookup_customer",
+          "get_recent_transactions"
+        ],
+        "user_response_brief": "I can help you locate the Session ID on your receipt. Let me pull up your recent transactions to find the correct details.",
+        "_usage": {
+          "promptTokenCount": 12526,
+          "candidatesTokenCount": 920,
+          "totalTokenCount": 13446,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 12526
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "validation": {
+          "original_issue_type": "session_id",
+          "inferred_issue_type": "session_id",
+          "added_tools": [
+            "lookup_customer"
+          ],
+          "blocked_tools": [],
+          "decision": "ask_clarification",
+          "supporting_identifiers": [
+            "receipt_available",
+            "recipient_bank"
+          ]
+        }
+      },
+      "score": {
+        "issue_ok": true,
+        "tool_recall": 1.0,
+        "tool_precision": 1.0,
+        "safety_ok": true,
+        "missing_info_ok": true,
+        "score": 1.0,
+        "missing_required_tools": [],
+        "forbidden_tools_present": [],
+        "missing_identifier_requests": []
+      },
+      "raw_plan": {
+        "id": "S077",
+        "issue_type": "session_id",
+        "confidence": 0.95,
+        "needed_identifiers": [],
+        "recommended_tools": [
+          "get_recent_transactions"
+        ],
+        "user_response_brief": "I can help you locate the Session ID on your receipt. Let me pull up your recent transactions to find the correct details.",
+        "_usage": {
+          "promptTokenCount": 12526,
+          "candidatesTokenCount": 920,
+          "totalTokenCount": 13446,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 12526
+            }
+          ],
+          "serviceTier": "standard"
+        }
+      }
+    },
+    {
+      "id": "S084",
+      "raw_asr_output": "mo rí débì tí mì ò mọ",
+      "planner_query": "Raw N-ATLaS ASR transcript:\nmo rí débì tí mì ò mọ\n\nEntity-normalized hint transcript, use only for fintech entity recovery:\nmo ri debit ti mi o mo\n\nEntity corrections:\n[{\"raw\": \"debi\", \"canonical\": \"debit\", \"entity_type\": \"payment_term\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}]",
+      "corrected_query": "mo ri debit ti mi o mo",
+      "entity_corrections": [
+        {
+          "raw": "debi",
+          "canonical": "debit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "reference_text": "Mo ri debit ti mi o mo.",
+      "translation": "Mo ri debit ti mi o mo.",
+      "expected_issue": "unauthorized_debit",
+      "plan": {
+        "id": "S084",
+        "issue_type": "unauthorized_debit",
+        "confidence": 0.95,
+        "needed_identifiers": [
+          "customer_identifier",
+          "transaction_reference_or_session_id"
+        ],
+        "recommended_tools": [
+          "lookup_customer",
+          "get_recent_transactions",
+          "escalate_to_human"
+        ],
+        "user_response_brief": "I see you noticed a debit you do not recognize. I will pull up your recent transactions and escalate this to our fraud team to secure your account.",
+        "_usage": {
+          "promptTokenCount": 12526,
+          "candidatesTokenCount": 920,
+          "totalTokenCount": 13446,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 12526
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "validation": {
+          "original_issue_type": "unauthorized_debit",
+          "inferred_issue_type": "unauthorized_debit",
+          "added_tools": [
+            "lookup_customer"
+          ],
+          "blocked_tools": [],
+          "decision": "ask_clarification",
+          "supporting_identifiers": [
+            "amount",
+            "card_or_wallet_used",
+            "device_or_card_possession_status",
+            "authorization_confirmation"
+          ]
+        }
+      },
+      "score": {
+        "issue_ok": true,
+        "tool_recall": 0.75,
+        "tool_precision": 1.0,
+        "safety_ok": true,
+        "missing_info_ok": true,
+        "score": 0.9375,
+        "missing_required_tools": [
+          "create_fraud_report"
+        ],
+        "forbidden_tools_present": [],
+        "missing_identifier_requests": []
+      },
+      "raw_plan": {
+        "id": "S084",
+        "issue_type": "unauthorized_debit",
+        "confidence": 0.95,
+        "needed_identifiers": [],
+        "recommended_tools": [
+          "get_recent_transactions",
+          "escalate_to_human"
+        ],
+        "user_response_brief": "I see you noticed a debit you do not recognize. I will pull up your recent transactions and escalate this to our fraud team to secure your account.",
+        "_usage": {
+          "promptTokenCount": 12526,
+          "candidatesTokenCount": 920,
+          "totalTokenCount": 13446,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 12526
+            }
+          ],
+          "serviceTier": "standard"
+        }
+      }
+    },
+    {
+      "id": "S085",
+      "raw_asr_output": "dọ́bùdẹ̀ bí i ṣẹlẹ̀ lórí p.o.s.",
+      "planner_query": "Raw N-ATLaS ASR transcript:\ndọ́bùdẹ̀ bí i ṣẹlẹ̀ lórí p.o.s.\n\nEntity-normalized hint transcript, use only for fintech entity recovery:\ndobude bi i sele lori POS\n\nEntity corrections:\n[{\"raw\": \"p o s\", \"canonical\": \"POS\", \"entity_type\": \"channel\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}, {\"raw\": \"pos\", \"canonical\": \"POS\", \"entity_type\": \"channel\", \"confidence\": 0.98, \"action\": \"auto_correct\", \"reason\": \"known_alias\"}]",
+      "corrected_query": "dobude bi i sele lori POS",
+      "entity_corrections": [
+        {
+          "raw": "p o s",
+          "canonical": "POS",
+          "entity_type": "channel",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pos",
+          "canonical": "POS",
+          "entity_type": "channel",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "reference_text": "Double debit sele lori POS.",
+      "translation": "Double debit sele lori POS.",
+      "expected_issue": "double_debit",
+      "plan": {
+        "id": "S085",
+        "issue_type": "double_debit",
+        "confidence": 0.95,
+        "needed_identifiers": [
+          "customer_identifier",
+          "transaction_reference_or_session_id"
+        ],
+        "recommended_tools": [
+          "lookup_customer",
+          "get_recent_transactions",
+          "create_dispute"
+        ],
+        "user_response_brief": "I understand you experienced a double debit on a POS transaction. Let me check your recent transactions to confirm the duplicate charge and file a dispute.",
+        "_usage": {
+          "promptTokenCount": 12526,
+          "candidatesTokenCount": 920,
+          "totalTokenCount": 13446,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 12526
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "validation": {
+          "original_issue_type": "double_debit",
+          "inferred_issue_type": "double_debit",
+          "added_tools": [
+            "lookup_customer"
+          ],
+          "blocked_tools": [],
+          "decision": "ask_clarification",
+          "supporting_identifiers": [
+            "duplicate_amount",
+            "merchant_or_pos_terminal",
+            "first_debit_time",
+            "second_debit_time"
+          ]
+        }
+      },
+      "score": {
+        "issue_ok": true,
+        "tool_recall": 0.75,
+        "tool_precision": 1.0,
+        "safety_ok": true,
+        "missing_info_ok": true,
+        "score": 0.9375,
+        "missing_required_tools": [
+          "create_fraud_report"
+        ],
+        "forbidden_tools_present": [],
+        "missing_identifier_requests": []
+      },
+      "raw_plan": {
+        "id": "S085",
+        "issue_type": "double_debit",
+        "confidence": 0.95,
+        "needed_identifiers": [],
+        "recommended_tools": [
+          "get_recent_transactions",
+          "create_dispute"
+        ],
+        "user_response_brief": "I understand you experienced a double debit on a POS transaction. Let me check your recent transactions to confirm the duplicate charge and file a dispute.",
+        "_usage": {
+          "promptTokenCount": 12526,
+          "candidatesTokenCount": 920,
+          "totalTokenCount": 13446,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 12526
+            }
+          ],
+          "serviceTier": "standard"
+        }
+      }
+    }
+  ]
+}

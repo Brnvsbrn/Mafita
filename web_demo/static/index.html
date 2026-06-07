@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="yo">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mafita Agent | Aṣoju Iranlọwọ AI</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="Navigation">
+      <button class="sidebar-logo" id="sidebar-toggle" type="button" aria-label="Toggle sidebar" aria-expanded="false" data-tooltip="Toggle sidebar">
+        <span class="logo-short">M.</span>
+        <span class="logo-full">Mafita.</span>
+        <i data-lucide="panel-left"></i>
+      </button>
+      <nav class="sidebar-nav" aria-label="Main">
+        <button type="button" aria-label="New chat" data-tooltip="New Chat"><i data-lucide="message-circle"></i><span>New Chat</span></button>
+      </nav>
+      <button class="sidebar-logout" type="button" aria-label="Log out" data-tooltip="Log out"><i data-lucide="log-out"></i><span>Log out</span></button>
+    </aside>
+
+    <main class="chat-page empty">
+      <header class="chat-header">
+
+        <div class="voice-controls">
+          <button class="control-button" id="voice-mode" type="button" aria-pressed="false">
+            <i data-lucide="mic"></i>
+            <span>Enable voice mode</span>
+          </button>
+          <select class="control-select" id="voice-select" aria-label="Select voice">
+            <option value="femi">Fẹmi (Ọkùnrin)</option>
+            <option value="segun">Ṣẹgun (Ọkùnrin)</option>
+            <option value="sade">Ṣadé (Obìnrin)</option>
+            <option value="funmi">Fúnmi (Obìnrin)</option>
+          </select>
+        </div>
+      </header>
+
+      <section class="conversation empty" id="messages" aria-live="polite">
+        <div class="empty-state" id="empty-state">
+
+          <h1>Báwo ni, kí ni mo lè ràn ẹ́ lọ́wọ́ lónìí?</h1>
+
+        </div>
+      </section>
+
+      <div class="composer-container">
+        <div id="waveform-overlay" class="waveform-overlay" hidden>
+          <div class="recording-status">
+            <span class="recording-dot" style="display:inline-block; width:8px; height:8px; background:var(--red); border-radius:50%; margin-right:6px; animation: pulse-red 1s infinite alternate;"></span>
+            <span>Gbohùn (Recording...)</span>
+          </div>
+          <div class="wave-bars">
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+            <div class="wave-bar"></div>
+          </div>
+          <div class="recording-timer" id="recording-timer">00:00</div>
+        </div>
+
+        <form class="composer" id="composer">
+          <button class="add-button" type="button" aria-label="Attach file">
+            <i data-lucide="plus"></i>
+          </button>
+          <textarea id="message-input" rows="1" placeholder="Send a message..." autocomplete="off"></textarea>
+          <div class="composer-actions">
+            <button class="voice-input-button" id="voice-input-button" type="button" aria-label="Voice input" data-tooltip="Click to speak">
+              <i data-lucide="mic"></i>
+            </button>
+            <button class="send-button" id="send-button" type="submit" aria-label="Send">
+              <i data-lucide="arrow-up"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="/static/icons.js"></script>
+  <script src="/static/app.js"></script>
+  <script type="module" src="/static/agentation.js"></script>
+</body>
+</html>

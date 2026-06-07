@@ -1,0 +1,16 @@
+id,model,task,target,latency_seconds,wer,cer,english_token_f1,entity_preservation,entities_missing,reference,output
+Q01,whisper-large-v3,transcribe,yoruba,2.64,1.0,0.5094,,0.0,['opay'],"Ẹ jọ̀ọ́, gbígbé owó mi kùnà lórí OPay. Owó mi sì ti sọnù.","Eji bibi awami kunolori opi, awami sitisoni."
+Q02,whisper-large-v3,transcribe,yoruba,2.847,0.8824,0.4348,,0.0,"['access bank', 'palmpay']","Mo gbé owó láti PalmPay sí Access Bank, ṣùgbọ́n ó kùnà. Owó mi sì ti lọ.",Mwbe owo lati pampe si Asset Bank shugwa okuno owo mi sitilo.
+Q03,whisper-large-v3,transcribe,yoruba,3.027,0.9167,0.4107,,0.0,['moniepoint'],"Owó mi ti sọnù lórí Moniepoint, lẹ́yìn gbígbé owó tó kùnà.",Awo mi tisonu lori Money Point. Leni gbibe owo tokuna.
+Q04,whisper-large-v3,transcribe,yoruba,2.967,0.75,0.28,,0.5,['palmpay'],PalmPay mi ti dínà nítorí KYC. Mi ò lè gbé owó jáde.,"Pampe, mi ti dina ni tori KYC mi o legbi owo jade."
+Q05,whisper-large-v3,transcribe,yoruba,3.169,0.9,0.6222,,0.0,['opay'],Mo ṣì owó firánṣẹ́ sí akọó̀lẹ́ mìíràn lórí OPay.,Mo siyo wo franchesi a kowale miro lo liyo pe.
+Q01,whisper-large-v3,translate,english,3.279,,,0.0,0.0,['opay'],Please my transfer failed on OPay and my money has been debited.,I am a citizen.
+Q02,whisper-large-v3,translate,english,5.72,,,0.0714,0.0,"['access bank', 'palmpay']",I transferred money from PalmPay to Access Bank but it failed and my money was debited.,"Mugbe owo lati pampe si Assess Bank. Shugbo kuno, owo mi sitilo."
+Q03,whisper-large-v3,translate,english,5.627,,,0.1111,0.0,['moniepoint'],My money is lost on Moniepoint after a failed transfer.,Awamiti Sonu Lori Money Point Lengi Gbibe Owotokuna
+Q04,whisper-large-v3,translate,english,2.437,,,0.25,0.5,['palmpay'],"My PalmPay is restricted because of KYC, I cannot withdraw money.","I am a member of KYC, I am a member of the OJAD."
+Q05,whisper-large-v3,translate,english,2.566,,,0.2353,0.0,['opay'],I mistakenly sent money to another account on OPay.,I'm not going to let you go.
+Q01,whisper-large-v3-turbo,transcribe,yoruba,2.623,0.8571,0.4717,,0.0,['opay'],"Ẹ jọ̀ọ́, gbígbé owó mi kùnà lórí OPay. Owó mi sì ti sọnù.","Ejigbibu awa mi kuno lori okpe, awa mi sitisonu."
+Q02,whisper-large-v3-turbo,transcribe,yoruba,2.555,0.7647,0.2899,,0.0,"['access bank', 'palmpay']","Mo gbé owó láti PalmPay sí Access Bank, ṣùgbọ́n ó kùnà. Owó mi sì ti lọ.",Mogbé ọwọ láti Pampé s'íí Assets Bank ṣùgbọ̀ ókùnọ̀ ọwọ̀ mi sítì lọ.
+Q03,whisper-large-v3-turbo,transcribe,yoruba,3.766,0.8333,0.2679,,0.0,['moniepoint'],"Owó mi ti sọnù lórí Moniepoint, lẹ́yìn gbígbé owó tó kùnà.",Ảwọ́ mi ti sọ́nù lóri Mònny Point lẹ́yìn gbibbé owò tókú náà.
+Q04,whisper-large-v3-turbo,transcribe,yoruba,3.177,0.9167,0.24,,0.0,"['kyc', 'palmpay']",PalmPay mi ti dínà nítorí KYC. Mi ò lè gbé owó jáde.,Pampa mi ti dína ni tòri K.Y.C. mi o lègbé owó jade.
+Q05,whisper-large-v3-turbo,transcribe,yoruba,2.007,0.9,0.6,,0.0,['opay'],Mo ṣì owó firánṣẹ́ sí akọó̀lẹ́ mìíràn lórí OPay.,Mo siyogwa fri nášè si akawwailè minran lori yo pè.

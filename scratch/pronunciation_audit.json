@@ -1,0 +1,142 @@
+[
+  {
+    "id": "Q01",
+    "voice": "femi",
+    "intended": "Ẹ jọ̀ọ́, gbígbé owó mi kùnà lórí OPay. Owó mi sì ti sọnù.",
+    "transcribed": "[TRANSCRIPTION ERROR: Error code: 500 - {'detail': 'unable to transcribe.'}]",
+    "duration_s": 3.93
+  },
+  {
+    "id": "Q02",
+    "voice": "sade",
+    "intended": "Mo gbé owó láti PalmPay sí Access Bank, ṣùgbọ́n ó kùnà. Owó mi sì ti lọ.",
+    "transcribed": "[TRANSCRIPTION ERROR: Error code: 500 - {'detail': 'unable to transcribe.'}]",
+    "duration_s": 5.74
+  },
+  {
+    "id": "Q03",
+    "voice": "segun",
+    "intended": "Owó mi ti sọnù lórí Moniepoint, lẹ́yìn gbígbé owó tó kùnà.",
+    "transcribed": "[TRANSCRIPTION ERROR: Error code: 500 - {'detail': 'unable to transcribe.'}]",
+    "duration_s": 5.37
+  },
+  {
+    "id": "Q04",
+    "voice": "funmi",
+    "intended": "PalmPay mi ti dínà nítorí KYC. Mi ò lè gbé owó jáde.",
+    "transcribed": "[TRANSCRIPTION ERROR: Error code: 500 - {'detail': 'unable to transcribe.'}]",
+    "duration_s": 3.97
+  },
+  {
+    "id": "Q05",
+    "voice": "femi",
+    "intended": "Mo ṣì owó firánṣẹ́ sí akọó̀lẹ́ mìíràn lórí OPay.",
+    "transcribed": "[TRANSCRIPTION ERROR: Error code: 500 - {'detail': 'unable to transcribe.'}]",
+    "duration_s": 3.64
+  },
+  {
+    "id": "Q06",
+    "voice": "sade",
+    "intended": "Níbo ni mo ti lè rí Session ID, fún gbígbé owó tó kùnà?",
+    "transcribed": "[TRANSCRIPTION ERROR: Error code: 500 - {'detail': 'unable to transcribe.'}]",
+    "duration_s": 4.41
+  },
+  {
+    "id": "Q07",
+    "voice": "segun",
+    "intended": "Báwo ni mo ṣe lè sọ BVN àti NIN mi pọ̀ mọ́ OPay, láti gbé owó sókè?",
+    "transcribed": "[TRANSCRIPTION ERROR: Error code: 500 - {'detail': 'unable to transcribe.'}]",
+    "duration_s": 5.83
+  },
+  {
+    "id": "Q08",
+    "voice": "funmi",
+    "intended": "Account mi ti dínà, nítorí wọ́n rí ìwà ìfura lórí rẹ̀.",
+    "transcribed": "[TRANSCRIPTION ERROR: Error code: 500 - {'detail': 'unable to transcribe.'}]",
+    "duration_s": 4.0
+  },
+  {
+    "id": "Q09",
+    "voice": "femi",
+    "intended": "Wọ́n nà mí ní owó lẹ́mẹjì, fún ríra ẹyọ kan.",
+    "transcribed": "[TRANSCRIPTION ERROR: Error code: 500 - {'detail': 'unable to transcribe.'}]",
+    "duration_s": 2.9
+  },
+  {
+    "id": "Q10",
+    "voice": "sade",
+    "intended": "Ó ti tó wákàtí méjì-lé-lọ́gọ́jọ, tí mo ti ń dúró de reversal mi.",
+    "transcribed": "[TRANSCRIPTION ERROR: Error code: 500 - {'detail': 'unable to transcribe.'}]",
+    "duration_s": 5.05
+  },
+  {
+    "id": "Q11",
+    "voice": "segun",
+    "intended": "Mo fẹ́ rí transaction history mi, láti oṣù tó kọjá.",
+    "transcribed": "mo fẹ́ rí transaction history mi láti oṣù tó kọjá",
+    "duration_s": 4.68
+  },
+  {
+    "id": "Q12",
+    "voice": "funmi",
+    "intended": "App OPay mi ń crash, nígbà tí mo bá fẹ́ gbé owó.",
+    "transcribed": "apò pe mi ń krash nígbà tí mo bá fẹ́ gbé owó",
+    "duration_s": 3.47
+  },
+  {
+    "id": "Q13",
+    "voice": "femi",
+    "intended": "Debit card mi ò ṣiṣẹ́ lórí ATM. Mo fẹ́ mọ ìdí tí ó fi rí bẹ́ẹ̀.",
+    "transcribed": "debris card ni òṣìṣẹ́ lórí atm mo fẹ́ mọ èdè tí ó fi rí bẹ́ẹ̀",
+    "duration_s": 4.37
+  },
+  {
+    "id": "Q14",
+    "voice": "sade",
+    "intended": "Mo rí debit tí mi ò mọ̀ nípa rẹ̀, lórí account mi.",
+    "transcribed": "mo rí débì tí mi ò mọ̀ nípa rẹ̀ lórí account mi",
+    "duration_s": 3.74
+  },
+  {
+    "id": "Q15",
+    "voice": "segun",
+    "intended": "Wọ́n ní mo ti dé daily transfer limit mi, ṣùgbọ́n mo nílò láti gbé owó pàjáwìrì.",
+    "transcribed": "wọ́n ní mo ti dé daily transfer limit mí ṣùgbọ́n mo nílò láti gbé owó pàjáwìrì",
+    "duration_s": 6.85
+  },
+  {
+    "id": "Q16",
+    "voice": "funmi",
+    "intended": "Báwo ni mo ṣe lè ṣe àtúnṣe, sí BVN mi tí ó wà lórí PalmPay?",
+    "transcribed": "báwo ni mo ṣe le ṣe àtúnṣe sí bí v ẹ̀mí tí ó wà lórí pámpè",
+    "duration_s": 4.56
+  },
+  {
+    "id": "Q17",
+    "voice": "femi",
+    "intended": "Koodu USSD wo ni mo lè lo, láti wo balance mi lórí OPay?",
+    "transcribed": "kòdù ussd wo ni mo lè lò láti wo balance mi lórí opè",
+    "duration_s": 3.97
+  },
+  {
+    "id": "Q18",
+    "voice": "sade",
+    "intended": "Orúkọ tí ó hàn nígbà tí mo fẹ́ gbé owó, yàtọ̀ sí orúkọ tó yẹ kó hàn.",
+    "transcribed": "orúkọ tí ó hàn nígbà tí mo fẹ́ gbẹ́ owó yátọ̀ sí orúkọ tó yẹ kó hàn",
+    "duration_s": 5.22
+  },
+  {
+    "id": "Q19",
+    "voice": "segun",
+    "intended": "Ẹ jọ̀ọ́, ẹ ràn mí lọ́wọ́! Wọn ti ṣe scam mi lórí OPay, wọ́n sì gbé gbogbo owó mi lọ.",
+    "transcribed": "eji o eran mi lọwọ́ wọn ti ṣe skam mi lórí opé wọn si gbé gbogbo owó mi lọ",
+    "duration_s": 6.98
+  },
+  {
+    "id": "Q20",
+    "voice": "funmi",
+    "intended": "Báwo ni mo ṣe lè bá customer care gidi sọ̀rọ̀, yàtọ̀ sí bot yìí?",
+    "transcribed": "báwo ni mo ṣe lè bá customer care gidi sọ̀rọ̀ yàtọ̀ sí bọ̀tì yìí",
+    "duration_s": 4.97
+  }
+]

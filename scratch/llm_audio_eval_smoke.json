@@ -1,0 +1,125 @@
+{
+  "summary": {
+    "gemini-3.1-flash-lite:english": {
+      "samples": 1,
+      "avg_english_token_f1": 0.4348,
+      "avg_entity_preservation": 1.0,
+      "avg_amortized_latency_seconds": 6.882
+    },
+    "gemini-3.1-flash-lite:yoruba": {
+      "samples": 1,
+      "avg_wer": 0.5714,
+      "avg_cer": 0.283,
+      "avg_entity_preservation": 0.0,
+      "avg_amortized_latency_seconds": 5.8
+    },
+    "gemini-3.5-flash:english": {
+      "samples": 1,
+      "avg_english_token_f1": 0.7273,
+      "avg_entity_preservation": 1.0,
+      "avg_amortized_latency_seconds": 6.182
+    },
+    "gemini-3.5-flash:yoruba": {
+      "samples": 1,
+      "avg_wer": 0.7857,
+      "avg_cer": 0.4906,
+      "avg_entity_preservation": 1.0,
+      "avg_amortized_latency_seconds": 6.033
+    }
+  },
+  "failures": [],
+  "rows": [
+    {
+      "id": "Q01",
+      "audio_filename": "Q01_femi_failed_transfer_opay.wav",
+      "voice": "femi",
+      "category": "failed_transfer_opay",
+      "model": "gemini-3.1-flash-lite",
+      "target": "yoruba",
+      "reference": "Ẹ jọ̀ọ́, gbígbé owó mi kùnà lórí OPay. Owó mi sì ti sọnù.",
+      "output": "Ẹ jẹ́ kí gbogbo ọwọ́ mi kún lórí òpè, ọwọ́ mi sì ti sọnu.",
+      "batch_latency_seconds": 5.8,
+      "amortized_latency_seconds": 5.8,
+      "entity_preservation": 0.0,
+      "entities_expected": [
+        "opay"
+      ],
+      "entities_found": [],
+      "entities_missing": [
+        "opay"
+      ],
+      "wer": 0.5714,
+      "cer": 0.283,
+      "english_token_f1": null
+    },
+    {
+      "id": "Q01",
+      "audio_filename": "Q01_femi_failed_transfer_opay.wav",
+      "voice": "femi",
+      "category": "failed_transfer_opay",
+      "model": "gemini-3.1-flash-lite",
+      "target": "english",
+      "reference": "Please my transfer failed on OPay and my money has been debited.",
+      "output": "My OPay account has been restricted, and I cannot access it.",
+      "batch_latency_seconds": 6.882,
+      "amortized_latency_seconds": 6.882,
+      "entity_preservation": 1.0,
+      "entities_expected": [
+        "opay"
+      ],
+      "entities_found": [
+        "opay"
+      ],
+      "entities_missing": [],
+      "wer": null,
+      "cer": null,
+      "english_token_f1": 0.4348
+    },
+    {
+      "id": "Q01",
+      "audio_filename": "Q01_femi_failed_transfer_opay.wav",
+      "voice": "femi",
+      "category": "failed_transfer_opay",
+      "model": "gemini-3.5-flash",
+      "target": "yoruba",
+      "reference": "Ẹ jọ̀ọ́, gbígbé owó mi kùnà lórí OPay. Owó mi sì ti sọnù.",
+      "output": "Ẹ jẹ gbigbe owo mi kun lori OPay, o",
+      "batch_latency_seconds": 6.033,
+      "amortized_latency_seconds": 6.033,
+      "entity_preservation": 1.0,
+      "entities_expected": [
+        "opay"
+      ],
+      "entities_found": [
+        "opay"
+      ],
+      "entities_missing": [],
+      "wer": 0.7857,
+      "cer": 0.4906,
+      "english_token_f1": null
+    },
+    {
+      "id": "Q01",
+      "audio_filename": "Q01_femi_failed_transfer_opay.wav",
+      "voice": "femi",
+      "category": "failed_transfer_opay",
+      "model": "gemini-3.5-flash",
+      "target": "english",
+      "reference": "Please my transfer failed on OPay and my money has been debited.",
+      "output": "My transfer failed on OPay, and my money is missing.",
+      "batch_latency_seconds": 6.182,
+      "amortized_latency_seconds": 6.182,
+      "entity_preservation": 1.0,
+      "entities_expected": [
+        "opay"
+      ],
+      "entities_found": [
+        "opay"
+      ],
+      "entities_missing": [],
+      "wer": null,
+      "cer": null,
+      "english_token_f1": 0.7273
+    }
+  ]
+}

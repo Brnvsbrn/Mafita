@@ -1,0 +1,110 @@
+[
+  {
+    "case_id": "MFCASE001",
+    "issue_family": "failed_transfer",
+    "tester_brief": "You sent money to someone. Your wallet was debited, but the recipient says they did not receive it.",
+    "details_tester_can_provide": {"transaction_id": "OPY7834KL", "time": "1:47pm", "amount": 15000, "recipient_bank": "Zenith Bank"},
+    "internal_links": {"customer_id": "CUS-001", "transaction_id": "TX-1001"},
+    "expected_path": "resolve_by_agent",
+    "expected_behavior": ["ask for transaction ID, time, and amount if missing", "explain settlement queue", "give 1-3 hour timeline", "do not escalate immediately"]
+  },
+  {
+    "case_id": "MFCASE002",
+    "issue_family": "failed_transfer",
+    "tester_brief": "You paid a vendor. The money left your wallet, but the vendor has not received it.",
+    "details_tester_can_provide": {"transaction_id": "PAL4829QA", "time": "10:18am", "amount": 22000, "recipient_bank": "Access Bank"},
+    "internal_links": {"customer_id": "CUS-002", "transaction_id": "TX-1002"},
+    "expected_path": "resolve_by_agent",
+    "expected_behavior": ["confirm transaction exists", "explain receiving bank acknowledgement delay", "give a short timeline", "tell user not to retry"]
+  },
+  {
+    "case_id": "MFCASE003",
+    "issue_family": "failed_transfer",
+    "tester_brief": "You sent a small transfer to a friend. Your balance dropped, but the friend says nothing arrived.",
+    "details_tester_can_provide": {"transaction_id": "MFT6082RD", "time": "6:05pm", "amount": 8750, "recipient_bank": "GTBank"},
+    "internal_links": {"customer_id": "CUS-003", "transaction_id": "TX-1003"},
+    "expected_path": "resolve_by_agent",
+    "expected_behavior": ["identify NIBSS queue delay", "reassure money is traceable", "give same-day resolution expectation"]
+  },
+  {
+    "case_id": "MFCASE004",
+    "issue_family": "pending_transfer",
+    "tester_brief": "You sent rent money. It is pending and you are tempted to send it again.",
+    "details_tester_can_provide": {"transaction_id": "MPT9021XZ", "time": "3:15pm", "amount": 50000},
+    "internal_links": {"customer_id": "CUS-002", "transaction_id": "TX-2001"},
+    "expected_path": "resolve_by_agent",
+    "expected_behavior": ["strongly warn not to retry", "explain pending settlement", "suggest screenshot as proof", "give 30 minute wait guidance"]
+  },
+  {
+    "case_id": "MFCASE005",
+    "issue_family": "pending_transfer",
+    "tester_brief": "You paid school fees and the transfer has been pending for a short time.",
+    "details_tester_can_provide": {"transaction_id": "OPA7145MN", "time": "8:40am", "amount": 12000},
+    "internal_links": {"customer_id": "CUS-003", "transaction_id": "TX-2002"},
+    "expected_path": "resolve_by_agent",
+    "expected_behavior": ["do not advise retry", "explain bank network delay", "give 20-45 minute timeline"]
+  },
+  {
+    "case_id": "MFCASE006",
+    "issue_family": "pending_reversal",
+    "tester_brief": "You have been waiting for a reversal since Monday and want a real update.",
+    "details_tester_can_provide": {"transaction_id": "MNP4410BV", "time": "Monday 10am", "amount": 32000, "ticket_id": "CMP4192A"},
+    "internal_links": {"customer_id": "CUS-001", "transaction_id": "TX-3001", "ticket_id": "CMP4192A"},
+    "expected_path": "resolve_by_agent",
+    "expected_behavior": ["check reversal status", "explain working-day timeline", "say it is in process, not stuck", "set expectation for next update"]
+  },
+  {
+    "case_id": "MFCASE007",
+    "issue_family": "pending_reversal",
+    "tester_brief": "You raised a complaint for a failed transfer and want to know why the reversal has not arrived.",
+    "details_tester_can_provide": {"transaction_id": "RVL7832TX", "time": "Tuesday 4:20pm", "amount": 18500, "ticket_id": "CMP8305K"},
+    "internal_links": {"customer_id": "CUS-004", "transaction_id": "TX-3002", "ticket_id": "CMP8305K"},
+    "expected_path": "resolve_by_agent",
+    "expected_behavior": ["check ticket", "explain partner bank reversal stage", "give 3-5 working day expectation"]
+  },
+  {
+    "case_id": "MFCASE008",
+    "issue_family": "double_debit_pos",
+    "tester_brief": "You tried to withdraw at a POS. The POS declined, but your wallet was debited.",
+    "details_tester_can_provide": {"transaction_id": "OPY2291TR", "time": "yesterday 6pm", "amount": 50000, "evidence": ["decline slip", "debit alert"]},
+    "internal_links": {"customer_id": "CUS-006", "transaction_id": "TX-4001"},
+    "expected_path": "escalate_to_disputes",
+    "expected_behavior": ["ask for decline slip and debit alert", "create urgent disputes ticket", "attach evidence", "mock-send Slack payload to disputes"]
+  },
+  {
+    "case_id": "MFCASE009",
+    "issue_family": "double_debit_pos",
+    "tester_brief": "A POS withdrawal failed this morning, but the money left your wallet.",
+    "details_tester_can_provide": {"transaction_id": "POS8044KD", "time": "today 9:10am", "amount": 30000, "evidence": ["decline slip", "debit alert"]},
+    "internal_links": {"customer_id": "CUS-004", "transaction_id": "TX-4002"},
+    "expected_path": "escalate_to_disputes",
+    "expected_behavior": ["confirm POS side declined", "explain partner bank trace is required", "escalate as urgent"]
+  },
+  {
+    "case_id": "MFCASE010",
+    "issue_family": "double_debit_pos",
+    "tester_brief": "A POS agent says they were not credited, but your wallet shows a debit.",
+    "details_tester_can_provide": {"transaction_id": "MPT5520HF", "time": "Friday 7:30pm", "amount": 20000, "evidence": ["decline slip", "debit alert"]},
+    "internal_links": {"customer_id": "CUS-003", "transaction_id": "TX-4003"},
+    "expected_path": "escalate_to_disputes",
+    "expected_behavior": ["collect evidence", "create urgent ticket", "mock-send Slack payload to disputes"]
+  },
+  {
+    "case_id": "MFCASE011",
+    "issue_family": "kyc_restriction",
+    "tester_brief": "Your account is frozen. You cannot send or receive money because of a KYC name mismatch.",
+    "details_tester_can_provide": {"registered_phone": "07055234918", "evidence": ["government ID", "written explanation"]},
+    "internal_links": {"customer_id": "CUS-005", "restriction_id": "RST-005"},
+    "expected_path": "escalate_to_kyc_review",
+    "expected_behavior": ["explain BVN/account name mismatch", "ask for ID and explanation", "create urgent KYC review ticket", "mock-send Slack payload to kyc review"]
+  },
+  {
+    "case_id": "MFCASE012",
+    "issue_family": "kyc_restriction",
+    "tester_brief": "Your account is restricted after a suspicious activity flag and you need review.",
+    "details_tester_can_provide": {"registered_phone": "08031456789", "evidence": ["government ID", "written explanation"]},
+    "internal_links": {"customer_id": "CUS-006", "restriction_id": "RST-006"},
+    "expected_path": "escalate_to_kyc_review",
+    "expected_behavior": ["explain human review is required", "ask for ID and written explanation", "create urgent KYC review ticket"]
+  }
+]

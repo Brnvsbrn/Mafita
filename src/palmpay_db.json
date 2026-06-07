@@ -1,0 +1,65 @@
+{
+  "users": {
+    "+2348022222222": {
+      "phone_number": "+2348022222222",
+      "name": "Barin Adegboye",
+      "balance": 25000.0,
+      "kyc_level": "Tier 2",
+      "status": "ACTIVE",
+      "account_number": "9080222222222"
+    },
+    "+2348055555555": {
+      "phone_number": "+2348055555555",
+      "name": "Folake Alabi",
+      "balance": 12500.5,
+      "kyc_level": "Tier 1",
+      "status": "ACTIVE",
+      "account_number": "908055555555"
+    }
+  },
+  "transactions": {
+    "PMP_TX_987654321": {
+      "ref": "PMP_TX_987654321",
+      "sender_phone": "+2348022222222",
+      "recipient_account": "0123456789",
+      "recipient_bank": "Access Bank",
+      "recipient_name": "Adekunle Alao",
+      "amount": 12000.0,
+      "timestamp": "2026-05-30T14:30:00",
+      "status": "FAILED",
+      "gateway_response": "09 - Timeout waiting for response",
+      "reversal_status": "NONE",
+      "reversal_timestamp": null,
+      "session_id": "999120260530143000123456789012"
+    },
+    "PMP_TX_111111111": {
+      "ref": "PMP_TX_111111111",
+      "sender_phone": "+2348022222222",
+      "recipient_account": "9080111111111",
+      "recipient_bank": "OPay",
+      "recipient_name": "Babatunde Ojo",
+      "amount": 5000.0,
+      "timestamp": "2026-05-29T10:00:00",
+      "status": "FAILED",
+      "gateway_response": "91 - System Error",
+      "reversal_status": "REVERSED",
+      "reversal_timestamp": "2026-05-29T10:05:00",
+      "session_id": "999120260529100000111111111001"
+    },
+    "PMP_TX_222222222": {
+      "ref": "PMP_TX_222222222",
+      "sender_phone": "+2348022222222",
+      "recipient_account": "2039485768",
+      "recipient_bank": "Zenith Bank",
+      "recipient_name": "Halima Musa",
+      "amount": 20000.0,
+      "timestamp": "2026-05-28T09:15:00",
+      "status": "SUCCESSFUL",
+      "gateway_response": "00 - Approved",
+      "reversal_status": "NONE",
+      "reversal_timestamp": null,
+      "session_id": "999120260528091500222222222002"
+    }
+  },
+  "disputes": {}
+}

@@ -1,0 +1,7 @@
+{
+  "mode": "gemini",
+  "model": "gemini-3.5-flash",
+  "thinking_budget": 0,
+  "skipped": true,
+  "reason": "HTTPStatusError: Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=REDACTED'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+}

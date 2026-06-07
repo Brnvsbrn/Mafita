@@ -1,0 +1,51 @@
+{
+  "users": {
+    "+2348011111111": {
+      "phone_number": "+2348011111111",
+      "name": "Babatunde Ojo",
+      "balance": 15000.0,
+      "kyc_level": "Tier 3",
+      "status": "ACTIVE",
+      "account_number": "908011111111"
+    },
+    "+2348077777777": {
+      "phone_number": "+2348077777777",
+      "name": "Ngozi Okafor",
+      "balance": 8000.0,
+      "kyc_level": "Tier 2",
+      "status": "ACTIVE",
+      "account_number": "908077777777"
+    }
+  },
+  "transactions": {
+    "OPY_TX_987654321": {
+      "ref": "OPY_TX_987654321",
+      "sender_phone": "+2348011111111",
+      "recipient_account": "1020304050",
+      "recipient_bank": "GTBank",
+      "recipient_name": "Chioma Nwachukwu",
+      "amount": 5000.0,
+      "timestamp": "2026-05-30T10:15:00",
+      "status": "FAILED",
+      "gateway_response": "91 - System Error",
+      "reversal_status": "PENDING_REVERSAL",
+      "reversal_timestamp": null,
+      "session_id": "999220260530101500102030405001"
+    },
+    "OPY_TX_222222222": {
+      "ref": "OPY_TX_222222222",
+      "sender_phone": "+2348011111111",
+      "recipient_account": "9080222222222",
+      "recipient_bank": "PalmPay",
+      "recipient_name": "Barin Adegboye",
+      "amount": 10000.0,
+      "timestamp": "2026-05-28T16:45:00",
+      "status": "SUCCESSFUL",
+      "gateway_response": "00 - Approved",
+      "reversal_status": "NONE",
+      "reversal_timestamp": null,
+      "session_id": "999220260528164500908022222002"
+    }
+  },
+  "disputes": {}
+}

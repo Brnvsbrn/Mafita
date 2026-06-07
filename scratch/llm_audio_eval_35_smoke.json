@@ -1,0 +1,18 @@
+{
+  "summary": {},
+  "failures": [
+    {
+      "model": "gemini-3.5-flash",
+      "target": "yoruba",
+      "ids": "Q01",
+      "error": "Could not parse model JSON: Expecting property name enclosed in double quotes: line 3 column 6 (char 22). Raw: {\n  \"results\": [\n    {"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "english",
+      "ids": "Q01",
+      "error": "Could not parse model JSON: Expecting value: line 2 column 15 (char 16). Raw: {\n  \"results\": [\n    "
+    }
+  ],
+  "rows": []
+}

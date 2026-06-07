@@ -1,0 +1,4825 @@
+{
+  "summary": {
+    "samples": 86,
+    "previous_original_benchmark": {
+      "samples": 20,
+      "raw_entity_preservation": 0.5375,
+      "corrected_entity_preservation": 0.9875,
+      "absolute_lift": 0.45
+    },
+    "previous_expanded_benchmark": {
+      "samples": 40,
+      "raw_entity_preservation": 0.2908,
+      "corrected_entity_preservation": 0.8504,
+      "absolute_lift": 0.5596
+    },
+    "entity_stress_v2": {
+      "raw_entity_preservation": 0.3236,
+      "corrected_entity_preservation": 0.8682,
+      "absolute_lift": 0.5446,
+      "avg_correction_latency_ms": 3.9491
+    }
+  },
+  "rows": [
+    {
+      "id": "S001",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "OPay",
+        "Access Bank",
+        "pending",
+        "reversal"
+      ],
+      "raw_output": "mo lo pe lati ran owo si access bank ṣugun transcional wa ni pẹndin, mo fẹri faṣa o",
+      "corrected_output": "OPay lati ran owo si Access Bank Bank sugun transcional wa ni pending mo reversal o",
+      "raw_entity_preservation": 0.25,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "OPay",
+        "pending",
+        "reversal"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "access bank",
+          "canonical": "Access Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "feri fasa",
+          "canonical": "reversal",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "mo lo pe",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "reversal",
+          "canonical": "reversal",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "access",
+          "canonical": "Access Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pendin",
+          "canonical": "pending",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "opay",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 128.179
+    },
+    {
+      "id": "S002",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "PalmPay",
+        "Fidelity Bank",
+        "successful",
+        "failed transfer"
+      ],
+      "raw_output": "mo lo pampé láti rán owó sí fidelity bank, ṣùgbọ́n transcation náà wà ní suxsessful, mo fẹ́ fẹ́ ó tránsfà",
+      "corrected_output": "mo lo PalmPay lati ran owo si Fidelity Bank Bank sugbon transcation naa wa ni successful mo fe fe o transfa",
+      "raw_entity_preservation": 0.25,
+      "corrected_entity_preservation": 0.75,
+      "raw_missing": [
+        "PalmPay",
+        "successful",
+        "failed transfer"
+      ],
+      "corrected_missing": [
+        "failed transfer"
+      ],
+      "corrections": [
+        {
+          "raw": "fidelity bank",
+          "canonical": "Fidelity Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "suxsessful",
+          "canonical": "successful",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "fidelity",
+          "canonical": "Fidelity Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pampe",
+          "canonical": "PalmPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 7.933
+    },
+    {
+      "id": "S003",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "Moniepoint",
+        "FCMB",
+        "timeout",
+        "chargeback"
+      ],
+      "raw_output": "mo lo money point lati ran owo si fcmb, ṣugbọn transcion naa wa ni thyme out, mo fẹ charge back",
+      "corrected_output": "mo lo Moniepoint lati ran owo si FCMB sugbon transcion naa wa ni timeout mo fe chargeback",
+      "raw_entity_preservation": 0.25,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Moniepoint",
+        "timeout",
+        "chargeback"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "money point",
+          "canonical": "Moniepoint",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "charge back",
+          "canonical": "chargeback",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "moniepoint",
+          "canonical": "Moniepoint",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "chargeback",
+          "canonical": "chargeback",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "thyme out",
+          "canonical": "timeout",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "timeout",
+          "canonical": "timeout",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "fcmb",
+          "canonical": "FCMB",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 5.674
+    },
+    {
+      "id": "S004",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "Kuda",
+        "First Bank",
+        "pending",
+        "dispute"
+      ],
+      "raw_output": "mo lókúdá láti rán owó sí first bank, ṣùgbọ́n, tànàsáàṣàn náà wà ní pẹ́ndìn, mo fẹ́ dísípírì",
+      "corrected_output": "mo lokuda lati ran owo si First Bank sugbon tanasaasan naa wa ni pending mo fe disipiri",
+      "raw_entity_preservation": 0.5,
+      "corrected_entity_preservation": 0.75,
+      "raw_missing": [
+        "pending",
+        "dispute"
+      ],
+      "corrected_missing": [
+        "dispute"
+      ],
+      "corrections": [
+        {
+          "raw": "first bank",
+          "canonical": "First Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pendin",
+          "canonical": "pending",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 5.176
+    },
+    {
+      "id": "S005",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "Paga",
+        "GTBank",
+        "successful",
+        "transaction history"
+      ],
+      "raw_output": "mo lo paga lati ran owó sí gt bank, ṣùgbọ́n transdẹ́ẹ̀ṣàn náà wà ní sọ̀sẹ̀sífọ̀, mo fẹ́ transdẹ́ẹ̀ṣàn history food stop.",
+      "corrected_output": "mo lo Paga lati ran owo si GTBank sugbon transdeesan naa wa ni successful mo fe transdeesan history food stop",
+      "raw_entity_preservation": 0.25,
+      "corrected_entity_preservation": 0.75,
+      "raw_missing": [
+        "GTBank",
+        "successful",
+        "transaction history"
+      ],
+      "corrected_missing": [
+        "transaction history"
+      ],
+      "corrections": [
+        {
+          "raw": "sosesifo",
+          "canonical": "successful",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "gt bank",
+          "canonical": "GTBank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "gtbank",
+          "canonical": "GTBank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "paga",
+          "canonical": "Paga",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 3.052
+    },
+    {
+      "id": "S006",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "Pocket",
+        "UBA",
+        "timeout",
+        "customer care"
+      ],
+      "raw_output": "mo lo pókẹ́tì láti rán owó sí uba, ṣùgbọ́n tí rán ṣàǹsàn náà wà ní thyme-out, mo fẹ́ custom-made.",
+      "corrected_output": "mo lo Pocket lati ran owo si UBA sugbon ti ran sansan naa wa ni timeout mo fe customer care",
+      "raw_entity_preservation": 0.25,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Pocket",
+        "timeout",
+        "customer care"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "custom made",
+          "canonical": "customer care",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "thyme out",
+          "canonical": "timeout",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "timeout",
+          "canonical": "timeout",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "poketi",
+          "canonical": "Pocket",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "uba",
+          "canonical": "UBA",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 2.687
+    },
+    {
+      "id": "S007",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "NowNow",
+        "Zenith Bank",
+        "pending",
+        "bot"
+      ],
+      "raw_output": "mo lo náà náà ò̩láti ran owó si zenith bank, ṣùgbó̩n transcirnó̩ wà ní pẹ́ndin, mo fé̩ bò̩ò̩t",
+      "corrected_output": "mo lo NowNow olati ran owo si Zenith Bank Bank sugbon transcirno wa ni pending mo fe bot",
+      "raw_entity_preservation": 0.25,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "NowNow",
+        "pending",
+        "bot"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "zenith bank",
+          "canonical": "Zenith Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "naa naa",
+          "canonical": "NowNow",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "nownow",
+          "canonical": "NowNow",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "zenith",
+          "canonical": "Zenith Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pendin",
+          "canonical": "pending",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "boot",
+          "canonical": "bot",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "bot",
+          "canonical": "bot",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 2.432
+    },
+    {
+      "id": "S008",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "KongaPay",
+        "Citibank",
+        "successful",
+        "reversal"
+      ],
+      "raw_output": "mo lo konga pe lati ran owó sí city bank, ṣùgbọ́n transcation náà wà ní suxsẹsúfù, mo fẹ́rii vásáò",
+      "corrected_output": "mo lo KongaPay lati ran owo si Citibank sugbon transcation naa wa ni successful mo reversal",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "KongaPay",
+        "Citibank",
+        "successful",
+        "reversal"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "ferii vasao",
+          "canonical": "reversal",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "city bank",
+          "canonical": "Citibank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "suxsesufu",
+          "canonical": "successful",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "konga pe",
+          "canonical": "KongaPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "citibank",
+          "canonical": "Citibank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "reversal",
+          "canonical": "reversal",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 3.511
+    },
+    {
+      "id": "S009",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "FETS",
+        "Ecobank",
+        "timeout",
+        "failed transfer"
+      ],
+      "raw_output": "mo lo fí tí s láti rún owó sí èkó báńkì ṣùgbọ́n transcation náà wà ní thyme-out, mo fẹ́ fí ó tírànfà.",
+      "corrected_output": "mo lo FETS lati run owo si Ecobank sugbon transcation naa wa ni timeout mo fe failed transfer",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "FETS",
+        "Ecobank",
+        "timeout",
+        "failed transfer"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "fi o tiranfa",
+          "canonical": "failed transfer",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "eko banki",
+          "canonical": "Ecobank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "thyme out",
+          "canonical": "timeout",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "fi ti s",
+          "canonical": "FETS",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "ecobank",
+          "canonical": "Ecobank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "timeout",
+          "canonical": "timeout",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "fets",
+          "canonical": "FETS",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 4.595
+    },
+    {
+      "id": "S010",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "Teasy Mobile",
+        "Globus Bank",
+        "pending",
+        "chargeback"
+      ],
+      "raw_output": "mo lo tí sí móbà láti ran owó sí globus bank, ṣùgbọ́n transcation náà wà ní pẹ́ndìn, mo fẹ́ charge bank.",
+      "corrected_output": "mo lo Teasy Mobile Mobile lati ran owo si Globus Bank Bank sugbon transcation naa wa ni pending mo fe chargeback",
+      "raw_entity_preservation": 0.25,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Teasy Mobile",
+        "pending",
+        "chargeback"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "globus bank",
+          "canonical": "Globus Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "charge bank",
+          "canonical": "chargeback",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "ti si moba",
+          "canonical": "Teasy Mobile",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "chargeback",
+          "canonical": "chargeback",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "globus",
+          "canonical": "Globus Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pendin",
+          "canonical": "pending",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "teasy",
+          "canonical": "Teasy Mobile",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 2.885
+    },
+    {
+      "id": "S011",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "Xpress Wallet",
+        "Keystone Bank",
+        "successful",
+        "dispute"
+      ],
+      "raw_output": "mo lo express wallet lati ran owo si keystone bank, shugbon, transaction naa wa ni suxsessful, mo fẹ disput",
+      "corrected_output": "mo lo Xpress wallet balance wallet balance lati ran owo si Keystone Bank Bank shugbon transaction naa wa ni successful mo fe dispute",
+      "raw_entity_preservation": 0.5,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "successful",
+        "dispute"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "express wallet",
+          "canonical": "Xpress Wallet",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "xpress wallet",
+          "canonical": "Xpress Wallet",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "keystone bank",
+          "canonical": "Keystone Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "suxsessful",
+          "canonical": "successful",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "keystone",
+          "canonical": "Keystone Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "xpress",
+          "canonical": "Xpress Wallet",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "disput",
+          "canonical": "dispute",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "wallet",
+          "canonical": "wallet balance",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 2.988
+    },
+    {
+      "id": "S012",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "Chams Mobile",
+        "Polaris Bank",
+        "timeout",
+        "transaction history"
+      ],
+      "raw_output": "mo lo chimes mo bao lati ran owo si po karis bank, ṣugbọn transaction naa wa ni thyme out, mo fẹ́ transaction history.",
+      "corrected_output": "mo lo Chams Mobile Mobile lati ran owo si Polaris Bank Bank sugbon transaction naa wa ni timeout mo fe transaction history",
+      "raw_entity_preservation": 0.25,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Chams Mobile",
+        "Polaris Bank",
+        "timeout"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "transaction history",
+          "canonical": "transaction history",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "chimes mo bao",
+          "canonical": "Chams Mobile",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "po karis bank",
+          "canonical": "Polaris Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "chams mobile",
+          "canonical": "Chams Mobile",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "polaris bank",
+          "canonical": "Polaris Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "thyme out",
+          "canonical": "timeout",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "polaris",
+          "canonical": "Polaris Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "timeout",
+          "canonical": "timeout",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "chams",
+          "canonical": "Chams Mobile",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 3.189
+    },
+    {
+      "id": "S013",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "Mkudi",
+        "Stanbic IBTC",
+        "pending",
+        "customer care"
+      ],
+      "raw_output": "láti rán owó sí stímbìk, iptc, ṣùgbọ́n, tàǹsáńsù náà wà ní pẹ́ndín, mo fẹ́ kọ́stọ́mákìẹ̀.",
+      "corrected_output": "lati ran owo si Stanbic Stanbic IBTC Stanbic IBTC sugbon tansansu naa wa ni pending mo fe customer care",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 0.75,
+      "raw_missing": [
+        "Mkudi",
+        "Stanbic IBTC",
+        "pending",
+        "customer care"
+      ],
+      "corrected_missing": [
+        "Mkudi"
+      ],
+      "corrections": [
+        {
+          "raw": "stimbik iptc",
+          "canonical": "Stanbic IBTC",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "kostomakie",
+          "canonical": "customer care",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "stanbic",
+          "canonical": "Stanbic IBTC",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pendin",
+          "canonical": "pending",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "ibtc",
+          "canonical": "Stanbic IBTC",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 5.893
+    },
+    {
+      "id": "S014",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "Parkway",
+        "Standard Chartered",
+        "successful",
+        "bot"
+      ],
+      "raw_output": "mo lo parkway lati ran owo si standard chart aded, ṣugbon transaction naa wa ni suxsessful, mo fẹ bọt",
+      "corrected_output": "mo lo Parkway lati ran owo si Standard Chartered sugbon transaction naa wa ni successful mo fe bot",
+      "raw_entity_preservation": 0.5,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Standard Chartered",
+        "successful"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "standard chart aded",
+          "canonical": "Standard Chartered",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "standard chartered",
+          "canonical": "Standard Chartered",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "suxsessful",
+          "canonical": "successful",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "parkway",
+          "canonical": "Parkway",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "bot",
+          "canonical": "bot",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 4.129
+    },
+    {
+      "id": "S015",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "MoMo PSB",
+        "Sterling Bank",
+        "timeout",
+        "reversal"
+      ],
+      "raw_output": "mo lo mo mú pshb láti ran owó sí stírímbánk, ṣùgbọ́n, tẹ̀ránṣọ́nà wà ní taímáàòtù mo fẹ́ ríi báṣà ọ",
+      "corrected_output": "mo lo MoMo PSB PSB lati ran owo si Sterling Bank Bank sugbon teransona wa ni timeout mo fe reversal o",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "MoMo PSB",
+        "Sterling Bank",
+        "timeout",
+        "reversal"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "mo mu pshb",
+          "canonical": "MoMo PSB",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "stirimbank",
+          "canonical": "Sterling Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "taimaaotu",
+          "canonical": "timeout",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "momo psb",
+          "canonical": "MoMo PSB",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "sterling",
+          "canonical": "Sterling Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "rii basa",
+          "canonical": "reversal",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "timeout",
+          "canonical": "timeout",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "momo",
+          "canonical": "MoMo PSB",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 2.742
+    },
+    {
+      "id": "S016",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "SmartCash PSB",
+        "Titan Trust Bank",
+        "pending",
+        "failed transfer"
+      ],
+      "raw_output": "mo lo smart cash, psb lati ran owó sí titan trust bank, ṣùgbọ́n transactions náà wà ní pẹndin, mo fẹ́ field transport.",
+      "corrected_output": "mo lo SmartCash PSB PSB psb lati ran owo si Titan Trust Bank Bank sugbon transactions naa wa ni pending mo fe failed transfer",
+      "raw_entity_preservation": 0.25,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "SmartCash PSB",
+        "pending",
+        "failed transfer"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "titan trust bank",
+          "canonical": "Titan Trust Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "field transport",
+          "canonical": "failed transfer",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "titan trust",
+          "canonical": "Titan Trust Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "smart cash",
+          "canonical": "SmartCash PSB",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "smartcash",
+          "canonical": "SmartCash PSB",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pendin",
+          "canonical": "pending",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 3.312
+    },
+    {
+      "id": "S017",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "MoneyMaster PSB",
+        "Union Bank",
+        "successful",
+        "chargeback"
+      ],
+      "raw_output": "mo ló mọ́ ní mástà psb láti rán owó sí union bank, ṣùgbó ń trànsáà náà wà ní sọ̀sẹ́fọ̀ mọ́ fẹ́ chargeback.",
+      "corrected_output": "mo lo MoneyMaster PSB PSB lati ran owo si Union Bank Bank sugbo n transaa naa wa ni successful mo fe chargeback",
+      "raw_entity_preservation": 0.5,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "MoneyMaster PSB",
+        "successful"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "mo ni masta psb",
+          "canonical": "MoneyMaster PSB",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "moneymaster",
+          "canonical": "MoneyMaster PSB",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "union bank",
+          "canonical": "Union Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "chargeback",
+          "canonical": "chargeback",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "sosefo",
+          "canonical": "successful",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "union",
+          "canonical": "Union Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 7.915
+    },
+    {
+      "id": "S018",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "9PSB",
+        "Unity Bank",
+        "timeout",
+        "dispute"
+      ],
+      "raw_output": "mo ló ní p.s.b. láti rán owó sí unity bank, ṣùgbọ́n, tànàṣẹ́n náà wà ní time-out, mo fẹ́ díspíò",
+      "corrected_output": "mo lo 9PSB lati ran owo si Unity Bank Bank sugbon tanasen naa wa ni timeout mo fe dispute",
+      "raw_entity_preservation": 0.25,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "9PSB",
+        "timeout",
+        "dispute"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "unity bank",
+          "canonical": "Unity Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "ni p s b",
+          "canonical": "9PSB",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "time out",
+          "canonical": "timeout",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "timeout",
+          "canonical": "timeout",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "dispio",
+          "canonical": "dispute",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "unity",
+          "canonical": "Unity Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "9psb",
+          "canonical": "9PSB",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 5.316
+    },
+    {
+      "id": "S019",
+      "category": "provider_bank_status_support",
+      "expected_entities": [
+        "Nomba",
+        "Wema Bank",
+        "pending",
+        "transaction history"
+      ],
+      "raw_output": "mo lo nọ́ḿbà láti ran òwòsí wema bank, ṣùgbọ́n transcion náà wà ní pẹ́ndín, mo fẹ́ transcionístrí.",
+      "corrected_output": "mo lo Nomba lati ran owosi Wema Bank Bank sugbon transcion naa wa ni pending mo fe transcionistri",
+      "raw_entity_preservation": 0.5,
+      "corrected_entity_preservation": 0.75,
+      "raw_missing": [
+        "pending",
+        "transaction history"
+      ],
+      "corrected_missing": [
+        "transaction history"
+      ],
+      "corrections": [
+        {
+          "raw": "wema bank",
+          "canonical": "Wema Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pendin",
+          "canonical": "pending",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "nomba",
+          "canonical": "Nomba",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "wema",
+          "canonical": "Wema Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 6.363
+    },
+    {
+      "id": "S020",
+      "category": "bank_pair_reference_receipt",
+      "expected_entities": [
+        "Premium Trust Bank",
+        "Optimus Bank",
+        "transaction reference",
+        "receipt"
+      ],
+      "raw_output": "transfer lati premium trust bank si optimus bank ni transaction reference ṣugbon ko si receipt",
+      "corrected_output": "transfer lati Premium Trust Bank Bank si Optimus Bank Bank ni transaction reference sugbon ko si receipt",
+      "raw_entity_preservation": 1.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "transaction reference",
+          "canonical": "transaction reference",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "premium trust bank",
+          "canonical": "Premium Trust Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "premium trust",
+          "canonical": "Premium Trust Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "optimus bank",
+          "canonical": "Optimus Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "optimus",
+          "canonical": "Optimus Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "receipt",
+          "canonical": "receipt",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 7.902
+    },
+    {
+      "id": "S021",
+      "category": "bank_pair_reference_receipt",
+      "expected_entities": [
+        "Providus Bank",
+        "Parallex Bank",
+        "transaction reference",
+        "receipt"
+      ],
+      "raw_output": "transfer latí providus bank sí parlance bank ní transaction reference ṣùgbọ́n kò sí receipt.",
+      "corrected_output": "transfer lati Providus Bank Bank si Parallex Bank Bank ni transaction reference sugbon ko si receipt",
+      "raw_entity_preservation": 0.75,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Parallex Bank"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "transaction reference",
+          "canonical": "transaction reference",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "providus bank",
+          "canonical": "Providus Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "parlance bank",
+          "canonical": "Parallex Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "providus",
+          "canonical": "Providus Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "parallex",
+          "canonical": "Parallex Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "receipt",
+          "canonical": "receipt",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 7.731
+    },
+    {
+      "id": "S022",
+      "category": "bank_pair_reference_receipt",
+      "expected_entities": [
+        "SunTrust Bank",
+        "Signature Bank",
+        "transaction reference",
+        "receipt"
+      ],
+      "raw_output": "transfer lati sunkrothed bank, c-signature bank, ni transaction rẹfẹrin ṣugbọn ko si receipt.",
+      "corrected_output": "transfer lati SunTrust Bank Bank c Signature Bank Bank ni transaction reference sugbon ko si receipt",
+      "raw_entity_preservation": 0.5,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "SunTrust Bank",
+        "transaction reference"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "transaction referin",
+          "canonical": "transaction reference",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "sunkrothed bank",
+          "canonical": "SunTrust Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "signature bank",
+          "canonical": "Signature Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "suntrust bank",
+          "canonical": "SunTrust Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "signature",
+          "canonical": "Signature Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "suntrust",
+          "canonical": "SunTrust Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "receipt",
+          "canonical": "receipt",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 5.23
+    },
+    {
+      "id": "S023",
+      "category": "bank_pair_reference_receipt",
+      "expected_entities": [
+        "Jaiz Bank",
+        "TAJ Bank",
+        "transaction reference",
+        "receipt"
+      ],
+      "raw_output": "transfalà láti jáìsì báǹk sí tí ájé báǹk ní táǹsás̩áń rè̩rè̩ǹs̩, s̩ùgbò̩n kò sírís̩ìtì",
+      "corrected_output": "transfala lati Jaiz Bank Bank si TAJ Bank Bank ni transaction reference sugbon ko receipt",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Jaiz Bank",
+        "TAJ Bank",
+        "transaction reference",
+        "receipt"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "tansasan rerens",
+          "canonical": "transaction reference",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "ti aje bank",
+          "canonical": "TAJ Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "jaisi bank",
+          "canonical": "Jaiz Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "jaiz bank",
+          "canonical": "Jaiz Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "taj bank",
+          "canonical": "TAJ Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "sirisiti",
+          "canonical": "receipt",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "receipt",
+          "canonical": "receipt",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "jaiz",
+          "canonical": "Jaiz Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "taj",
+          "canonical": "TAJ Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 4.571
+    },
+    {
+      "id": "S024",
+      "category": "bank_pair_reference_receipt",
+      "expected_entities": [
+        "Lotus Bank",
+        "Alternative Bank",
+        "transaction reference",
+        "receipt"
+      ],
+      "raw_output": "transfer lati lotus bank si alternative bank ni transassional reference ṣugbon ko si receipt",
+      "corrected_output": "transfer lati Lotus Bank Bank si Alternative Bank Bank ni transassional reference sugbon ko si receipt",
+      "raw_entity_preservation": 0.75,
+      "corrected_entity_preservation": 0.75,
+      "raw_missing": [
+        "transaction reference"
+      ],
+      "corrected_missing": [
+        "transaction reference"
+      ],
+      "corrections": [
+        {
+          "raw": "alternative bank",
+          "canonical": "Alternative Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "alternative",
+          "canonical": "Alternative Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "lotus bank",
+          "canonical": "Lotus Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "receipt",
+          "canonical": "receipt",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "lotus",
+          "canonical": "Lotus Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 5.512
+    },
+    {
+      "id": "S025",
+      "category": "digital_bank_account_term",
+      "expected_entities": [
+        "Carbon",
+        "wallet balance",
+        "Access Bank"
+      ],
+      "raw_output": "karbonar mi sọ pé wallet balans lori transfers bank access",
+      "corrected_output": "Carbon mi so pe wallet balance wallet balance balance lori transfers bank Access Bank",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Carbon",
+        "wallet balance",
+        "Access Bank"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "wallet balans",
+          "canonical": "wallet balance",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "karbonar",
+          "canonical": "Carbon",
+          "entity_type": "digital_bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "balance",
+          "canonical": "wallet balance",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "carbon",
+          "canonical": "Carbon",
+          "entity_type": "digital_bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "access",
+          "canonical": "Access Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "wallet",
+          "canonical": "wallet balance",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.851
+    },
+    {
+      "id": "S026",
+      "category": "digital_bank_account_term",
+      "expected_entities": [
+        "FairMoney",
+        "account restricted",
+        "Fidelity Bank"
+      ],
+      "raw_output": "femony ap mi sọ pe account restricted lori transfers si fidelity bank.",
+      "corrected_output": "FairMoney ap mi so pe account restricted lori transfers si Fidelity Bank Bank",
+      "raw_entity_preservation": 0.6666666666666666,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "FairMoney"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "account restricted",
+          "canonical": "account restricted",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "fidelity bank",
+          "canonical": "Fidelity Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "fidelity",
+          "canonical": "Fidelity Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "femony",
+          "canonical": "FairMoney",
+          "entity_type": "digital_bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 2.011
+    },
+    {
+      "id": "S027",
+      "category": "digital_bank_account_term",
+      "expected_entities": [
+        "ALAT",
+        "daily limit",
+        "FCMB"
+      ],
+      "raw_output": "alatap mi sọ pé daylilimit lori transfa si fcmb",
+      "corrected_output": "alatap mi so pe daily limit lori transfa si FCMB",
+      "raw_entity_preservation": 0.6666666666666666,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "daily limit"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "daylilimit",
+          "canonical": "daily limit",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "fcmb",
+          "canonical": "FCMB",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.36
+    },
+    {
+      "id": "S028",
+      "category": "digital_bank_account_term",
+      "expected_entities": [
+        "VBank",
+        "wallet balance",
+        "First Bank"
+      ],
+      "raw_output": "the bank ap mi sọ pe wallet balance lori transfers si first bank",
+      "corrected_output": "the bank ap mi so pe wallet balance wallet balance balance lori transfers si First Bank",
+      "raw_entity_preservation": 0.6666666666666666,
+      "corrected_entity_preservation": 0.6666666666666666,
+      "raw_missing": [
+        "VBank"
+      ],
+      "corrected_missing": [
+        "VBank"
+      ],
+      "corrections": [
+        {
+          "raw": "wallet balance",
+          "canonical": "wallet balance",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "first bank",
+          "canonical": "First Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "balance",
+          "canonical": "wallet balance",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "wallet",
+          "canonical": "wallet balance",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.966
+    },
+    {
+      "id": "S029",
+      "category": "digital_bank_account_term",
+      "expected_entities": [
+        "Eyowo",
+        "account restricted",
+        "GTBank"
+      ],
+      "raw_output": "iyowo àpamí sọ pé àkọọ̀ntì stricte lórí transciti gt bank.",
+      "corrected_output": "Eyowo apami so pe account restricted lori transciti GTBank",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Eyowo",
+        "account restricted",
+        "GTBank"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "akoonti stricte",
+          "canonical": "account restricted",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "gt bank",
+          "canonical": "GTBank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "gtbank",
+          "canonical": "GTBank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "iyowo",
+          "canonical": "Eyowo",
+          "entity_type": "digital_bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.661
+    },
+    {
+      "id": "S030",
+      "category": "digital_bank_account_term",
+      "expected_entities": [
+        "Carbon",
+        "daily limit",
+        "UBA"
+      ],
+      "raw_output": "carbon àpì mi sọ pé daylìlìmí ti lórí transcene uba.",
+      "corrected_output": "Carbon api mi so pe daylilimi ti lori transcene UBA",
+      "raw_entity_preservation": 0.6666666666666666,
+      "corrected_entity_preservation": 0.6666666666666666,
+      "raw_missing": [
+        "daily limit"
+      ],
+      "corrected_missing": [
+        "daily limit"
+      ],
+      "corrections": [
+        {
+          "raw": "carbon",
+          "canonical": "Carbon",
+          "entity_type": "digital_bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "uba",
+          "canonical": "UBA",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.511
+    },
+    {
+      "id": "S031",
+      "category": "digital_bank_account_term",
+      "expected_entities": [
+        "FairMoney",
+        "wallet balance",
+        "Zenith Bank"
+      ],
+      "raw_output": "fẹ́mọ́ní apì mi sọ pé wálẹ̀t baláǹs̀ lórí, táǹṣfà sí zenith bank.",
+      "corrected_output": "FairMoney api mi so pe wallet balance wallet balance balance lori tansfa si Zenith Bank Bank",
+      "raw_entity_preservation": 0.3333333333333333,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "FairMoney",
+        "wallet balance"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "walet balans",
+          "canonical": "wallet balance",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "zenith bank",
+          "canonical": "Zenith Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "balance",
+          "canonical": "wallet balance",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "femoni",
+          "canonical": "FairMoney",
+          "entity_type": "digital_bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "zenith",
+          "canonical": "Zenith Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "wallet",
+          "canonical": "wallet balance",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.912
+    },
+    {
+      "id": "S032",
+      "category": "digital_bank_account_term",
+      "expected_entities": [
+        "ALAT",
+        "account restricted",
+        "Citibank"
+      ],
+      "raw_output": "alatap mi sọ pe account restricted lori transfaasi citybank",
+      "corrected_output": "alatap mi so pe account restricted lori transfaasi Citibank",
+      "raw_entity_preservation": 0.6666666666666666,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Citibank"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "account restricted",
+          "canonical": "account restricted",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "citybank",
+          "canonical": "Citibank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 2.917
+    },
+    {
+      "id": "S033",
+      "category": "digital_bank_account_term",
+      "expected_entities": [
+        "VBank",
+        "daily limit",
+        "Ecobank"
+      ],
+      "raw_output": "fi banka pín sọ pé day lily meat lori transcensivá sí ecobank",
+      "corrected_output": "fi banka PIN so pe daily limit lori transcensiva si Ecobank",
+      "raw_entity_preservation": 0.3333333333333333,
+      "corrected_entity_preservation": 0.6666666666666666,
+      "raw_missing": [
+        "VBank",
+        "daily limit"
+      ],
+      "corrected_missing": [
+        "VBank"
+      ],
+      "corrections": [
+        {
+          "raw": "day lily meat",
+          "canonical": "daily limit",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "daily limit",
+          "canonical": "daily limit",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "ecobank",
+          "canonical": "Ecobank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pin",
+          "canonical": "PIN",
+          "entity_type": "security_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.75
+    },
+    {
+      "id": "S034",
+      "category": "digital_bank_account_term",
+      "expected_entities": [
+        "Eyowo",
+        "wallet balance",
+        "Globus Bank"
+      ],
+      "raw_output": "ẹ̀yọ̀ áàpù mi sọ pé wálẹ̀t balans lórí tránsfásì gúlóbòs bánkì",
+      "corrected_output": "Eyowo mi so pe wallet balance wallet balance balance lori transfasi Globus Bank Bank",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Eyowo",
+        "wallet balance",
+        "Globus Bank"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "gulobos banki",
+          "canonical": "Globus Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "walet balans",
+          "canonical": "wallet balance",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "globus bank",
+          "canonical": "Globus Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "eyo aapu",
+          "canonical": "Eyowo",
+          "entity_type": "digital_bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "balance",
+          "canonical": "wallet balance",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "globus",
+          "canonical": "Globus Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "wallet",
+          "canonical": "wallet balance",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "eyowo",
+          "canonical": "Eyowo",
+          "entity_type": "digital_bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.822
+    },
+    {
+      "id": "S035",
+      "category": "processor_card_payment_term",
+      "expected_entities": [
+        "Paystack",
+        "Verve",
+        "debit card"
+      ],
+      "raw_output": "pestac payment lori veff card ni debit card, mo nilo hẹnpẹ.",
+      "corrected_output": "Paystack payment lori Verve ni debit card mo nilo henpe",
+      "raw_entity_preservation": 0.3333333333333333,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Paystack",
+        "Verve"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "debit card",
+          "canonical": "debit card",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "veff card",
+          "canonical": "Verve",
+          "entity_type": "card_scheme",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pestac",
+          "canonical": "Paystack",
+          "entity_type": "payment_processor",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "verve",
+          "canonical": "Verve",
+          "entity_type": "card_scheme",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "debit",
+          "canonical": "debit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.641
+    },
+    {
+      "id": "S036",
+      "category": "processor_card_payment_term",
+      "expected_entities": [
+        "Flutterwave",
+        "Visa",
+        "virtual card"
+      ],
+      "raw_output": "flotterway payment lori fisicard ni bachelocard mo nilo help.",
+      "corrected_output": "Flutterwave payment lori Visa ni virtual card mo nilo help",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Flutterwave",
+        "Visa",
+        "virtual card"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "bachelocard",
+          "canonical": "virtual card",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "flotterway",
+          "canonical": "Flutterwave",
+          "entity_type": "payment_processor",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "fisicard",
+          "canonical": "Visa",
+          "entity_type": "card_scheme",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "visa",
+          "canonical": "Visa",
+          "entity_type": "card_scheme",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.681
+    },
+    {
+      "id": "S037",
+      "category": "processor_card_payment_term",
+      "expected_entities": [
+        "Interswitch",
+        "Mastercard",
+        "debit"
+      ],
+      "raw_output": "ìtà̀sùlítì pẹ́mẹ̀tì lórí masakadkadì ní débìtì mu nílò hẹ́ọ̀pù",
+      "corrected_output": "Interswitch pemeti lori Mastercard ni debit mu nilo heopu",
+      "raw_entity_preservation": 0.3333333333333333,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Interswitch",
+        "Mastercard"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "masakadkadi",
+          "canonical": "Mastercard",
+          "entity_type": "card_scheme",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "mastercard",
+          "canonical": "Mastercard",
+          "entity_type": "card_scheme",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "itasuliti",
+          "canonical": "Interswitch",
+          "entity_type": "payment_processor",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "debiti",
+          "canonical": "debit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "debit",
+          "canonical": "debit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.655
+    },
+    {
+      "id": "S038",
+      "category": "processor_card_payment_term",
+      "expected_entities": [
+        "Remita",
+        "Verve",
+        "credit"
+      ],
+      "raw_output": "remita payment lórí waafkard ni credit mo nílò help",
+      "corrected_output": "Remita lori Verve ni credit mo nilo help",
+      "raw_entity_preservation": 0.6666666666666666,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Verve"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "remita payment",
+          "canonical": "Remita",
+          "entity_type": "payment_processor",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "waafkard",
+          "canonical": "Verve",
+          "entity_type": "card_scheme",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "remita",
+          "canonical": "Remita",
+          "entity_type": "payment_processor",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "credit",
+          "canonical": "credit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "verve",
+          "canonical": "Verve",
+          "entity_type": "card_scheme",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.246
+    },
+    {
+      "id": "S039",
+      "category": "channel_customer_care",
+      "expected_entities": [
+        "USSD",
+        "Paga",
+        "customer care",
+        "bot"
+      ],
+      "raw_output": "usd lori paga ko ṣiṣẹ, kọsitọmá kẹbọd kò rán mi lọ́wọ́",
+      "corrected_output": "USSD lori Paga ko sise kositoma bot ko ran mi lowo",
+      "raw_entity_preservation": 0.25,
+      "corrected_entity_preservation": 0.75,
+      "raw_missing": [
+        "USSD",
+        "customer care",
+        "bot"
+      ],
+      "corrected_missing": [
+        "customer care"
+      ],
+      "corrections": [
+        {
+          "raw": "kebod",
+          "canonical": "bot",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "paga",
+          "canonical": "Paga",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "usd",
+          "canonical": "USSD",
+          "entity_type": "channel",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "bot",
+          "canonical": "bot",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.546
+    },
+    {
+      "id": "S040",
+      "category": "channel_customer_care",
+      "expected_entities": [
+        "ATM",
+        "Pocket",
+        "customer care",
+        "bot"
+      ],
+      "raw_output": "atm lórí pọ́kẹ̀tì kò ṣiṣẹ́ kọ́stọ́má kẹ́bọd kò rán mi lọ́wọ́",
+      "corrected_output": "ATM lori Pocket ko sise customer care ko ran mi lowo",
+      "raw_entity_preservation": 0.25,
+      "corrected_entity_preservation": 0.75,
+      "raw_missing": [
+        "Pocket",
+        "customer care",
+        "bot"
+      ],
+      "corrected_missing": [
+        "bot"
+      ],
+      "corrections": [
+        {
+          "raw": "kostoma kebod",
+          "canonical": "customer care",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "poketi",
+          "canonical": "Pocket",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "atm",
+          "canonical": "ATM",
+          "entity_type": "channel",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.513
+    },
+    {
+      "id": "S041",
+      "category": "channel_customer_care",
+      "expected_entities": [
+        "POS",
+        "NowNow",
+        "customer care",
+        "bot"
+      ],
+      "raw_output": "pọ́ṣ lórí náà náà kò ṣiṣẹ́, kọ́́sínmá kẹ́bọ́t kò omi lọ́wọ́",
+      "corrected_output": "POS lori NowNow ko sise kosinma kebot ko omi lowo",
+      "raw_entity_preservation": 0.5,
+      "corrected_entity_preservation": 0.75,
+      "raw_missing": [
+        "NowNow",
+        "customer care"
+      ],
+      "corrected_missing": [
+        "customer care"
+      ],
+      "corrections": [
+        {
+          "raw": "naa naa",
+          "canonical": "NowNow",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "nownow",
+          "canonical": "NowNow",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pos",
+          "canonical": "POS",
+          "entity_type": "channel",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.976
+    },
+    {
+      "id": "S042",
+      "category": "channel_customer_care",
+      "expected_entities": [
+        "QR Code",
+        "KongaPay",
+        "customer care",
+        "bot"
+      ],
+      "raw_output": "kiwacold lori konga pe ko ṣiṣẹ, kọsitọmá kẹbọt kò rán mi lọ́wọ́.",
+      "corrected_output": "kiwacold lori KongaPay ko sise kositoma kebot ko ran mi lowo",
+      "raw_entity_preservation": 0.25,
+      "corrected_entity_preservation": 0.5,
+      "raw_missing": [
+        "QR Code",
+        "KongaPay",
+        "customer care"
+      ],
+      "corrected_missing": [
+        "QR Code",
+        "customer care"
+      ],
+      "corrections": [
+        {
+          "raw": "konga pe",
+          "canonical": "KongaPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 3.304
+    },
+    {
+      "id": "S043",
+      "category": "identity_security",
+      "expected_entities": [
+        "BVN",
+        "NIN",
+        "KYC",
+        "OTP"
+      ],
+      "raw_output": "mo fẹ́ sọ bvn àti ni imọ-account mi fún kys, ṣùgbọ́n otp kò dé",
+      "corrected_output": "mo fe so BVN ati NIN account mi fun KYC sugbon OTP ko de",
+      "raw_entity_preservation": 0.5,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "NIN",
+        "KYC"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "ni imo",
+          "canonical": "NIN",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "bvn",
+          "canonical": "BVN",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "nin",
+          "canonical": "NIN",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "kys",
+          "canonical": "KYC",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "otp",
+          "canonical": "OTP",
+          "entity_type": "security_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 3.241
+    },
+    {
+      "id": "S044",
+      "category": "security_terms",
+      "expected_entities": [
+        "OTP",
+        "PIN",
+        "password"
+      ],
+      "raw_output": "mo gbàgbé pín àti password mi, ṣùgbọ́n apu kò gba verification.",
+      "corrected_output": "mo gbagbe PIN ati password mi sugbon apu ko gba verification",
+      "raw_entity_preservation": 0.6666666666666666,
+      "corrected_entity_preservation": 0.6666666666666666,
+      "raw_missing": [
+        "OTP"
+      ],
+      "corrected_missing": [
+        "OTP"
+      ],
+      "corrections": [
+        {
+          "raw": "password",
+          "canonical": "password",
+          "entity_type": "security_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pin",
+          "canonical": "PIN",
+          "entity_type": "security_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 3.309
+    },
+    {
+      "id": "S045",
+      "category": "payment_infrastructure_terms",
+      "expected_entities": [
+        "NIBSS",
+        "Session ID",
+        "NIP",
+        "NUBAN"
+      ],
+      "raw_output": "bífíìsì nílò sẹ́sọ́nàìlì àti nípa dító fún núbà àkọ́ọ̀tì nọ́mbà",
+      "corrected_output": "NIBSS nilo Session ID ati NIP dito fun NUBAN Nomba",
+      "raw_entity_preservation": 0.25,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "NIBSS",
+        "Session ID",
+        "NUBAN"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "nuba akooti",
+          "canonical": "NUBAN",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "sesonaili",
+          "canonical": "Session ID",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "bifiisi",
+          "canonical": "NIBSS",
+          "entity_type": "payment_infrastructure",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "nomba",
+          "canonical": "Nomba",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "nibss",
+          "canonical": "NIBSS",
+          "entity_type": "payment_infrastructure",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "nuban",
+          "canonical": "NUBAN",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "nipa",
+          "canonical": "NIP",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "nip",
+          "canonical": "NIP",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 2.986
+    },
+    {
+      "id": "S046",
+      "category": "fraud_legal_transfer_issue",
+      "expected_entities": [
+        "unauthorized debit",
+        "scam",
+        "wrong recipient",
+        "court order"
+      ],
+      "raw_output": "mo rí onàfíríísì débìt, wọn ní oúnjẹ scam, ṣùgbọ́n ráńgùn rẹ̀ sípíẹ̀ńtì náà ló kọ́tọ́ọ̀dà.",
+      "corrected_output": "mo ri unauthorized debit won ni ounje scam sugbon rangun re sipienti naa lo court order",
+      "raw_entity_preservation": 0.25,
+      "corrected_entity_preservation": 0.75,
+      "raw_missing": [
+        "unauthorized debit",
+        "wrong recipient",
+        "court order"
+      ],
+      "corrected_missing": [
+        "wrong recipient"
+      ],
+      "corrections": [
+        {
+          "raw": "onafiriisi debit",
+          "canonical": "unauthorized debit",
+          "entity_type": "fraud_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "kotooda",
+          "canonical": "court order",
+          "entity_type": "legal_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "debit",
+          "canonical": "debit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "scam",
+          "canonical": "scam",
+          "entity_type": "fraud_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 4.623
+    },
+    {
+      "id": "S047",
+      "category": "beneficiary_card_terms",
+      "expected_entities": [
+        "beneficiary",
+        "credit",
+        "debit card",
+        "virtual card"
+      ],
+      "raw_output": "bẹẹfiṣiari kò rí credit, debit card àti virtual card méjèèjì ní iṣu",
+      "corrected_output": "beefisiari ko ri credit debit card ati virtual card mejeeji ni isu",
+      "raw_entity_preservation": 0.75,
+      "corrected_entity_preservation": 0.75,
+      "raw_missing": [
+        "beneficiary"
+      ],
+      "corrected_missing": [
+        "beneficiary"
+      ],
+      "corrections": [
+        {
+          "raw": "virtual card",
+          "canonical": "virtual card",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "debit card",
+          "canonical": "debit card",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "credit",
+          "canonical": "credit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "debit",
+          "canonical": "debit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.926
+    },
+    {
+      "id": "S048",
+      "category": "critical_variant_opay",
+      "expected_entities": [
+        "OPay",
+        "failed transfer",
+        "GTBank"
+      ],
+      "raw_output": "òpè transfer mi kùnà sí gt bank.",
+      "corrected_output": "OPay mi kuna si GTBank",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 0.6666666666666666,
+      "raw_missing": [
+        "OPay",
+        "failed transfer",
+        "GTBank"
+      ],
+      "corrected_missing": [
+        "failed transfer"
+      ],
+      "corrections": [
+        {
+          "raw": "ope transfer",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "gt bank",
+          "canonical": "GTBank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "gtbank",
+          "canonical": "GTBank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "opay",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 0.823
+    },
+    {
+      "id": "S049",
+      "category": "critical_variant_opay",
+      "expected_entities": [
+        "OPay",
+        "Session ID"
+      ],
+      "raw_output": "kò pé mi kò fi sẹ́sọ́náídì ń",
+      "corrected_output": "OPay mi ko fi Session ID n",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "OPay",
+        "Session ID"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "sesonaidi",
+          "canonical": "Session ID",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "ko pe",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "opay",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 0.833
+    },
+    {
+      "id": "S050",
+      "category": "critical_variant_opay",
+      "expected_entities": [
+        "OPay",
+        "POS",
+        "double debit"
+      ],
+      "raw_output": "òpè píẹ̀sí jẹntina mi dọ́bùdẹ́bìtì",
+      "corrected_output": "OPay piesi jentina mi double debit",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 0.6666666666666666,
+      "raw_missing": [
+        "OPay",
+        "POS",
+        "double debit"
+      ],
+      "corrected_missing": [
+        "POS"
+      ],
+      "corrections": [
+        {
+          "raw": "dobudebiti",
+          "canonical": "double debit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "debit",
+          "canonical": "debit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "ope",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 0.97
+    },
+    {
+      "id": "S051",
+      "category": "critical_variant_opay",
+      "expected_entities": [
+        "OPay",
+        "reversal",
+        "receipt"
+      ],
+      "raw_output": "mo fẹ́ rẹ́và sál lórí òpè irìsí ti mi",
+      "corrected_output": "mo fe reversal lori OPay receipt mi",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "OPay",
+        "reversal",
+        "receipt"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "irisi ti",
+          "canonical": "receipt",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "reva sal",
+          "canonical": "reversal",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "receipt",
+          "canonical": "receipt",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "ope",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.048
+    },
+    {
+      "id": "S052",
+      "category": "critical_variant_palmpay",
+      "expected_entities": [
+        "PalmPay",
+        "Access Bank",
+        "pending"
+      ],
+      "raw_output": "pampe si access bank wa ni pending",
+      "corrected_output": "PalmPay Access Bank Bank wa ni pending",
+      "raw_entity_preservation": 0.6666666666666666,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "PalmPay"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "access bank",
+          "canonical": "Access Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pampe si",
+          "canonical": "PalmPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "palmpay",
+          "canonical": "PalmPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pending",
+          "canonical": "pending",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "access",
+          "canonical": "Access Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.048
+    },
+    {
+      "id": "S053",
+      "category": "critical_variant_palmpay",
+      "expected_entities": [
+        "PalmPay",
+        "receipt",
+        "transaction reference"
+      ],
+      "raw_output": "paunpé rí síìtì mi ni transactions rẹ́fùrànísì tí kò pé.",
+      "corrected_output": "PalmPay receipt mi ni transactions transaction reference ti OPay",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "PalmPay",
+        "receipt",
+        "transaction reference"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "refuranisi",
+          "canonical": "transaction reference",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "ri siiti",
+          "canonical": "receipt",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "receipt",
+          "canonical": "receipt",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "paunpe",
+          "canonical": "PalmPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "ko pe",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "opay",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.702
+    },
+    {
+      "id": "S054",
+      "category": "critical_variant_palmpay",
+      "expected_entities": [
+        "PalmPay",
+        "BVN",
+        "KYC"
+      ],
+      "raw_output": "mo fẹ́ líńbí-vnm lórí páńpè fún kyc",
+      "corrected_output": "mo fe linbi vnm lori PalmPay fun KYC",
+      "raw_entity_preservation": 0.3333333333333333,
+      "corrected_entity_preservation": 0.6666666666666666,
+      "raw_missing": [
+        "PalmPay",
+        "BVN"
+      ],
+      "corrected_missing": [
+        "BVN"
+      ],
+      "corrections": [
+        {
+          "raw": "panpe",
+          "canonical": "PalmPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "kyc",
+          "canonical": "KYC",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.059
+    },
+    {
+      "id": "S055",
+      "category": "critical_variant_palmpay",
+      "expected_entities": [
+        "PalmPay",
+        "customer care",
+        "bot"
+      ],
+      "raw_output": "pámpé kọ́stọ́má kíẹ̀ bọ́t kò dáhùn.",
+      "corrected_output": "PalmPay customer care kie bot ko dahun",
+      "raw_entity_preservation": 0.3333333333333333,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "PalmPay",
+        "customer care"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "kostoma",
+          "canonical": "customer care",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pampe",
+          "canonical": "PalmPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "bot",
+          "canonical": "bot",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 0.965
+    },
+    {
+      "id": "S056",
+      "category": "critical_variant_moniepoint",
+      "expected_entities": [
+        "Moniepoint",
+        "POS",
+        "timeout",
+        "NIP"
+      ],
+      "raw_output": "mọ́ní pọ́ǹt p.o.s.míní tíimọ̀tù lórí níbi tíránfà.",
+      "corrected_output": "Moniepoint POS mini tiimotu lori NIP failed transfer",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 0.75,
+      "raw_missing": [
+        "Moniepoint",
+        "POS",
+        "timeout",
+        "NIP"
+      ],
+      "corrected_missing": [
+        "timeout"
+      ],
+      "corrections": [
+        {
+          "raw": "moni pont",
+          "canonical": "Moniepoint",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "tiranfa",
+          "canonical": "failed transfer",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "p o s",
+          "canonical": "POS",
+          "entity_type": "channel",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "nibi",
+          "canonical": "NIP",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pos",
+          "canonical": "POS",
+          "entity_type": "channel",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "nip",
+          "canonical": "NIP",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.464
+    },
+    {
+      "id": "S057",
+      "category": "critical_variant_moniepoint",
+      "expected_entities": [
+        "Moniepoint",
+        "successful"
+      ],
+      "raw_output": "mo ní pọ́ń ẹjàn sọ pé ṣanṣẹ́sọ̀sífọ̀",
+      "corrected_output": "mo ni Moniepoint so pe successful",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Moniepoint",
+        "successful"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "sansesosifo",
+          "canonical": "successful",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "successful",
+          "canonical": "successful",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pon ejan",
+          "canonical": "Moniepoint",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.731
+    },
+    {
+      "id": "S058",
+      "category": "critical_variant_moniepoint",
+      "expected_entities": [
+        "Moniepoint",
+        "dispute",
+        "double debit"
+      ],
+      "raw_output": "mo fẹ́ dispute fun money-poin dọ́bú dẹ́bít.",
+      "corrected_output": "mo fe dispute fun Moniepoint dobu debit",
+      "raw_entity_preservation": 0.3333333333333333,
+      "corrected_entity_preservation": 0.6666666666666666,
+      "raw_missing": [
+        "Moniepoint",
+        "double debit"
+      ],
+      "corrected_missing": [
+        "double debit"
+      ],
+      "corrections": [
+        {
+          "raw": "money poin",
+          "canonical": "Moniepoint",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "dispute",
+          "canonical": "dispute",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "debit",
+          "canonical": "debit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 3.049
+    },
+    {
+      "id": "S059",
+      "category": "critical_variant_kuda",
+      "expected_entities": [
+        "Kuda",
+        "Zenith Bank",
+        "pending"
+      ],
+      "raw_output": "colder c zenith bank transfer wa ni pending",
+      "corrected_output": "colder c Zenith Bank Bank transfer wa ni pending",
+      "raw_entity_preservation": 0.6666666666666666,
+      "corrected_entity_preservation": 0.6666666666666666,
+      "raw_missing": [
+        "Kuda"
+      ],
+      "corrected_missing": [
+        "Kuda"
+      ],
+      "corrections": [
+        {
+          "raw": "zenith bank",
+          "canonical": "Zenith Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pending",
+          "canonical": "pending",
+          "entity_type": "status",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "zenith",
+          "canonical": "Zenith Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 2.53
+    },
+    {
+      "id": "S060",
+      "category": "critical_variant_kuda",
+      "expected_entities": [
+        "Kuda",
+        "NIN",
+        "BVN"
+      ],
+      "raw_output": "kúdà bẹ́rẹ̀ fún ní àti bvn.",
+      "corrected_output": "Kuda bere fun ni ati BVN",
+      "raw_entity_preservation": 0.6666666666666666,
+      "corrected_entity_preservation": 0.6666666666666666,
+      "raw_missing": [
+        "NIN"
+      ],
+      "corrected_missing": [
+        "NIN"
+      ],
+      "corrections": [
+        {
+          "raw": "kuda",
+          "canonical": "Kuda",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "kuda",
+          "canonical": "Kuda",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "bvn",
+          "canonical": "BVN",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.416
+    },
+    {
+      "id": "S061",
+      "category": "critical_variant_kuda",
+      "expected_entities": [
+        "Kuda",
+        "debit card",
+        "ATM"
+      ],
+      "raw_output": "kọ́dà debit card kò ṣiṣẹ́ lórí atm",
+      "corrected_output": "Kuda debit card ko sise lori ATM",
+      "raw_entity_preservation": 0.6666666666666666,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Kuda"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "debit card",
+          "canonical": "debit card",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "debit",
+          "canonical": "debit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "koda",
+          "canonical": "Kuda",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "atm",
+          "canonical": "ATM",
+          "entity_type": "channel",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.875
+    },
+    {
+      "id": "S062",
+      "category": "critical_variant_paga",
+      "expected_entities": [
+        "Paga",
+        "USSD",
+        "wallet balance"
+      ],
+      "raw_output": "pàga usd-cold kò fi wálẹ̀t balanṣán.",
+      "corrected_output": "Paga USSD cold ko fi walet balansan",
+      "raw_entity_preservation": 0.3333333333333333,
+      "corrected_entity_preservation": 0.6666666666666666,
+      "raw_missing": [
+        "USSD",
+        "wallet balance"
+      ],
+      "corrected_missing": [
+        "wallet balance"
+      ],
+      "corrections": [
+        {
+          "raw": "paga",
+          "canonical": "Paga",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "usd",
+          "canonical": "USSD",
+          "entity_type": "channel",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.996
+    },
+    {
+      "id": "S063",
+      "category": "critical_variant_paga",
+      "expected_entities": [
+        "Paga",
+        "account restricted",
+        "KYC"
+      ],
+      "raw_output": "pàga àkáùntì restricted nítorí kyc",
+      "corrected_output": "Paga akaunti restricted nitori KYC",
+      "raw_entity_preservation": 0.6666666666666666,
+      "corrected_entity_preservation": 0.6666666666666666,
+      "raw_missing": [
+        "account restricted"
+      ],
+      "corrected_missing": [
+        "account restricted"
+      ],
+      "corrections": [
+        {
+          "raw": "paga",
+          "canonical": "Paga",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "kyc",
+          "canonical": "KYC",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.953
+    },
+    {
+      "id": "S064",
+      "category": "critical_variant_paga",
+      "expected_entities": [
+        "Paga",
+        "Session ID"
+      ],
+      "raw_output": "pàgá transfer nílò ṣẹ́ṣẹ́ náìdì.",
+      "corrected_output": "Paga transfer nilo Session ID",
+      "raw_entity_preservation": 0.5,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Session ID"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "sese naidi",
+          "canonical": "Session ID",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "paga",
+          "canonical": "Paga",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.781
+    },
+    {
+      "id": "S065",
+      "category": "critical_variant_access_bank",
+      "expected_entities": [
+        "Access Bank",
+        "credit",
+        "OPay"
+      ],
+      "raw_output": "acess banko rí credit láti o pe",
+      "corrected_output": "Access Bank Bank ri credit lati OPay",
+      "raw_entity_preservation": 0.3333333333333333,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Access Bank",
+        "OPay"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "acess banko",
+          "canonical": "Access Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "access",
+          "canonical": "Access Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "credit",
+          "canonical": "credit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "o pe",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.366
+    },
+    {
+      "id": "S066",
+      "category": "critical_variant_access_bank",
+      "expected_entities": [
+        "Access Bank",
+        "beneficiary"
+      ],
+      "raw_output": "access bank benifitary ní èmi yàtò",
+      "corrected_output": "Access Bank Bank benifitary ni emi yato",
+      "raw_entity_preservation": 0.5,
+      "corrected_entity_preservation": 0.5,
+      "raw_missing": [
+        "beneficiary"
+      ],
+      "corrected_missing": [
+        "beneficiary"
+      ],
+      "corrections": [
+        {
+          "raw": "access bank",
+          "canonical": "Access Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "access",
+          "canonical": "Access Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.115
+    },
+    {
+      "id": "S067",
+      "category": "critical_variant_access_bank",
+      "expected_entities": [
+        "Access Bank",
+        "transaction reference"
+      ],
+      "raw_output": "assess bank transaction rẹfẹrẹns kohán",
+      "corrected_output": "Access Bank Bank transaction reference kohan",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Access Bank",
+        "transaction reference"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "transaction referens",
+          "canonical": "transaction reference",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "assess bank",
+          "canonical": "Access Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "access",
+          "canonical": "Access Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.124
+    },
+    {
+      "id": "S068",
+      "category": "critical_variant_gtbank",
+      "expected_entities": [
+        "GTBank",
+        "PalmPay",
+        "failed transfer"
+      ],
+      "raw_output": "gti ban transfer lati pampe efeld",
+      "corrected_output": "GTBank transfer lati PalmPay efeld",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 0.6666666666666666,
+      "raw_missing": [
+        "GTBank",
+        "PalmPay",
+        "failed transfer"
+      ],
+      "corrected_missing": [
+        "failed transfer"
+      ],
+      "corrections": [
+        {
+          "raw": "gti ban",
+          "canonical": "GTBank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "gtbank",
+          "canonical": "GTBank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pampe",
+          "canonical": "PalmPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 0.978
+    },
+    {
+      "id": "S069",
+      "category": "critical_variant_gtbank",
+      "expected_entities": [
+        "GTBank",
+        "receipt",
+        "Session ID"
+      ],
+      "raw_output": "gítí bank rìsíìtì nílò ṣẹ̀ṣàn id.",
+      "corrected_output": "GTBank receipt nilo Session ID",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "GTBank",
+        "receipt",
+        "Session ID"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "giti bank",
+          "canonical": "GTBank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "sesan id",
+          "canonical": "Session ID",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "risiiti",
+          "canonical": "receipt",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "gtbank",
+          "canonical": "GTBank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 0.912
+    },
+    {
+      "id": "S070",
+      "category": "critical_variant_gtbank",
+      "expected_entities": [
+        "GTBank",
+        "POS",
+        "chargeback"
+      ],
+      "raw_output": "jíti bank card ló ri peos ni chargeback",
+      "corrected_output": "GTBank card lo ri peos ni chargeback",
+      "raw_entity_preservation": 0.3333333333333333,
+      "corrected_entity_preservation": 0.6666666666666666,
+      "raw_missing": [
+        "GTBank",
+        "POS"
+      ],
+      "corrected_missing": [
+        "POS"
+      ],
+      "corrections": [
+        {
+          "raw": "chargeback",
+          "canonical": "chargeback",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "jiti bank",
+          "canonical": "GTBank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "gtbank",
+          "canonical": "GTBank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.158
+    },
+    {
+      "id": "S071",
+      "category": "critical_variant_zenith_bank",
+      "expected_entities": [
+        "Zenith Bank",
+        "wallet balance"
+      ],
+      "raw_output": "zenith bank alaad de sugbon balaadns ko yipada",
+      "corrected_output": "Zenith Bank Bank de sugbon balaadns ko yipada",
+      "raw_entity_preservation": 0.5,
+      "corrected_entity_preservation": 0.5,
+      "raw_missing": [
+        "wallet balance"
+      ],
+      "corrected_missing": [
+        "wallet balance"
+      ],
+      "corrections": [
+        {
+          "raw": "zenith bank alaad",
+          "canonical": "Zenith Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "zenith bank",
+          "canonical": "Zenith Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "zenith",
+          "canonical": "Zenith Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.191
+    },
+    {
+      "id": "S072",
+      "category": "critical_variant_zenith_bank",
+      "expected_entities": [
+        "Zenith Bank",
+        "NIP",
+        "timeout"
+      ],
+      "raw_output": "zenith bánk nip ọ̀pọ̀ ní thymealt.",
+      "corrected_output": "Zenith Bank Bank NIP opo ni thymealt",
+      "raw_entity_preservation": 0.6666666666666666,
+      "corrected_entity_preservation": 0.6666666666666666,
+      "raw_missing": [
+        "timeout"
+      ],
+      "corrected_missing": [
+        "timeout"
+      ],
+      "corrections": [
+        {
+          "raw": "zenith bank",
+          "canonical": "Zenith Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "zenith",
+          "canonical": "Zenith Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "nip",
+          "canonical": "NIP",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 0.986
+    },
+    {
+      "id": "S073",
+      "category": "critical_variant_zenith_bank",
+      "expected_entities": [
+        "Zenith Bank",
+        "wrong recipient",
+        "court order"
+      ],
+      "raw_output": "Senate bank rong recipient nilo court order.",
+      "corrected_output": "Zenith Bank Bank wrong beneficiary nilo court order",
+      "raw_entity_preservation": 0.3333333333333333,
+      "corrected_entity_preservation": 0.6666666666666666,
+      "raw_missing": [
+        "Zenith Bank",
+        "wrong recipient"
+      ],
+      "corrected_missing": [
+        "wrong recipient"
+      ],
+      "corrections": [
+        {
+          "raw": "rong recipient",
+          "canonical": "wrong recipient",
+          "entity_type": "transfer_issue",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "senate bank",
+          "canonical": "Zenith Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "court order",
+          "canonical": "court order",
+          "entity_type": "legal_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "recipient",
+          "canonical": "beneficiary",
+          "entity_type": "transfer_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "zenith",
+          "canonical": "Zenith Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.289
+    },
+    {
+      "id": "S074",
+      "category": "critical_variant_bvn",
+      "expected_entities": [
+        "BVN",
+        "NIN",
+        "KYC"
+      ],
+      "raw_output": "bífí ẹ̀mí kò máátì ní mi lórí kíwáísí",
+      "corrected_output": "BVN ko maati NIN lori KYC",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "BVN",
+        "NIN",
+        "KYC"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "bifi emi",
+          "canonical": "BVN",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "kiwaisi",
+          "canonical": "KYC",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "ni mi",
+          "canonical": "NIN",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "bvn",
+          "canonical": "BVN",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "nin",
+          "canonical": "NIN",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "kyc",
+          "canonical": "KYC",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.092
+    },
+    {
+      "id": "S075",
+      "category": "critical_variant_bvn",
+      "expected_entities": [
+        "BVN",
+        "PalmPay"
+      ],
+      "raw_output": "mo fẹ́ kọ́rẹ́ gbé vẹ̀n lórí pampe",
+      "corrected_output": "mo fe kore gbe ven lori PalmPay",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 0.5,
+      "raw_missing": [
+        "BVN",
+        "PalmPay"
+      ],
+      "corrected_missing": [
+        "BVN"
+      ],
+      "corrections": [
+        {
+          "raw": "pampe",
+          "canonical": "PalmPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 0.904
+    },
+    {
+      "id": "S076",
+      "category": "critical_variant_bvn",
+      "expected_entities": [
+        "BVN",
+        "OTP"
+      ],
+      "raw_output": "bíbi ẹ́nbẹ̀ fikasion kò gba otp.",
+      "corrected_output": "BVN enbe fikasion ko gba OTP",
+      "raw_entity_preservation": 0.5,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "BVN"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "bibi",
+          "canonical": "BVN",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "bvn",
+          "canonical": "BVN",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "otp",
+          "canonical": "OTP",
+          "entity_type": "security_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 0.887
+    },
+    {
+      "id": "S077",
+      "category": "critical_variant_session_id",
+      "expected_entities": [
+        "Session ID",
+        "receipt"
+      ],
+      "raw_output": "níbo ni ṣẹ̀ṣàn-àdí wà lórí rí síìtì?",
+      "corrected_output": "nibo ni Session ID wa lori receipt",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Session ID",
+        "receipt"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "sesan adi",
+          "canonical": "Session ID",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "ri siiti",
+          "canonical": "receipt",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "receipt",
+          "canonical": "receipt",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.065
+    },
+    {
+      "id": "S078",
+      "category": "critical_variant_session_id",
+      "expected_entities": [
+        "NIBSS",
+        "Session ID"
+      ],
+      "raw_output": "dbs sestrize bẹrẹ fun sessional id",
+      "corrected_output": "NIBSS sestrize bere fun Session ID",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "NIBSS",
+        "Session ID"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "sessional id",
+          "canonical": "Session ID",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "session id",
+          "canonical": "Session ID",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "dbs",
+          "canonical": "NIBSS",
+          "entity_type": "payment_infrastructure",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 0.979
+    },
+    {
+      "id": "S079",
+      "category": "critical_variant_session_id",
+      "expected_entities": [
+        "Session ID",
+        "OPay"
+      ],
+      "raw_output": "sẹ́ṣùn áìdí lórí ò pé táǹṣfà kọ́ han",
+      "corrected_output": "Session ID lori OPay tansfa ko han",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "Session ID",
+        "OPay"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "sesun aidi",
+          "canonical": "Session ID",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "o pe",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.991
+    },
+    {
+      "id": "S080",
+      "category": "critical_variant_session_id",
+      "expected_entities": [
+        "beneficiary",
+        "Session ID"
+      ],
+      "raw_output": "bánkì bẹ̀nífíṣẹ́ rì nílò sẹ́sọ́ń-ń-ń-dì",
+      "corrected_output": "banki beneficiary nilo Session ID",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "beneficiary",
+        "Session ID"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "seson n n di",
+          "canonical": "Session ID",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "benifise ri",
+          "canonical": "beneficiary",
+          "entity_type": "transfer_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "session id",
+          "canonical": "Session ID",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.375
+    },
+    {
+      "id": "S081",
+      "category": "critical_variant_transaction_reference",
+      "expected_entities": [
+        "transaction reference",
+        "transaction history"
+      ],
+      "raw_output": "tranfrẹnse mi kó nínú tranfrẹnse ìstrè",
+      "corrected_output": "transaction reference mi ko ninu transaction reference transaction history",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "transaction reference",
+        "transaction history"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "tranfrense",
+          "canonical": "transaction reference",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "istre",
+          "canonical": "transaction history",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.436
+    },
+    {
+      "id": "S082",
+      "category": "critical_variant_transaction_reference",
+      "expected_entities": [
+        "transaction reference",
+        "receipt"
+      ],
+      "raw_output": "mo ní transaction reference sùgbọ́n kò sí receipt.",
+      "corrected_output": "mo ni transaction reference sugbon ko si receipt",
+      "raw_entity_preservation": 1.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "transaction reference",
+          "canonical": "transaction reference",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "receipt",
+          "canonical": "receipt",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.346
+    },
+    {
+      "id": "S083",
+      "category": "critical_variant_transaction_reference",
+      "expected_entities": [
+        "customer care",
+        "transaction reference"
+      ],
+      "raw_output": "customer care béré fún transaction reference.",
+      "corrected_output": "customer care bere fun transaction reference",
+      "raw_entity_preservation": 1.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "transaction reference",
+          "canonical": "transaction reference",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "customer care",
+          "canonical": "customer care",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.234
+    },
+    {
+      "id": "S084",
+      "category": "critical_variant_debit",
+      "expected_entities": [
+        "debit"
+      ],
+      "raw_output": "mo rí débì tí mì ò mọ",
+      "corrected_output": "mo ri debit ti mi o mo",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "debit"
+      ],
+      "corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "debi",
+          "canonical": "debit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 0.701
+    },
+    {
+      "id": "S085",
+      "category": "critical_variant_debit",
+      "expected_entities": [
+        "double debit",
+        "POS"
+      ],
+      "raw_output": "dọ́bùdẹ̀ bí i ṣẹlẹ̀ lórí p.o.s.",
+      "corrected_output": "dobude bi i sele lori POS",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 0.5,
+      "raw_missing": [
+        "double debit",
+        "POS"
+      ],
+      "corrected_missing": [
+        "double debit"
+      ],
+      "corrections": [
+        {
+          "raw": "p o s",
+          "canonical": "POS",
+          "entity_type": "channel",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pos",
+          "canonical": "POS",
+          "entity_type": "channel",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 0.86
+    },
+    {
+      "id": "S086",
+      "category": "critical_variant_debit",
+      "expected_entities": [
+        "unauthorized debit",
+        "virtual card"
+      ],
+      "raw_output": "unterized débits wa lori virtual card",
+      "corrected_output": "unterized debit wa lori virtual card",
+      "raw_entity_preservation": 0.5,
+      "corrected_entity_preservation": 0.5,
+      "raw_missing": [
+        "unauthorized debit"
+      ],
+      "corrected_missing": [
+        "unauthorized debit"
+      ],
+      "corrections": [
+        {
+          "raw": "virtual card",
+          "canonical": "virtual card",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "debits",
+          "canonical": "debit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "debit",
+          "canonical": "debit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "correction_latency_ms": 1.065
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "palmpay": {
+    "failed_transfer_deducted": {
+      "problem": "My money transfer failed on PalmPay, the money was deducted from my account but the recipient did not receive it.",
+      "steps": [
+        "Step 1: Check the transaction status in the PalmPay app by going to Me -> My Transactions.",
+        "Step 2: If the status is 'FAILED', the money will be reversed automatically to your wallet. For internal transfers, it's instant. For external transfers to other banks, it can take up to 24-48 business hours.",
+        "Step 3: If the status is 'SUCCESSFUL' but the beneficiary did not receive it, obtain the Session ID (a 30-digit number starting with 999) from the transaction receipt. The beneficiary should take this Session ID to their bank to trace the funds.",
+        "Step 4: If 48 hours have passed and no reversal or credit is confirmed, go to the dispute center in the app, select the transaction, click 'Feedback Now', and upload the receipt as proof."
+      ],
+      "channels": {
+        "live_chat": "Available 24/7 in the PalmPay app",
+        "phone": "+234 2018886888",
+        "email": "support@palmpay.com",
+        "social": "@PalmPay_NG on Twitter/X"
+      },
+      "resolution_timeline": "24 to 72 hours"
+    },
+    "erroneous_transfer": {
+      "problem": "I sent money to the wrong account number or wrong bank on PalmPay.",
+      "steps": [
+        "Step 1: Immediately contact PalmPay support with the transaction reference, amount, recipient account number, and bank name.",
+        "Step 2: PalmPay will contact the recipient's bank to request a restriction on the funds, but they cannot legally reverse the money without the recipient's consent.",
+        "Step 3: If the recipient refuses to return the money, you must obtain a Court Order (such as a Mareva injunction) and present it to PalmPay or the receiving bank to force a reversal."
+      ],
+      "channels": {
+        "phone": "+234 2018886888",
+        "email": "support@palmpay.com"
+      },
+      "resolution_timeline": "Subject to recipient consent or legal court order (can take days to weeks)"
+    },
+    "account_restricted": {
+      "problem": "My PalmPay account has been restricted, blocked, or frozen.",
+      "steps": [
+        "Step 1: Identify the KYC Tier of your account. Tier 1 has a daily transaction limit of 50,000 NGN, Tier 2 is 200,000 NGN, and Tier 3 is 5,000,000 NGN.",
+        "Step 2: If restriction is due to limit exhaustion, link your BVN (Bank Verification Number) and NIN (National Identification Number) in the app to upgrade your KYC tier.",
+        "Step 3: If restriction is due to security/fraud alerts (e.g. unusual login locations), contact support via email with a government-issued ID card and selfie holding the ID card to verify ownership."
+      ],
+      "channels": {
+        "email": "support@palmpay.com",
+        "live_chat": "In-app support icon"
+      },
+      "resolution_timeline": "24 to 48 hours after providing ID documentation"
+    }
+  },
+  "opay": {
+    "failed_transfer_deducted": {
+      "problem": "My money transfer failed on OPay, the money was debited but not received by the beneficiary.",
+      "steps": [
+        "Step 1: Open the OPay app, go to Me -> Help Center -> Report a Transaction Issue.",
+        "Step 2: Select the transaction from the history to report. If the transaction was a transfer to another bank, the standard bank auto-reversal window is 24 to 48 business hours.",
+        "Step 3: If it was an internal OPay-to-OPay transfer and failed, the refund is typically instant.",
+        "Step 4: If funds are not reversed after 48 hours, file a complaint in the app under 'Complaint History' and attach the transaction receipt showing the Session ID."
+      ],
+      "channels": {
+        "live_chat": "In-app support under Help Center",
+        "phone": "0700 702 2662",
+        "whatsapp": "0809 100 2000",
+        "email": "support@opay.com.ng"
+      },
+      "resolution_timeline": "24 to 48 business hours"
+    },
+    "erroneous_transfer": {
+      "problem": "I made a transfer to the wrong account on OPay.",
+      "steps": [
+        "Step 1: Report the error immediately to OPay customer support via the phone line (0700 702 2662) or WhatsApp.",
+        "Step 2: Provide the transaction reference, beneficiary account, bank, and date. OPay will place a temporary hold on the funds in the beneficiary's OPay wallet if the funds are still there, and contact the customer.",
+        "Step 3: If the recipient agrees, OPay will reverse the transfer. If they refuse or have already withdrawn the money, you must escalate legally with a Court Order."
+      ],
+      "channels": {
+        "phone": "0700 702 2662",
+        "whatsapp": "0809 100 2000"
+      },
+      "resolution_timeline": "Dependent on beneficiary response or court order process"
+    },
+    "account_restricted": {
+      "problem": "My OPay account has been frozen or limited.",
+      "steps": [
+        "Step 1: OPay mandates BVN and NIN binding for all accounts in compliance with CBN regulations.",
+        "Step 2: Open the app, tap on your profile picture, go to KYC Info, and upload any missing details (BVN, NIN, Utility Bill, or Selfie).",
+        "Step 3: If your account is frozen due to suspected fraud, contact OPay compliance via email with your identity documents and proof of transaction source."
+      ],
+      "channels": {
+        "email": "support@opay.com.ng",
+        "phone": "0700 702 2662"
+      },
+      "resolution_timeline": "24 to 48 hours for KYC upgrade; up to 5 business days for fraud restrictions"
+    }
+  },
+  "moniepoint": {
+    "failed_transfer_deducted": {
+      "problem": "My transfer on Moniepoint failed but my account was debited.",
+      "steps": [
+        "Step 1: Check transaction history in the Moniepoint app or agent POS terminal.",
+        "Step 2: Most failed transfers are reversed automatically within 24 hours. Moniepoint uses a real-time settlement engine that attempts immediate reversal for failed NIP (NIBSS Instant Payment) transactions.",
+        "Step 3: If funds are not returned after 24 hours, click the transaction in the history and select 'Raise Dispute'. Provide details of the beneficiary bank and account.",
+        "Step 4: Moniepoint support will initiate a chargeback claim with NIBSS (Nigeria Inter-Bank Settlement System)."
+      ],
+      "channels": {
+        "live_chat": "Moniepoint in-app support",
+        "phone": "+234 2018889900",
+        "email": "support@moniepoint.com"
+      },
+      "resolution_timeline": "24 to 48 business hours"
+    }
+  },
+  "paystack": {
+    "chargeback_dispute": {
+      "problem": "A customer is disputing a payment made via Paystack (chargeback).",
+      "steps": [
+        "Step 1: Log in to your Paystack Dashboard, go to the 'Disputes' tab.",
+        "Step 2: Review the dispute reason (e.g., 'Service not rendered', 'Duplicate charge', 'Unrecognized transaction').",
+        "Step 3: Upload evidence of service delivery (delivery note, invoice, chat logs) within 15 hours of the dispute creation. If you do not respond, the chargeback will be automatically accepted, and funds refunded to the customer.",
+        "Step 4: If you accept the dispute, click 'Decline Dispute' if you have evidence, or 'Accept Dispute' to refund the customer."
+      ],
+      "channels": {
+        "support": "support@paystack.com",
+        "portal": "Paystack Dashboard Dispute Panel"
+      },
+      "resolution_timeline": "Must respond within 15 hours; resolution takes 3 to 7 business days"
+    }
+  },
+  "flutterwave": {
+    "chargeback_dispute": {
+      "problem": "Handling chargebacks or transaction disputes on Flutterwave.",
+      "steps": [
+        "Step 1: Check the 'Chargebacks' section on your Flutterwave dashboard.",
+        "Step 2: You have 24-48 hours to represent the chargeback with evidence of value delivery (e.g., ticket receipt, proof of download, shipping tracking details).",
+        "Step 3: If no evidence is provided, Flutterwave will debit your settlement account for the disputed amount plus a chargeback fee and refund the customer.",
+        "Step 4: Once represented, the card issuer (Visa/Mastercard) has up to 45 days to make a final ruling."
+      ],
+      "channels": {
+        "support": "chargebacks@flutterwavego.com",
+        "portal": "Flutterwave Dashboard Chargebacks Panel"
+      },
+      "resolution_timeline": "Up to 45 days for final card network arbitration"
+    }
+  }
+}

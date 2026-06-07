@@ -1,0 +1,55 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.env
+
+# Model weights and audio files (hackathon local bloat mitigation)
+*.ckpt
+*.pth
+*.safetensors
+*.bin
+*.wav
+*.mp3
+*.log
+
+# Dependencies and IDEs
+node_modules/
+.vscode/
+.idea/
+.DS_Store
+
+# Large datasets & scratch files
+scratch/*.zip
+scratch/tts_cache/
+scratch/test_stt_fallback.py
+scratch/test_slack_escalation.py
+scratch/test_hf_inference.py
+continuation v1.txt

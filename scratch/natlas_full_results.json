@@ -1,0 +1,182 @@
+[
+  {
+    "id": "Q01",
+    "audio_filename": "Q01_femi_failed_transfer_opay.wav",
+    "reference": "Ẹ jọ̀ọ́, gbígbé owó mi kùnà lórí OPay. Owó mi sì ti sọnù.",
+    "output": "ẹ jí gbígbé ọwọ́ mi kùnú lórí òpín ọwọ́ mi sí ti sọ nù.",
+    "wer": 0.6428571428571429,
+    "cer": 0.24528301886792453,
+    "latency_seconds": 1.387
+  },
+  {
+    "id": "Q02",
+    "audio_filename": "Q02_sade_failed_transfer_palmpay.wav",
+    "reference": "Mo gbé owó láti PalmPay sí Access Bank, ṣùgbọ́n ó kùnà. Owó mi sì ti lọ.",
+    "output": "mo gbé ọwọ́ láti pampé sí access bank, ṣùgbọ́n ó kùnà, ọwọ́ mi sì ti lọ",
+    "wer": 0.17647058823529413,
+    "cer": 0.10144927536231885,
+    "latency_seconds": 0.711
+  },
+  {
+    "id": "Q03",
+    "audio_filename": "Q03_segun_failed_transfer_moniepoint.wav",
+    "reference": "Owó mi ti sọnù lórí Moniepoint, lẹ́yìn gbígbé owó tó kùnà.",
+    "output": "ọwọ́ mi ti sọnù lórí money-point lẹ́yìn gbígbé owó tó kùnà",
+    "wer": 0.16666666666666666,
+    "cer": 0.08928571428571429,
+    "latency_seconds": 0.555
+  },
+  {
+    "id": "Q04",
+    "audio_filename": "Q04_funmi_account_restricted_kyc.wav",
+    "reference": "PalmPay mi ti dínà nítorí KYC. Mi ò lè gbé owó jáde.",
+    "output": "pámpé mi ti dínà nítorí kyc mi ò lè gbé owó jáde",
+    "wer": 0.08333333333333333,
+    "cer": 0.08,
+    "latency_seconds": 0.438
+  },
+  {
+    "id": "Q05",
+    "audio_filename": "Q05_femi_erroneous_transfer.wav",
+    "reference": "Mo ṣì owó firánṣẹ́ sí akọó̀lẹ́ mìíràn lórí OPay.",
+    "output": "mo ṣì ọwọ́ fí ránṣẹ́ sí àkọwálẹ̀ mìíràn lórí òpé.",
+    "wer": 0.6,
+    "cer": 0.2222222222222222,
+    "latency_seconds": 0.575
+  },
+  {
+    "id": "Q06",
+    "audio_filename": "Q06_sade_session_id_query.wav",
+    "reference": "Níbo ni mo ti lè rí Session ID, fún gbígbé owó tó kùnà?",
+    "output": "níbo ni mo ti le rí sẹ́sọ̀n-ń-ń-ń-dì fún gbígbé owó tó kùnà?",
+    "wer": 0.3076923076923077,
+    "cer": 0.24528301886792453,
+    "latency_seconds": 0.678
+  },
+  {
+    "id": "Q07",
+    "audio_filename": "Q07_segun_kyc_upgrade.wav",
+    "reference": "Báwo ni mo ṣe lè sọ BVN àti NIN mi pọ̀ mọ́ OPay, láti gbé owó sókè?",
+    "output": "báwo ni mo ṣe lè sọ bvn àti ní mi pọ̀ mọ́ òpè láti gbé owó sókè?",
+    "wer": 0.11764705882352941,
+    "cer": 0.07936507936507936,
+    "latency_seconds": 0.647
+  },
+  {
+    "id": "Q08",
+    "audio_filename": "Q08_funmi_security_freeze.wav",
+    "reference": "Account mi ti dínà, nítorí wọ́n rí ìwà ìfura lórí rẹ̀.",
+    "output": "account me ti dín náà nítorí wón rí ìwà ìfúrà lórí rẹ̀",
+    "wer": 0.5,
+    "cer": 0.1568627450980392,
+    "latency_seconds": 0.507
+  },
+  {
+    "id": "Q09",
+    "audio_filename": "Q09_femi_double_debit.wav",
+    "reference": "Wọ́n nà mí ní owó lẹ́mẹjì, fún ríra ẹyọ kan.",
+    "output": "wọn náà mí ní owó lẹ méjì fún rírà ẹ̀yọ̀ kan",
+    "wer": 0.5833333333333334,
+    "cer": 0.11904761904761904,
+    "latency_seconds": 0.492
+  },
+  {
+    "id": "Q10",
+    "audio_filename": "Q10_sade_delayed_reversal.wav",
+    "reference": "Ó ti tó wákàtí méjì-lé-lọ́gọ́jọ, tí mo ti ń dúró de reversal mi.",
+    "output": "ó ti tó wákàtí méjì lé lọ́gọ́jọ́ tí mo ti ń dúró dẹ ríi vásà mi",
+    "wer": 0.4,
+    "cer": 0.16129032258064516,
+    "latency_seconds": 0.624
+  },
+  {
+    "id": "Q11",
+    "audio_filename": "Q11_segun_transaction_history.wav",
+    "reference": "Mo fẹ́ rí transaction history mi, láti oṣù tó kọjá.",
+    "output": "mo fẹ́ rí ṣanṣẹ́nṣẹ́n ìstrì mi láti oṣù tó kọjá",
+    "wer": 0.4,
+    "cer": 0.2708333333333333,
+    "latency_seconds": 0.552
+  },
+  {
+    "id": "Q12",
+    "audio_filename": "Q12_funmi_app_issue.wav",
+    "reference": "App OPay mi ń crash, nígbà tí mo bá fẹ́ gbé owó.",
+    "output": "apó pé mi n kíràsì nígbà tí mo bá fẹ́ gbé owó.",
+    "wer": 0.3333333333333333,
+    "cer": 0.2,
+    "latency_seconds": 0.485
+  },
+  {
+    "id": "Q13",
+    "audio_filename": "Q13_femi_card_issue.wav",
+    "reference": "Debit card mi ò ṣiṣẹ́ lórí ATM. Mo fẹ́ mọ ìdí tí ó fi rí bẹ́ẹ̀.",
+    "output": "debate card mi oṣiṣẹ lori atm, mo fẹ́ mọ idi ti o fi ri be",
+    "wer": 0.5882352941176471,
+    "cer": 0.2413793103448276,
+    "latency_seconds": 0.475
+  },
+  {
+    "id": "Q14",
+    "audio_filename": "Q14_sade_unrecognized_debit.wav",
+    "reference": "Mo rí debit tí mi ò mọ̀ nípa rẹ̀, lórí account mi.",
+    "output": "mo rí débìtí mi ò mọ̀ nípa rẹ̀ lórí account mi",
+    "wer": 0.16666666666666666,
+    "cer": 0.08695652173913043,
+    "latency_seconds": 0.446
+  },
+  {
+    "id": "Q15",
+    "audio_filename": "Q15_segun_limit_reached.wav",
+    "reference": "Wọ́n ní mo ti dé daily transfer limit mi, ṣùgbọ́n mo nílò láti gbé owó pàjáwìrì.",
+    "output": "wọ́n ní mo ti dé day li transparantial limit mi, ṣùgbọ́n mo nílò láti gbé owó pàjáwì rí.",
+    "wer": 0.2777777777777778,
+    "cer": 0.16666666666666666,
+    "latency_seconds": 0.733
+  },
+  {
+    "id": "Q16",
+    "audio_filename": "Q16_funmi_bvn_correction.wav",
+    "reference": "Báwo ni mo ṣe lè ṣe àtúnṣe, sí BVN mi tí ó wà lórí PalmPay?",
+    "output": "báwo ni mo ṣe lè ṣe àtúnṣe sí bíbí ẹ̀mí tí ó wà lórí pampé?",
+    "wer": 0.26666666666666666,
+    "cer": 0.15789473684210525,
+    "latency_seconds": 0.646
+  },
+  {
+    "id": "Q17",
+    "audio_filename": "Q17_femi_ussd_balance.wav",
+    "reference": "Koodu USSD wo ni mo lè lo, láti wo balance mi lórí OPay?",
+    "output": "kòdù ussd wo ni mo lè lò láti wo balans mi lórí ope?",
+    "wer": 0.3076923076923077,
+    "cer": 0.14814814814814814,
+    "latency_seconds": 0.451
+  },
+  {
+    "id": "Q18",
+    "audio_filename": "Q18_sade_wrong_recipient_name.wav",
+    "reference": "Orúkọ tí ó hàn nígbà tí mo fẹ́ gbé owó, yàtọ̀ sí orúkọ tó yẹ kó hàn.",
+    "output": "orúkọ tí ó hàn nígbà tí mo fẹ́ gbé owó, yàtọ̀ sí orúkọ tó yẹ kóhàn.",
+    "wer": 0.11764705882352941,
+    "cer": 0.015625,
+    "latency_seconds": 0.706
+  },
+  {
+    "id": "Q19",
+    "audio_filename": "Q19_segun_scam_complaint.wav",
+    "reference": "Ẹ jọ̀ọ́, ẹ ràn mí lọ́wọ́! Wọn ti ṣe scam mi lórí OPay, wọ́n sì gbé gbogbo owó mi lọ.",
+    "output": "ẹ̀jì o ẹran mi lọ́wọ́, wọ́n ti ṣe skam mi lórí òpè, wọ́n sì gbé gbogbo owó mi lọ.",
+    "wer": 0.391304347826087,
+    "cer": 0.1282051282051282,
+    "latency_seconds": 0.82
+  },
+  {
+    "id": "Q20",
+    "audio_filename": "Q20_funmi_agent_escalation.wav",
+    "reference": "Báwo ni mo ṣe lè bá customer care gidi sọ̀rọ̀, yàtọ̀ sí bot yìí?",
+    "output": "báwo ni mo ṣe lè bá custom market gidi sọ̀rọ̀ yàtọ̀ sí bọ̀ọ̀tì yìí?",
+    "wer": 0.3333333333333333,
+    "cer": 0.16666666666666666,
+    "latency_seconds": 0.677
+  }
+]

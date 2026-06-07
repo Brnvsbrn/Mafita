@@ -1,0 +1,178 @@
+{
+  "summary": {
+    "gemini-3.5-flash:yoruba": {
+      "samples": 2,
+      "avg_wer": 0.6,
+      "avg_cer": 0.5834,
+      "avg_entity_preservation": 0.5,
+      "avg_amortized_latency_seconds": 3.851
+    }
+  },
+  "failures": [
+    {
+      "model": "gemini-3.5-flash",
+      "target": "yoruba",
+      "ids": "Q01, Q02",
+      "error": "Could not parse model output: Expecting value: line 1 column 1 (char 0). Raw:  lori OPay, owo mi si ti sọnu\" -> \"Ẹ jẹ gbig"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "yoruba",
+      "ids": "Q03, Q04",
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=[REDACTED]'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "yoruba",
+      "ids": "Q05, Q06",
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=[REDACTED]'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "yoruba",
+      "ids": "Q07, Q08",
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=[REDACTED]'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "yoruba",
+      "ids": "Q09, Q10",
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=[REDACTED]'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "yoruba",
+      "ids": "Q11, Q12",
+      "error": "missing outputs: ['Q12']",
+      "raw": "Q11: Mo fẹ́ rí transaction history mi láti oṣù"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "yoruba",
+      "ids": "Q13, Q14",
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=[REDACTED]'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "yoruba",
+      "ids": "Q15, Q16",
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=[REDACTED]'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "yoruba",
+      "ids": "Q17, Q18",
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=[REDACTED]'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "yoruba",
+      "ids": "Q19, Q20",
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=[REDACTED]'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "english",
+      "ids": "Q01, Q02",
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=[REDACTED]'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "english",
+      "ids": "Q03, Q04",
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=[REDACTED]'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "english",
+      "ids": "Q05, Q06",
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=[REDACTED]'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "english",
+      "ids": "Q07, Q08",
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=[REDACTED]'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "english",
+      "ids": "Q09, Q10",
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=[REDACTED]'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "english",
+      "ids": "Q11, Q12",
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=[REDACTED]'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "english",
+      "ids": "Q13, Q14",
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=[REDACTED]'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "english",
+      "ids": "Q15, Q16",
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=[REDACTED]'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "english",
+      "ids": "Q17, Q18",
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=[REDACTED]'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "target": "english",
+      "ids": "Q19, Q20",
+      "error": "Client error '429 Too Many Requests' for url 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=[REDACTED]'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    }
+  ],
+  "rows": [
+    {
+      "id": "Q11",
+      "audio_filename": "Q11_segun_transaction_history.wav",
+      "voice": "segun",
+      "category": "transaction_history",
+      "model": "gemini-3.5-flash",
+      "target": "yoruba",
+      "reference": "Mo fẹ́ rí transaction history mi, láti oṣù tó kọjá.",
+      "output": "Mo fẹ́ rí transaction history mi láti oṣù",
+      "batch_latency_seconds": 7.701,
+      "amortized_latency_seconds": 3.851,
+      "entity_preservation": 1.0,
+      "entities_expected": [],
+      "entities_found": [],
+      "entities_missing": [],
+      "wer": 0.2,
+      "cer": 0.1667,
+      "english_token_f1": null
+    },
+    {
+      "id": "Q12",
+      "audio_filename": "Q12_funmi_app_issue.wav",
+      "voice": "funmi",
+      "category": "app_issue",
+      "model": "gemini-3.5-flash",
+      "target": "yoruba",
+      "reference": "App OPay mi ń crash, nígbà tí mo bá fẹ́ gbé owó.",
+      "output": "",
+      "batch_latency_seconds": 7.701,
+      "amortized_latency_seconds": 3.851,
+      "entity_preservation": 0.0,
+      "entities_expected": [
+        "opay"
+      ],
+      "entities_found": [],
+      "entities_missing": [
+        "opay"
+      ],
+      "wer": 1.0,
+      "cer": 1.0,
+      "english_token_f1": null
+    }
+  ]
+}

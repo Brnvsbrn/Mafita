@@ -1,0 +1,820 @@
+{
+  "summary": {
+    "samples": 20,
+    "previous_seed_lexicon_result": {
+      "raw_avg_entity_preservation": 0.5375,
+      "corrected_avg_entity_preservation": 0.9875,
+      "absolute_lift": 0.45,
+      "avg_correction_latency_ms": 5.4883
+    },
+    "current_robust_lexicon_result": {
+      "metric_note": "Critical benchmark entity metric is kept comparable with previous result.",
+      "raw_avg_entity_preservation": 0.5375,
+      "corrected_avg_entity_preservation": 0.9875,
+      "absolute_lift": 0.45,
+      "avg_correction_latency_ms": 8.0338
+    },
+    "expanded_domain_entity_result": {
+      "metric_note": "Broader domain metric uses expanded lexicon entities that appear in the existing 20-sample metadata.",
+      "raw_avg_entity_preservation": 0.2679,
+      "corrected_avg_entity_preservation": 0.9107,
+      "absolute_lift": 0.6429
+    },
+    "raw_avg_entity_preservation": 0.5375,
+    "corrected_avg_entity_preservation": 0.9875,
+    "absolute_lift": 0.45,
+    "avg_correction_latency_ms": 8.0338
+  },
+  "rows": [
+    {
+      "id": "Q01",
+      "category": "failed_transfer_opay",
+      "expected_entities": [
+        "opay"
+      ],
+      "expanded_expected_entities": [
+        "opay"
+      ],
+      "raw_output": "ẹ jí gbígbé ọwọ́ mi kùnú lórí òpín ọwọ́ mi sí ti sọ nù.",
+      "corrected_output": "e ji gbigbe owo mi kunu lori OPay owo mi si ti so nu",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 0.0,
+      "expanded_corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "opay"
+      ],
+      "corrected_missing": [],
+      "expanded_raw_missing": [
+        "opay"
+      ],
+      "expanded_corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "opin",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "needs_confirmation": false,
+      "correction_latency_ms": 91.153
+    },
+    {
+      "id": "Q02",
+      "category": "failed_transfer_palmpay",
+      "expected_entities": [
+        "access bank",
+        "palmpay"
+      ],
+      "expanded_expected_entities": [
+        "access bank",
+        "palmpay"
+      ],
+      "raw_output": "mo gbé ọwọ́ láti pampé sí access bank, ṣùgbọ́n ó kùnà, ọwọ́ mi sì ti lọ",
+      "corrected_output": "mo gbe owo lati PalmPay si Access Bank Bank sugbon o kuna owo mi si ti lo",
+      "raw_entity_preservation": 0.5,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 0.5,
+      "expanded_corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "palmpay"
+      ],
+      "corrected_missing": [],
+      "expanded_raw_missing": [
+        "palmpay"
+      ],
+      "expanded_corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "access bank",
+          "canonical": "Access Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "access",
+          "canonical": "Access Bank",
+          "entity_type": "bank",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pampe",
+          "canonical": "PalmPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "needs_confirmation": false,
+      "correction_latency_ms": 11.465
+    },
+    {
+      "id": "Q03",
+      "category": "failed_transfer_moniepoint",
+      "expected_entities": [
+        "moniepoint"
+      ],
+      "expanded_expected_entities": [
+        "moniepoint"
+      ],
+      "raw_output": "ọwọ́ mi ti sọnù lórí money-point lẹ́yìn gbígbé owó tó kùnà",
+      "corrected_output": "owo mi ti sonu lori Moniepoint leyin gbigbe owo to kuna",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 0.0,
+      "expanded_corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "moniepoint"
+      ],
+      "corrected_missing": [],
+      "expanded_raw_missing": [
+        "moniepoint"
+      ],
+      "expanded_corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "money point",
+          "canonical": "Moniepoint",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "moniepoint",
+          "canonical": "Moniepoint",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "needs_confirmation": false,
+      "correction_latency_ms": 2.543
+    },
+    {
+      "id": "Q04",
+      "category": "account_restricted_kyc",
+      "expected_entities": [
+        "kyc",
+        "palmpay"
+      ],
+      "expanded_expected_entities": [
+        "kyc",
+        "palmpay"
+      ],
+      "raw_output": "pámpé mi ti dínà nítorí kyc mi ò lè gbé owó jáde",
+      "corrected_output": "PalmPay mi ti dina nitori KYC mi o le gbe owo jade",
+      "raw_entity_preservation": 0.5,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 0.5,
+      "expanded_corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "palmpay"
+      ],
+      "corrected_missing": [],
+      "expanded_raw_missing": [
+        "palmpay"
+      ],
+      "expanded_corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "pampe",
+          "canonical": "PalmPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "kyc",
+          "canonical": "KYC",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "needs_confirmation": false,
+      "correction_latency_ms": 2.251
+    },
+    {
+      "id": "Q05",
+      "category": "erroneous_transfer",
+      "expected_entities": [
+        "opay"
+      ],
+      "expanded_expected_entities": [
+        "opay"
+      ],
+      "raw_output": "mo ṣì ọwọ́ fí ránṣẹ́ sí àkọwálẹ̀ mìíràn lórí òpé.",
+      "corrected_output": "mo si owo fi ranse si akowale miiran lori OPay",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 0.0,
+      "expanded_corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "opay"
+      ],
+      "corrected_missing": [],
+      "expanded_raw_missing": [
+        "opay"
+      ],
+      "expanded_corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "ope",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "needs_confirmation": false,
+      "correction_latency_ms": 4.417
+    },
+    {
+      "id": "Q06",
+      "category": "session_id_query",
+      "expected_entities": [
+        "session id"
+      ],
+      "expanded_expected_entities": [
+        "session id"
+      ],
+      "raw_output": "níbo ni mo ti le rí sẹ́sọ̀n-ń-ń-ń-dì fún gbígbé owó tó kùnà?",
+      "corrected_output": "nibo ni mo ti le ri Session ID fun gbigbe owo to kuna",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 0.0,
+      "expanded_corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "session id"
+      ],
+      "corrected_missing": [],
+      "expanded_raw_missing": [
+        "session id"
+      ],
+      "expanded_corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "seson n n n di",
+          "canonical": "Session ID",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "session id",
+          "canonical": "Session ID",
+          "entity_type": "transaction_term",
+          "confidence": 0.98,
+          "action": "flag",
+          "reason": "known_alias"
+        }
+      ],
+      "needs_confirmation": false,
+      "correction_latency_ms": 3.092
+    },
+    {
+      "id": "Q07",
+      "category": "kyc_upgrade",
+      "expected_entities": [
+        "bvn",
+        "kyc",
+        "nin",
+        "opay"
+      ],
+      "expanded_expected_entities": [
+        "bvn",
+        "kyc",
+        "nin",
+        "opay"
+      ],
+      "raw_output": "báwo ni mo ṣe lè sọ bvn àti ní mi pọ̀ mọ́ òpè láti gbé owó sókè?",
+      "corrected_output": "bawo ni mo se le so BVN ati NIN po mo OPay lati gbe owo soke",
+      "raw_entity_preservation": 0.25,
+      "corrected_entity_preservation": 0.75,
+      "expanded_raw_entity_preservation": 0.25,
+      "expanded_corrected_entity_preservation": 0.75,
+      "raw_missing": [
+        "kyc",
+        "nin",
+        "opay"
+      ],
+      "corrected_missing": [
+        "kyc"
+      ],
+      "expanded_raw_missing": [
+        "kyc",
+        "nin",
+        "opay"
+      ],
+      "expanded_corrected_missing": [
+        "kyc"
+      ],
+      "corrections": [
+        {
+          "raw": "ni mi",
+          "canonical": "NIN",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "ope",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "bvn",
+          "canonical": "BVN",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "nin",
+          "canonical": "NIN",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "needs_confirmation": false,
+      "correction_latency_ms": 3.652
+    },
+    {
+      "id": "Q08",
+      "category": "security_freeze",
+      "expected_entities": [],
+      "expanded_expected_entities": [],
+      "raw_output": "account me ti dín náà nítorí wón rí ìwà ìfúrà lórí rẹ̀",
+      "corrected_output": "account me ti din naa nitori won ri iwa ifura lori re",
+      "raw_entity_preservation": 1.0,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 1.0,
+      "expanded_corrected_entity_preservation": 1.0,
+      "raw_missing": [],
+      "corrected_missing": [],
+      "expanded_raw_missing": [],
+      "expanded_corrected_missing": [],
+      "corrections": [],
+      "needs_confirmation": false,
+      "correction_latency_ms": 3.484
+    },
+    {
+      "id": "Q09",
+      "category": "double_debit",
+      "expected_entities": [],
+      "expanded_expected_entities": [],
+      "raw_output": "wọn náà mí ní owó lẹ méjì fún rírà ẹ̀yọ̀ kan",
+      "corrected_output": "won naa mi ni owo le meji fun rira eyo kan",
+      "raw_entity_preservation": 1.0,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 1.0,
+      "expanded_corrected_entity_preservation": 1.0,
+      "raw_missing": [],
+      "corrected_missing": [],
+      "expanded_raw_missing": [],
+      "expanded_corrected_missing": [],
+      "corrections": [],
+      "needs_confirmation": false,
+      "correction_latency_ms": 5.616
+    },
+    {
+      "id": "Q10",
+      "category": "delayed_reversal",
+      "expected_entities": [],
+      "expanded_expected_entities": [],
+      "raw_output": "ó ti tó wákàtí méjì lé lọ́gọ́jọ́ tí mo ti ń dúró dẹ ríi vásà mi",
+      "corrected_output": "o ti to wakati meji le logojo ti mo ti n duro de rii vasa mi",
+      "raw_entity_preservation": 1.0,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 1.0,
+      "expanded_corrected_entity_preservation": 1.0,
+      "raw_missing": [],
+      "corrected_missing": [],
+      "expanded_raw_missing": [],
+      "expanded_corrected_missing": [],
+      "corrections": [],
+      "needs_confirmation": false,
+      "correction_latency_ms": 4.061
+    },
+    {
+      "id": "Q11",
+      "category": "transaction_history",
+      "expected_entities": [],
+      "expanded_expected_entities": [],
+      "raw_output": "mo fẹ́ rí ṣanṣẹ́nṣẹ́n ìstrì mi láti oṣù tó kọjá",
+      "corrected_output": "mo fe ri sansensen istri mi lati osu to koja",
+      "raw_entity_preservation": 1.0,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 1.0,
+      "expanded_corrected_entity_preservation": 1.0,
+      "raw_missing": [],
+      "corrected_missing": [],
+      "expanded_raw_missing": [],
+      "expanded_corrected_missing": [],
+      "corrections": [],
+      "needs_confirmation": false,
+      "correction_latency_ms": 1.897
+    },
+    {
+      "id": "Q12",
+      "category": "app_issue",
+      "expected_entities": [
+        "opay"
+      ],
+      "expanded_expected_entities": [
+        "opay"
+      ],
+      "raw_output": "apó pé mi n kíràsì nígbà tí mo bá fẹ́ gbé owó.",
+      "corrected_output": "OPay mi n kirasi nigba ti mo ba fe gbe owo",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 0.0,
+      "expanded_corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "opay"
+      ],
+      "corrected_missing": [],
+      "expanded_raw_missing": [
+        "opay"
+      ],
+      "expanded_corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "apo pe",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "opay",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "needs_confirmation": false,
+      "correction_latency_ms": 1.82
+    },
+    {
+      "id": "Q13",
+      "category": "card_issue",
+      "expected_entities": [
+        "atm"
+      ],
+      "expanded_expected_entities": [
+        "atm"
+      ],
+      "raw_output": "debate card mi oṣiṣẹ lori atm, mo fẹ́ mọ idi ti o fi ri be",
+      "corrected_output": "debit card mi osise lori ATM mo fe mo idi ti o fi ri be",
+      "raw_entity_preservation": 1.0,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 1.0,
+      "expanded_corrected_entity_preservation": 1.0,
+      "raw_missing": [],
+      "corrected_missing": [],
+      "expanded_raw_missing": [],
+      "expanded_corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "debate card",
+          "canonical": "debit card",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "debit card",
+          "canonical": "debit card",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "debit",
+          "canonical": "debit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "atm",
+          "canonical": "ATM",
+          "entity_type": "channel",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "needs_confirmation": false,
+      "correction_latency_ms": 2.312
+    },
+    {
+      "id": "Q14",
+      "category": "unrecognized_debit",
+      "expected_entities": [],
+      "expanded_expected_entities": [
+        "nip"
+      ],
+      "raw_output": "mo rí débìtí mi ò mọ̀ nípa rẹ̀ lórí account mi",
+      "corrected_output": "mo ri debit mi o mo nipa re lori account mi",
+      "raw_entity_preservation": 1.0,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 1.0,
+      "expanded_corrected_entity_preservation": 1.0,
+      "raw_missing": [],
+      "corrected_missing": [],
+      "expanded_raw_missing": [],
+      "expanded_corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "debiti",
+          "canonical": "debit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "debit",
+          "canonical": "debit",
+          "entity_type": "payment_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "needs_confirmation": false,
+      "correction_latency_ms": 3.88
+    },
+    {
+      "id": "Q15",
+      "category": "limit_reached",
+      "expected_entities": [],
+      "expanded_expected_entities": [],
+      "raw_output": "wọ́n ní mo ti dé day li transparantial limit mi, ṣùgbọ́n mo nílò láti gbé owó pàjáwì rí.",
+      "corrected_output": "won ni mo ti de day li transparantial limit mi sugbon mo nilo lati gbe owo pajawi ri",
+      "raw_entity_preservation": 1.0,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 1.0,
+      "expanded_corrected_entity_preservation": 1.0,
+      "raw_missing": [],
+      "corrected_missing": [],
+      "expanded_raw_missing": [],
+      "expanded_corrected_missing": [],
+      "corrections": [],
+      "needs_confirmation": false,
+      "correction_latency_ms": 2.482
+    },
+    {
+      "id": "Q16",
+      "category": "bvn_correction",
+      "expected_entities": [
+        "bvn",
+        "palmpay"
+      ],
+      "expanded_expected_entities": [
+        "bvn",
+        "palmpay"
+      ],
+      "raw_output": "báwo ni mo ṣe lè ṣe àtúnṣe sí bíbí ẹ̀mí tí ó wà lórí pampé?",
+      "corrected_output": "bawo ni mo se le se atunse si BVN ti o wa lori PalmPay",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 0.0,
+      "expanded_corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "bvn",
+        "palmpay"
+      ],
+      "corrected_missing": [],
+      "expanded_raw_missing": [
+        "bvn",
+        "palmpay"
+      ],
+      "expanded_corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "bibi emi",
+          "canonical": "BVN",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "pampe",
+          "canonical": "PalmPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "bvn",
+          "canonical": "BVN",
+          "entity_type": "identity",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "needs_confirmation": false,
+      "correction_latency_ms": 3.255
+    },
+    {
+      "id": "Q17",
+      "category": "ussd_balance",
+      "expected_entities": [
+        "opay",
+        "ussd"
+      ],
+      "expanded_expected_entities": [
+        "opay",
+        "ussd"
+      ],
+      "raw_output": "kòdù ussd wo ni mo lè lò láti wo balans mi lórí ope?",
+      "corrected_output": "kodu USSD wo ni mo le lo lati wo wallet balance mi lori OPay",
+      "raw_entity_preservation": 0.5,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 0.5,
+      "expanded_corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "opay"
+      ],
+      "corrected_missing": [],
+      "expanded_raw_missing": [
+        "opay"
+      ],
+      "expanded_corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "balans",
+          "canonical": "wallet balance",
+          "entity_type": "account_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "ussd",
+          "canonical": "USSD",
+          "entity_type": "channel",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "ope",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "needs_confirmation": false,
+      "correction_latency_ms": 3.373
+    },
+    {
+      "id": "Q18",
+      "category": "wrong_recipient_name",
+      "expected_entities": [],
+      "expanded_expected_entities": [],
+      "raw_output": "orúkọ tí ó hàn nígbà tí mo fẹ́ gbé owó, yàtọ̀ sí orúkọ tó yẹ kóhàn.",
+      "corrected_output": "oruko ti o han nigba ti mo fe gbe owo yato si oruko to ye kohan",
+      "raw_entity_preservation": 1.0,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 1.0,
+      "expanded_corrected_entity_preservation": 1.0,
+      "raw_missing": [],
+      "corrected_missing": [],
+      "expanded_raw_missing": [],
+      "expanded_corrected_missing": [],
+      "corrections": [],
+      "needs_confirmation": false,
+      "correction_latency_ms": 4.347
+    },
+    {
+      "id": "Q19",
+      "category": "scam_complaint",
+      "expected_entities": [
+        "opay"
+      ],
+      "expanded_expected_entities": [
+        "opay"
+      ],
+      "raw_output": "ẹ̀jì o ẹran mi lọ́wọ́, wọ́n ti ṣe skam mi lórí òpè, wọ́n sì gbé gbogbo owó mi lọ.",
+      "corrected_output": "eji o eran mi lowo won ti se scam mi lori OPay won si gbe gbogbo owo mi lo",
+      "raw_entity_preservation": 0.0,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 0.0,
+      "expanded_corrected_entity_preservation": 1.0,
+      "raw_missing": [
+        "opay"
+      ],
+      "corrected_missing": [],
+      "expanded_raw_missing": [
+        "opay"
+      ],
+      "expanded_corrected_missing": [],
+      "corrections": [
+        {
+          "raw": "skam",
+          "canonical": "scam",
+          "entity_type": "fraud_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "ope",
+          "canonical": "OPay",
+          "entity_type": "provider",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "needs_confirmation": false,
+      "correction_latency_ms": 2.168
+    },
+    {
+      "id": "Q20",
+      "category": "agent_escalation",
+      "expected_entities": [],
+      "expanded_expected_entities": [
+        "alat"
+      ],
+      "raw_output": "báwo ni mo ṣe lè bá custom market gidi sọ̀rọ̀ yàtọ̀ sí bọ̀ọ̀tì yìí?",
+      "corrected_output": "bawo ni mo se le ba customer care gidi soro yato si bot yii",
+      "raw_entity_preservation": 1.0,
+      "corrected_entity_preservation": 1.0,
+      "expanded_raw_entity_preservation": 0.0,
+      "expanded_corrected_entity_preservation": 0.0,
+      "raw_missing": [],
+      "corrected_missing": [],
+      "expanded_raw_missing": [
+        "alat"
+      ],
+      "expanded_corrected_missing": [
+        "alat"
+      ],
+      "corrections": [
+        {
+          "raw": "custom market",
+          "canonical": "customer care",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "booti",
+          "canonical": "bot",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        },
+        {
+          "raw": "bot",
+          "canonical": "bot",
+          "entity_type": "support_term",
+          "confidence": 0.98,
+          "action": "auto_correct",
+          "reason": "known_alias"
+        }
+      ],
+      "needs_confirmation": false,
+      "correction_latency_ms": 3.408
+    }
+  ]
+}

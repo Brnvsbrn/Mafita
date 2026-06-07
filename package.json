@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "build:agentation": "esbuild web_demo/agentation-entry.jsx --bundle --format=esm --jsx=automatic --outfile=web_demo/static/agentation.js",
+    "build:icons": "esbuild web_demo/lucide-entry.js --bundle --format=esm --outfile=web_demo/static/icons.js"
+  },
+  "dependencies": {
+    "agentation": "^3.0.2",
+    "lucide": "^1.17.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  }
+}

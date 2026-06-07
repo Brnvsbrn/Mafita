@@ -1,0 +1,52 @@
+{
+  "failed_transfer": {
+    "label": "Debited but recipient not credited",
+    "required_identifiers": ["transaction_id", "transaction_time", "amount"],
+    "supporting_identifiers": ["recipient_bank", "recipient_context"],
+    "required_tools": ["get_transaction_by_reference", "check_transfer_status"],
+    "forbidden_tools": ["create_support_ticket", "create_fraud_report", "create_kyc_update_ticket", "escalate_to_human"],
+    "outcome": "resolve_by_agent",
+    "clarification_en": "Please send the transaction ID, time, and amount so I can check it.",
+    "clarification_yo": "Jowo fi transaction ID, akoko, ati iye owo ranse ki n le sayewo."
+  },
+  "pending_transfer": {
+    "label": "Pending transfer retry advice",
+    "required_identifiers": ["transaction_id", "transaction_time", "amount"],
+    "supporting_identifiers": ["recipient_context"],
+    "required_tools": ["get_transaction_by_reference", "check_transfer_status"],
+    "forbidden_tools": ["create_support_ticket", "create_fraud_report", "create_kyc_update_ticket", "escalate_to_human"],
+    "outcome": "resolve_by_agent",
+    "clarification_en": "Please send the transaction ID, time, and amount. Do not retry the transfer until I check it.",
+    "clarification_yo": "Jowo fi transaction ID, akoko, ati iye owo ranse. Ma tun transfer naa se titi emi yoo fi sayewo."
+  },
+  "pending_reversal": {
+    "label": "Pending reversal status",
+    "required_identifiers": ["transaction_id", "transaction_time", "amount"],
+    "supporting_identifiers": ["ticket_id"],
+    "required_tools": ["get_transaction_by_reference", "check_reversal_status", "get_support_ticket_by_transaction"],
+    "forbidden_tools": ["create_support_ticket", "create_fraud_report", "create_kyc_update_ticket", "escalate_to_human"],
+    "outcome": "resolve_by_agent",
+    "clarification_en": "Please send the transaction ID, original transaction time, and amount so I can check the reversal.",
+    "clarification_yo": "Jowo fi transaction ID, akoko transaction akoko, ati iye owo ranse ki n le sayewo reversal naa."
+  },
+  "double_debit_pos": {
+    "label": "Double debit on failed POS transaction",
+    "required_identifiers": ["transaction_id", "transaction_time", "amount"],
+    "supporting_identifiers": ["decline_slip", "debit_alert"],
+    "required_tools": ["get_transaction_by_reference", "check_transfer_status", "create_support_ticket", "attach_evidence_to_ticket", "mark_ticket_urgent", "escalate_to_human"],
+    "forbidden_tools": ["request_reversal", "create_kyc_update_ticket"],
+    "outcome": "escalate_to_disputes",
+    "clarification_en": "Please send the transaction ID, time, and amount. I may also need the decline slip and debit alert to escalate it.",
+    "clarification_yo": "Jowo fi transaction ID, akoko, ati iye owo ranse. Mo le nilo decline slip ati debit alert lati gbe e lo si disputes team."
+  },
+  "kyc_restriction": {
+    "label": "Account frozen due to KYC or suspicious activity flag",
+    "required_identifiers": ["customer_identifier"],
+    "supporting_identifiers": ["government_id", "written_explanation"],
+    "required_tools": ["lookup_customer", "check_kyc_status", "get_account_restrictions", "create_support_ticket", "attach_evidence_to_ticket", "mark_ticket_urgent", "escalate_to_human"],
+    "forbidden_tools": ["request_reversal", "create_dispute", "create_fraud_report"],
+    "outcome": "escalate_to_kyc_review",
+    "clarification_en": "Please send the registered phone number so I can check the account restriction.",
+    "clarification_yo": "Jowo fi nomba foonu account ranse ki n le sayewo restriction naa."
+  }
+}

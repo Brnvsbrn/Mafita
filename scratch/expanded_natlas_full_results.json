@@ -1,0 +1,282 @@
+[
+  {
+    "id": "E01",
+    "audio_filename": "E01_femi_provider_bank_failed_transfer.wav",
+    "reference": "Ẹ jọwọ, transfer mi lati OPay si GTBank kuna, ṣugbọn owo ti kuro ninu wallet mi.",
+    "output": "ẹjọ́ wọ́n tránsfàmí láti òpèsí gt-bánkùnà ṣùgbọ́n owó tí kúrò nínú wálẹ̀ tún.",
+    "latency_seconds": 1.515
+  },
+  {
+    "id": "E02",
+    "audio_filename": "E02_sade_session_id_receipt_trace.wav",
+    "reference": "Mo fi PalmPay ránṣẹ́ sí Zenith Bank, Session ID wà lórí receipt ṣùgbọ́n beneficiary kò tíì gba alert.",
+    "output": "mo fi pampe iranṣẹ si zenith bank, sẹsọ idwa lori rii sit, ṣugbọn benifishire koti igba alat",
+    "latency_seconds": 0.59
+  },
+  {
+    "id": "E03",
+    "audio_filename": "E03_segun_pos_double_debit.wav",
+    "reference": "Moniepoint POS agent na mi double debit, mo fẹ raise dispute.",
+    "output": "mọ́ní pọ̀nt p.o.s. agent nà mi dọ́bùdẹ́bìtì mọ́ fẹ́ ráísí díspúùtì.",
+    "latency_seconds": 0.685
+  },
+  {
+    "id": "E04",
+    "audio_filename": "E04_funmi_pending_transfer.wav",
+    "reference": "Kuda account mi ni pending transfer si Access Bank lati ana.",
+    "output": "kúdà account mi ni pẹ́ndín transcass bank láti àná",
+    "latency_seconds": 0.319
+  },
+  {
+    "id": "E05",
+    "audio_filename": "E05_femi_identity_kyc.wav",
+    "reference": "Mo fẹ́ mọ bí mo ṣe lè link BVN àti NIN mi lórí Paga fún KYC tier upgrade.",
+    "output": "mo fẹ́ mọ bí mo ṣe lè língbì vn àti ní mi lórí paga fún kyct up-grade.",
+    "latency_seconds": 0.538
+  },
+  {
+    "id": "E06",
+    "audio_filename": "E06_sade_otp_password_issue.wav",
+    "reference": "Pocket app mi kò gba OTP, nítorí náà mi ò lè reset password mi.",
+    "output": "pọ́kẹ́tàpù mi kò gba otp nítorí náà mi ò lè research password mi",
+    "latency_seconds": 0.492
+  },
+  {
+    "id": "E07",
+    "audio_filename": "E07_segun_account_restricted.wav",
+    "reference": "NowNow wallet mi ti frozen, customer care sọ pé account restricted ni.",
+    "output": "now now wallet mi ti frozen, custom care sọ pe account restricted ni.",
+    "latency_seconds": 0.278
+  },
+  {
+    "id": "E08",
+    "audio_filename": "E08_funmi_card_atm_issue.wav",
+    "reference": "KongaPay debit card mi ko ṣiṣẹ lori ATM ti UBA.",
+    "output": "kọ́nga pé debit card mi kò ṣiṣẹ́ lórí atm tí uba.",
+    "latency_seconds": 0.371
+  },
+  {
+    "id": "E09",
+    "audio_filename": "E09_femi_successful_but_not_received.wav",
+    "reference": "FETS transfer mi sí Fidelity Bank successful nínú app, ṣùgbọ́n receiver kò rí credit.",
+    "output": "fitẹstran's family sí fidelity bank sọsẹsifo nínú apu, ṣùgbọ́n rí sífà kò rí credit.",
+    "latency_seconds": 0.569
+  },
+  {
+    "id": "E10",
+    "audio_filename": "E10_sade_ussd_balance.wav",
+    "reference": "Teasy Mobile USSD code kò ṣiṣẹ́ fún balance enquiry mi.",
+    "output": "tísí móbá ussd code kò ṣiṣẹ́ fún balanse empire mi",
+    "latency_seconds": 0.363
+  },
+  {
+    "id": "E11",
+    "audio_filename": "E11_segun_gateway_error.wav",
+    "reference": "Xpress Wallet rán owó sí FCMB, ṣùgbọ́n gateway error ṣẹlẹ̀.",
+    "output": "express wálẹ̀tìrán owó cfc nb, ṣùgbọ́n géétù èrò ṣẹlẹ̀",
+    "latency_seconds": 0.557
+  },
+  {
+    "id": "E12",
+    "audio_filename": "E12_funmi_missing_transaction_history.wav",
+    "reference": "Chams Mobile transaction reference mi ko han ninu transaction history.",
+    "output": "champ's mobile transport rẹfẹrẹns mi kò hàn nínú transport history.",
+    "latency_seconds": 0.34
+  },
+  {
+    "id": "E13",
+    "audio_filename": "E13_femi_processing_delay.wav",
+    "reference": "Mkudi payment sí First Bank wà ní processing fún wákàtí mẹ́ta.",
+    "output": "nkúdípémentì first bank wà ní pro ṣẹ̀sìn fún wákàtí mẹ́ta",
+    "latency_seconds": 0.467
+  },
+  {
+    "id": "E14",
+    "audio_filename": "E14_sade_reversal_request.wav",
+    "reference": "Parkway wallet mi nilo reversal nitori transfer si Ecobank kuna.",
+    "output": "pákó èwọ́lẹ̀tí, mí nílò ríi báṣà nítorí transcensivà sí èkó báńkù náà",
+    "latency_seconds": 0.619
+  },
+  {
+    "id": "E15",
+    "audio_filename": "E15_segun_nip_transfer.wav",
+    "reference": "MoMo PSB agent sọ pé NIP transfer mi sí Sterling Bank ti lọ.",
+    "output": "mo mú p.s.b. a jẹ n sọ pé n.i.p.tranfami sí stilene bank ti lọ.",
+    "latency_seconds": 0.496
+  },
+  {
+    "id": "E16",
+    "audio_filename": "E16_funmi_pin_issue.wav",
+    "reference": "SmartCash PSB kò jẹ́ kí n yí transaction PIN mi padà.",
+    "output": "smart cash, p.s.b, kò jẹ́ kí ń yí transaction pin mi padà.",
+    "latency_seconds": 0.395
+  },
+  {
+    "id": "E17",
+    "audio_filename": "E17_femi_refund_request.wav",
+    "reference": "MoneyMaster PSB sí Polaris Bank failed, mo nílò refund.",
+    "output": "mọ́n máa ń sítápí ẹ́bí sí pọ̀láris bank field mu nílò rí fọ̀ndì",
+    "latency_seconds": 0.549
+  },
+  {
+    "id": "E18",
+    "audio_filename": "E18_sade_credit_not_received.wav",
+    "reference": "9PSB wallet mi kò gba credit láti Union Bank.",
+    "output": "nàí pí sb wálẹ̀tì mi kò gbà credit láti union bank.",
+    "latency_seconds": 0.38
+  },
+  {
+    "id": "E19",
+    "audio_filename": "E19_segun_virtual_card_decline.wav",
+    "reference": "Carbon virtual card mi declined lori Visa payment.",
+    "output": "carbon vatua card mi decline lori visa payment",
+    "latency_seconds": 0.183
+  },
+  {
+    "id": "E20",
+    "audio_filename": "E20_funmi_daily_limit.wav",
+    "reference": "FairMoney account mi de daily limit nígbà tí mo fẹ́ san sí Wema Bank.",
+    "output": "fẹ́mọ́nì àkánt mi de dé lílímìtì nígbà tí mo fẹ́ sán sí wẹ́ máa báǹkà.",
+    "latency_seconds": 0.835
+  },
+  {
+    "id": "E21",
+    "audio_filename": "E21_femi_missing_receipt.wav",
+    "reference": "ALAT by Wema app mi kò fi receipt hàn fún transfer sí Stanbic IBTC.",
+    "output": "alat by wemaap, mi kò fi irin sitan fún transfaasistánbig ibtc.",
+    "latency_seconds": 0.398
+  },
+  {
+    "id": "E22",
+    "audio_filename": "E22_sade_timeout.wav",
+    "reference": "VBank sí Standard Chartered transfer ní timeout.",
+    "output": "v-bánk sí sítándà tẹ́dẹ́tún án tíwànsífà ni tímọ́ọ̀tì",
+    "latency_seconds": 0.538
+  },
+  {
+    "id": "E23",
+    "audio_filename": "E23_segun_unauthorized_debit.wav",
+    "reference": "Ẹyọtọwọ́ transaction mi ni unauthorized debit lori account mi.",
+    "output": "ẹyọ tọwọ́́ transaction mí ní honored terrorist debit lórí account mi.",
+    "latency_seconds": 0.353
+  },
+  {
+    "id": "E24",
+    "audio_filename": "E24_funmi_chargeback.wav",
+    "reference": "Nọ́mbà POS fún Verve card mi ṣe chargeback laifọwọyi.",
+    "output": "nọ́mbà p.o.s.e. fún wá fúkáàdì mi ṣe chargeback láìfọ́wọ́ yìí.",
+    "latency_seconds": 0.6
+  },
+  {
+    "id": "E25",
+    "audio_filename": "E25_femi_processor_card_issue.wav",
+    "reference": "Paystack payment mi lori Mastercard kọ complete.",
+    "output": "pístà pímẹ̀nt mi lórí masquerade kọ́kọ́ńpílìtì.",
+    "latency_seconds": 0.43
+  },
+  {
+    "id": "E26",
+    "audio_filename": "E26_sade_merchant_settlement.wav",
+    "reference": "Flutterwave c Murwillumbah so successful, ṣùgbọ́n merchant kò rí settlement.",
+    "output": "flotterwavc, mọ̀ wí lọ́mbà, so suxs sufi, ṣùgbọ́n merchant kò rí sẹ́túmẹ̀tì.",
+    "latency_seconds": 0.695
+  },
+  {
+    "id": "E27",
+    "audio_filename": "E27_segun_bill_payment_pending.wav",
+    "reference": "Interswitch quickteller payment mi si PHCN wa ni pending.",
+    "output": "intaswt quick telepament mi si phcn wa nipẹndin",
+    "latency_seconds": 0.311
+  },
+  {
+    "id": "E28",
+    "audio_filename": "E28_funmi_remita_receipt.wav",
+    "reference": "Remita receipt mi fún school fees kò ní RRR number tí ó tẹ́.",
+    "output": "remita research mi fun school fees kọ ni rarẹ nọmba ti o tẹ",
+    "latency_seconds": 0.348
+  },
+  {
+    "id": "E29",
+    "audio_filename": "E29_femi_nibss_trace.wav",
+    "reference": "BÍBSS trace nílò Session ID fún transfer láti Jaiz Bank sí TAJ Bank.",
+    "output": "bibia strase nílò sẹsọ náídì fún transcise banks tí ajé bank.",
+    "latency_seconds": 0.399
+  },
+  {
+    "id": "E30",
+    "audio_filename": "E30_sade_nuban_beneficiary_mismatch.wav",
+    "reference": "NUBAN account number lórí Lotus Bank yàtọ̀ sí orúkọ beneficiary.",
+    "output": "nubank, account-number, lórí lotus bank, yàtọ̀ sí orúkọ benifíṣìàrí",
+    "latency_seconds": 0.461
+  },
+  {
+    "id": "E31",
+    "audio_filename": "E31_segun_wrong_recipient_legal.wav",
+    "reference": "Alternative Bank transfer mi si Providus Bank nilo court order nitori wrong recipient.",
+    "output": "alternative bank transfer mi si providus bank nilo court order nitori rong recipient",
+    "latency_seconds": 0.284
+  },
+  {
+    "id": "E32",
+    "audio_filename": "E32_funmi_restriction_fraud.wav",
+    "reference": "Parallex Bank app sọ account restricted nitori Pokhran scam report.",
+    "output": "paralex bankapp sọ account restricted nitori pọ karans cam report.",
+    "latency_seconds": 0.286
+  },
+  {
+    "id": "E33",
+    "audio_filename": "E33_femi_reference_without_receipt.wav",
+    "reference": "SunTrust Bank sí Signature Bank payment ní reference number ṣùgbọ́n kò sí receipt.",
+    "output": "suntruths banks sí signitor bank pímẹ̀nt ní rẹ fẹ́rẹ́sì nọmbà ṣùgbọ́n kò sí rí síi.",
+    "latency_seconds": 0.673
+  },
+  {
+    "id": "E34",
+    "audio_filename": "E34_sade_bank_dispute.wav",
+    "reference": "Optimus Bank transaction sí Premium Trust Bank wà nínú dispute center.",
+    "output": "optimus bank transaction sí premier trust bank wà nínú dispute center",
+    "latency_seconds": 0.249
+  },
+  {
+    "id": "E35",
+    "audio_filename": "E35_segun_alert_balance_mismatch.wav",
+    "reference": "Titan Trust Bank alert de, ṣùgbọ́n balance lórí Unity Bank kò yípadà.",
+    "output": "titan trust bank alat de ṣugbon balans lori unity bank kò yí padà",
+    "latency_seconds": 0.335
+  },
+  {
+    "id": "E36",
+    "audio_filename": "E36_funmi_intermediary_pending.wav",
+    "reference": "Citibank transfer si Globus Bank ni successful, ṣugbọn Keystone Bank intermediary sọ pending.",
+    "output": "city bank transfers to the global bank is sucessful to gbon keystone bank intermediary sor pending",
+    "latency_seconds": 0.324
+  },
+  {
+    "id": "E37",
+    "audio_filename": "E37_femi_qr_pos_credit.wav",
+    "reference": "Mo san pẹlu QR Code lori POS, ṣugbọn merchant sọ pe ko ri credit.",
+    "output": "mo san pẹlu kí wa code lori pios ṣùgbọ́n máa jẹ n sọ pé kó orí credit.",
+    "latency_seconds": 0.49
+  },
+  {
+    "id": "E38",
+    "audio_filename": "E38_sade_support_escalation.wav",
+    "reference": "Bot yìí kò rán mi lọ́wọ́, mo fẹ́ bá live chat customer care sọ̀rọ̀.",
+    "output": "bọ́ọ̀tì yìí kò ranmi lọ́wọ́, mo fẹ́ bá life chart kọ́stùmá kí ẹ̀sọ̀rọ̀.",
+    "latency_seconds": 0.705
+  },
+  {
+    "id": "E39",
+    "audio_filename": "E39_segun_security_reset.wav",
+    "reference": "Transaction PIN mi ati password mi ti reset, ṣugbọn OTP ko wọle.",
+    "output": "tran's action pin mi ati password mi ti rìsẹ̀tù ṣùgbọn otp kò wọlé",
+    "latency_seconds": 0.452
+  },
+  {
+    "id": "E40",
+    "audio_filename": "E40_funmi_virtual_card_unknown_debit.wav",
+    "reference": "Mo rí debit tí mi ò mọ̀ lórí virtual card, mo fẹ́ open complaint.",
+    "output": "mo rí débìtí mi ò mọ̀ lórí vatua card, mo fẹ́ ópùn complaint.",
+    "latency_seconds": 0.453
+  }
+]

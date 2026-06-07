@@ -1,0 +1,849 @@
+{
+  "system_prompt": "You are Mafita Agent, a Yoruba-first voice support agent for Mafita, a mock Nigerian fintech.\n\nYou are in demo/mock mode:\n- You may explain what you would check, but never claim you moved money or changed a real account.\n- If backend tool context is available, use it.\n- If identifiers are missing, ask for the exact missing details.\n- If the user only greets you, greet them naturally and ask how you can help.\n- Match the user's language for both thinking_steps and reply. For Yoruba or mixed Yoruba, use Yoruba with proper diacritics.\n- Keep product names like Mafita, OPay, PalmPay, Moniepoint, BVN, NIN, OTP, POS, NIP, Session ID unchanged.\n- Preserve important user-provided entities in the reply, especially provider, bank, Session ID, transaction reference, BVN, NIN, KYC, card, POS, and amount.\n- Do not translate fintech terms such as transaction reference, Session ID, BVN, NIN, KYC, OTP, POS, NIP, card, wallet, or account.\n- Keep replies voice-friendly: 1 to 2 short sentences unless the user asks for detail.\n- For missing transaction details, explicitly ask for transaction reference or Session ID.\n- For missing customer details, explicitly ask for the Mafita account phone number or name.\n\nReturn only JSON:\n{\n  \"language\": \"yo\" | \"en\" | \"mixed\",\n  \"thinking_steps\": string[],\n  \"reply\": string,\n  \"english_summary\": string\n}\n\nthinking_steps must be brief user-visible status updates, not hidden chain-of-thought. Use 2 to 4 steps.\n",
+  "summary": {
+    "openai/gpt-oss-120b": {
+      "cases": 8,
+      "avg_score": 0.8802,
+      "language_pass_rate": 1.0,
+      "avg_entity_preservation": 0.5208,
+      "missing_details_pass_rate": 1.0,
+      "voice_friendly_rate": 1.0,
+      "avg_english_leak_score": 0.0,
+      "avg_batch_latency_seconds": 3.956,
+      "avg_amortized_latency_seconds": 0.9394
+    },
+    "llama-3.3-70b-versatile": {
+      "cases": 8,
+      "avg_score": 0.832,
+      "language_pass_rate": 0.875,
+      "avg_entity_preservation": 0.4896,
+      "missing_details_pass_rate": 1.0,
+      "voice_friendly_rate": 1.0,
+      "avg_english_leak_score": 0.0227,
+      "avg_batch_latency_seconds": 2.8406,
+      "avg_amortized_latency_seconds": 0.7051
+    },
+    "openai/gpt-oss-20b": {
+      "cases": 5,
+      "avg_score": 0.825,
+      "language_pass_rate": 1.0,
+      "avg_entity_preservation": 0.3,
+      "missing_details_pass_rate": 1.0,
+      "voice_friendly_rate": 1.0,
+      "avg_english_leak_score": 0.0,
+      "avg_batch_latency_seconds": 2.359,
+      "avg_amortized_latency_seconds": 0.472
+    },
+    "meta-llama/llama-4-scout-17b-16e-instruct": {
+      "cases": 3,
+      "avg_score": 0.0333,
+      "language_pass_rate": 0.0,
+      "avg_entity_preservation": 0.0,
+      "missing_details_pass_rate": 0.0,
+      "voice_friendly_rate": 0.0,
+      "avg_english_leak_score": 0.6667,
+      "avg_batch_latency_seconds": 2.39,
+      "avg_amortized_latency_seconds": 0.797
+    }
+  },
+  "failures": [
+    {
+      "model": "openai/gpt-oss-20b",
+      "ids": "mixed_wrong_recipient, en_failed_transfer, yo_fraud",
+      "error": "Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400"
+    },
+    {
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "ids": "yo_greeting, yo_failed_transfer_missing_ref, yo_pending_with_session, yo_kyc_restriction, yo_double_debit_missing",
+      "error": "Extra data: line 6 column 2 (char 199)"
+    },
+    {
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "ids": "mixed_wrong_recipient, en_failed_transfer, yo_fraud",
+      "error": "missing outputs: ['mixed_wrong_recipient', 'en_failed_transfer', 'yo_fraud']",
+      "raw": "{\n\"language\": \"mixed\",\n  \"thinking_steps\": [\n    \"E se sinu Mafita, o de ọ rọ lọwọ.\",\n    \"N Biko, ṣe o nfun mi ni alaye gẹgẹ?\"\n  ],\n  \"reply\": \"Bawo, o ṣe o ṣenọ ni imawọn lowo o ṣe Mistakenly send money to wrong recipient on OPay? Ṣe o le fummi ni Session ID ati alaye OPay account rẹ?\",\n  \"english_summary\": \"The user mistakenly sent money to a wrong recipient on OPay and needs help.\"\n}"
+    }
+  ],
+  "rows": [
+    {
+      "id": "yo_greeting",
+      "model": "llama-3.3-70b-versatile",
+      "message": "Báwo ni",
+      "expected_language": "yo",
+      "language": "yo",
+      "language_ok": true,
+      "required_terms": [
+        "Mafita"
+      ],
+      "entity_preservation": 1.0,
+      "missing_terms": [],
+      "should_ask_missing": false,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 9,
+      "english_leak_score": 0.0,
+      "score": 1.0,
+      "batch_latency_seconds": 2.904,
+      "amortized_latency_seconds": 0.581,
+      "prompt_tokens": 644,
+      "completion_tokens": 474,
+      "total_tokens": 1118,
+      "reply": "Báwo ni, se wa ni Mafita Agent le wa?",
+      "thinking_steps": [
+        "Greeting customer",
+        "Asking how I can help"
+      ],
+      "english_summary": "Responding to greeting and asking how I can help"
+    },
+    {
+      "id": "yo_failed_transfer_missing_ref",
+      "model": "llama-3.3-70b-versatile",
+      "message": "Jọwọ, mo ran owó sí Access Bank lori OPay, owó ti kuro sugbon recipient kò rí i.",
+      "expected_language": "yo",
+      "language": "yo",
+      "language_ok": true,
+      "required_terms": [
+        "OPay",
+        "Access Bank"
+      ],
+      "entity_preservation": 0.0,
+      "missing_terms": [
+        "OPay",
+        "Access Bank"
+      ],
+      "should_ask_missing": true,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 11,
+      "english_leak_score": 0.0909,
+      "score": 0.7136,
+      "batch_latency_seconds": 2.904,
+      "amortized_latency_seconds": 0.581,
+      "prompt_tokens": 644,
+      "completion_tokens": 474,
+      "total_tokens": 1118,
+      "reply": "E ma binu, ọlọrọ wa ni transaction reference fun transfer naa?",
+      "thinking_steps": [
+        "Identifying issue with transfer",
+        "Requesting transaction reference"
+      ],
+      "english_summary": "Identifying issue with transfer and requesting transaction reference"
+    },
+    {
+      "id": "yo_pending_with_session",
+      "model": "llama-3.3-70b-versatile",
+      "message": "Transfer mi lori Moniepoint ṣi wa pending. Session ID ni B0-TX-2001.",
+      "expected_language": "yo",
+      "language": "yo",
+      "language_ok": false,
+      "required_terms": [
+        "Moniepoint",
+        "Session ID",
+        "B0-TX-2001"
+      ],
+      "entity_preservation": 0.6667,
+      "missing_terms": [
+        "Moniepoint"
+      ],
+      "should_ask_missing": false,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 11,
+      "english_leak_score": 0.0909,
+      "score": 0.6303,
+      "batch_latency_seconds": 2.904,
+      "amortized_latency_seconds": 0.581,
+      "prompt_tokens": 644,
+      "completion_tokens": 474,
+      "total_tokens": 1118,
+      "reply": "E ku, mo wa checking transfer yi lori Session ID B0-TX-2001.",
+      "thinking_steps": [
+        "Identifying pending transfer",
+        "Checking transfer status with Session ID B0-TX-2001"
+      ],
+      "english_summary": "Identifying pending transfer and checking status with provided Session ID"
+    },
+    {
+      "id": "yo_kyc_restriction",
+      "model": "llama-3.3-70b-versatile",
+      "message": "Account PalmPay mi ti di restricted nitori BVN ati NIN KYC.",
+      "expected_language": "yo",
+      "language": "yo",
+      "language_ok": true,
+      "required_terms": [
+        "PalmPay",
+        "BVN",
+        "NIN",
+        "KYC"
+      ],
+      "entity_preservation": 0.75,
+      "missing_terms": [
+        "PalmPay"
+      ],
+      "should_ask_missing": false,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 14,
+      "english_leak_score": 0.0,
+      "score": 0.9375,
+      "batch_latency_seconds": 2.904,
+      "amortized_latency_seconds": 0.581,
+      "prompt_tokens": 644,
+      "completion_tokens": 474,
+      "total_tokens": 1118,
+      "reply": "Account yi di restricted nitori BVN ati NIN KYC, ẹ jọwọ update KYC yin.",
+      "thinking_steps": [
+        "Identifying account restriction",
+        "Informing customer about KYC update"
+      ],
+      "english_summary": "Informing customer about account restriction due to incomplete KYC"
+    },
+    {
+      "id": "yo_double_debit_missing",
+      "model": "llama-3.3-70b-versatile",
+      "message": "Wọn yọ owó lẹ́ẹ̀mejì lori card mi, mi ò mọ transaction reference.",
+      "expected_language": "yo",
+      "language": "yo",
+      "language_ok": true,
+      "required_terms": [
+        "transaction reference"
+      ],
+      "entity_preservation": 1.0,
+      "missing_terms": [],
+      "should_ask_missing": true,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 16,
+      "english_leak_score": 0.0,
+      "score": 1.0,
+      "batch_latency_seconds": 2.904,
+      "amortized_latency_seconds": 0.581,
+      "prompt_tokens": 644,
+      "completion_tokens": 474,
+      "total_tokens": 1118,
+      "reply": "E ma binu, ọlọrọ wa ni transaction reference fun debit naa, tàbí kikọ lọrọ fun mi?",
+      "thinking_steps": [
+        "Identifying issue with double debit",
+        "Requesting transaction reference or more details"
+      ],
+      "english_summary": "Identifying issue with double debit and requesting transaction reference or more details"
+    },
+    {
+      "id": "mixed_wrong_recipient",
+      "model": "llama-3.3-70b-versatile",
+      "message": "Mo mistakenly send money to wrong recipient on OPay, please help me.",
+      "expected_language": "yo",
+      "language": "mixed",
+      "language_ok": true,
+      "required_terms": [
+        "OPay"
+      ],
+      "entity_preservation": 0.0,
+      "missing_terms": [
+        "OPay"
+      ],
+      "should_ask_missing": true,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 10,
+      "english_leak_score": 0.0,
+      "score": 0.75,
+      "batch_latency_seconds": 2.735,
+      "amortized_latency_seconds": 0.912,
+      "prompt_tokens": 564,
+      "completion_tokens": 396,
+      "total_tokens": 960,
+      "reply": "Jọwọ fun mi ni transaction reference ti o ṣe lọ.",
+      "thinking_steps": [
+        "Ọrọ yìí ti di gbèsè, mo ni lati fẹ̀ẹ́ ṣe àǹfààni.",
+        "Mo nilo transaction reference ṣe àǹfààni."
+      ],
+      "english_summary": "User sent money to wrong recipient on OPay, needs help to resolve issue."
+    },
+    {
+      "id": "en_failed_transfer",
+      "model": "llama-3.3-70b-versatile",
+      "message": "My transfer to Access Bank failed on OPay and I was debited.",
+      "expected_language": "en",
+      "language": "en",
+      "language_ok": true,
+      "required_terms": [
+        "OPay",
+        "Access Bank"
+      ],
+      "entity_preservation": 0.5,
+      "missing_terms": [
+        "OPay"
+      ],
+      "should_ask_missing": true,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 17,
+      "english_leak_score": 0.0,
+      "score": 0.875,
+      "batch_latency_seconds": 2.735,
+      "amortized_latency_seconds": 0.912,
+      "prompt_tokens": 564,
+      "completion_tokens": 396,
+      "total_tokens": 960,
+      "reply": "Can you please provide the transaction reference or Session ID for the failed transfer to Access Bank?",
+      "thinking_steps": [
+        "I need to check the transfer details.",
+        "A Session ID or transaction reference is required."
+      ],
+      "english_summary": "User's transfer to Access Bank failed on OPay and they were debited."
+    },
+    {
+      "id": "yo_fraud",
+      "model": "llama-3.3-70b-versatile",
+      "message": "Jọwọ ẹ ran mi lọwọ, scammer gba gbogbo owó mi lori OPay.",
+      "expected_language": "yo",
+      "language": "yo",
+      "language_ok": true,
+      "required_terms": [
+        "OPay"
+      ],
+      "entity_preservation": 0.0,
+      "missing_terms": [
+        "OPay"
+      ],
+      "should_ask_missing": true,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 11,
+      "english_leak_score": 0.0,
+      "score": 0.75,
+      "batch_latency_seconds": 2.735,
+      "amortized_latency_seconds": 0.912,
+      "prompt_tokens": 564,
+      "completion_tokens": 396,
+      "total_tokens": 960,
+      "reply": "Jọwọ fun mi ni orúkọ àti nọ́m̀bà fọ́nù ti Mafita rẹ.",
+      "thinking_steps": [
+        "Ọrọ yìí ti di gbèsè, mo ni lati fẹ̀ẹ́ ṣe àǹfààni.",
+        "Mo nilo orúkọ àti nọ́m̀bà fọ́nù ti Mafita ṣe àǹfààni."
+      ],
+      "english_summary": "User claims to be a victim of fraud on OPay, needs help to resolve issue."
+    },
+    {
+      "id": "yo_greeting",
+      "model": "openai/gpt-oss-20b",
+      "message": "Báwo ni",
+      "expected_language": "yo",
+      "language": "yo",
+      "language_ok": true,
+      "required_terms": [
+        "Mafita"
+      ],
+      "entity_preservation": 0.0,
+      "missing_terms": [
+        "Mafita"
+      ],
+      "should_ask_missing": false,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 11,
+      "english_leak_score": 0.0,
+      "score": 0.75,
+      "batch_latency_seconds": 2.359,
+      "amortized_latency_seconds": 0.472,
+      "prompt_tokens": 665,
+      "completion_tokens": 946,
+      "total_tokens": 1611,
+      "reply": "Ẹ̀ káàbọ̀! Báwo ni mo ṣe lè ràn yín lọ́wọ́ lónìí?",
+      "thinking_steps": [
+        "Received greeting",
+        "Offer assistance"
+      ],
+      "english_summary": "User greeted; agent greets back and offers help."
+    },
+    {
+      "id": "yo_failed_transfer_missing_ref",
+      "model": "openai/gpt-oss-20b",
+      "message": "Jọwọ, mo ran owó sí Access Bank lori OPay, owó ti kuro sugbon recipient kò rí i.",
+      "expected_language": "yo",
+      "language": "yo",
+      "language_ok": true,
+      "required_terms": [
+        "OPay",
+        "Access Bank"
+      ],
+      "entity_preservation": 0.0,
+      "missing_terms": [
+        "OPay",
+        "Access Bank"
+      ],
+      "should_ask_missing": true,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 9,
+      "english_leak_score": 0.0,
+      "score": 0.75,
+      "batch_latency_seconds": 2.359,
+      "amortized_latency_seconds": 0.472,
+      "prompt_tokens": 665,
+      "completion_tokens": 946,
+      "total_tokens": 1611,
+      "reply": "Jọwọ, fi transaction reference ranṣẹ́ kí a lè ṣàyẹ̀wò.",
+      "thinking_steps": [
+        "User reports missing transfer",
+        "Ask for transaction reference"
+      ],
+      "english_summary": "User reports transfer missing; agent asks for transaction reference."
+    },
+    {
+      "id": "yo_pending_with_session",
+      "model": "openai/gpt-oss-20b",
+      "message": "Transfer mi lori Moniepoint ṣi wa pending. Session ID ni B0-TX-2001.",
+      "expected_language": "yo",
+      "language": "yo",
+      "language_ok": true,
+      "required_terms": [
+        "Moniepoint",
+        "Session ID",
+        "B0-TX-2001"
+      ],
+      "entity_preservation": 0.0,
+      "missing_terms": [
+        "Moniepoint",
+        "Session ID",
+        "B0-TX-2001"
+      ],
+      "should_ask_missing": false,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 8,
+      "english_leak_score": 0.0,
+      "score": 0.75,
+      "batch_latency_seconds": 2.359,
+      "amortized_latency_seconds": 0.472,
+      "prompt_tokens": 665,
+      "completion_tokens": 946,
+      "total_tokens": 1611,
+      "reply": "Mo ń ṣàyẹ̀wò ìpinnu rẹ̀. Jọwọ duro díẹ̀.",
+      "thinking_steps": [
+        "User provides Session ID",
+        "Check status",
+        "Inform pending"
+      ],
+      "english_summary": "User has pending transfer; agent checks status and informs pending."
+    },
+    {
+      "id": "yo_kyc_restriction",
+      "model": "openai/gpt-oss-20b",
+      "message": "Account PalmPay mi ti di restricted nitori BVN ati NIN KYC.",
+      "expected_language": "yo",
+      "language": "yo",
+      "language_ok": true,
+      "required_terms": [
+        "PalmPay",
+        "BVN",
+        "NIN",
+        "KYC"
+      ],
+      "entity_preservation": 0.5,
+      "missing_terms": [
+        "PalmPay",
+        "KYC"
+      ],
+      "should_ask_missing": false,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 11,
+      "english_leak_score": 0.0,
+      "score": 0.875,
+      "batch_latency_seconds": 2.359,
+      "amortized_latency_seconds": 0.472,
+      "prompt_tokens": 665,
+      "completion_tokens": 946,
+      "total_tokens": 1611,
+      "reply": "A nilo ìmúdájú BVN àti NIN rẹ̀. Jọwọ fi wọn ranṣẹ́.",
+      "thinking_steps": [
+        "User says account restricted due to KYC",
+        "Ask for BVN/NIN"
+      ],
+      "english_summary": "User's PalmPay account restricted; agent requests BVN/NIN for verification."
+    },
+    {
+      "id": "yo_double_debit_missing",
+      "model": "openai/gpt-oss-20b",
+      "message": "Wọn yọ owó lẹ́ẹ̀mejì lori card mi, mi ò mọ transaction reference.",
+      "expected_language": "yo",
+      "language": "yo",
+      "language_ok": true,
+      "required_terms": [
+        "transaction reference"
+      ],
+      "entity_preservation": 1.0,
+      "missing_terms": [],
+      "should_ask_missing": true,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 9,
+      "english_leak_score": 0.0,
+      "score": 1.0,
+      "batch_latency_seconds": 2.359,
+      "amortized_latency_seconds": 0.472,
+      "prompt_tokens": 665,
+      "completion_tokens": 946,
+      "total_tokens": 1611,
+      "reply": "Jọwọ, fi transaction reference ranṣẹ́ kí a lè ṣàyẹ̀wò.",
+      "thinking_steps": [
+        "User reports double debit",
+        "Ask for transaction reference"
+      ],
+      "english_summary": "User reports double debit; agent asks for transaction reference."
+    },
+    {
+      "id": "yo_greeting",
+      "model": "openai/gpt-oss-120b",
+      "message": "Báwo ni",
+      "expected_language": "yo",
+      "language": "yo",
+      "language_ok": true,
+      "required_terms": [
+        "Mafita"
+      ],
+      "entity_preservation": 0.0,
+      "missing_terms": [
+        "Mafita"
+      ],
+      "should_ask_missing": false,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 11,
+      "english_leak_score": 0.0,
+      "score": 0.75,
+      "batch_latency_seconds": 4.547,
+      "amortized_latency_seconds": 0.909,
+      "prompt_tokens": 665,
+      "completion_tokens": 1505,
+      "total_tokens": 2170,
+      "reply": "Báwo ni! Báwo ni mo ṣe lè ràn ẹ́ lọ́wọ́ lónìí?",
+      "thinking_steps": [
+        "Ṣe ìkíni",
+        "Bèrè bí a ṣe lè ràn ọ́ lọ́wọ́"
+      ],
+      "english_summary": "Greeted the user and asked how to help."
+    },
+    {
+      "id": "yo_failed_transfer_missing_ref",
+      "model": "openai/gpt-oss-120b",
+      "message": "Jọwọ, mo ran owó sí Access Bank lori OPay, owó ti kuro sugbon recipient kò rí i.",
+      "expected_language": "yo",
+      "language": "yo",
+      "language_ok": true,
+      "required_terms": [
+        "OPay",
+        "Access Bank"
+      ],
+      "entity_preservation": 0.0,
+      "missing_terms": [
+        "OPay",
+        "Access Bank"
+      ],
+      "should_ask_missing": true,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 24,
+      "english_leak_score": 0.0,
+      "score": 0.75,
+      "batch_latency_seconds": 4.547,
+      "amortized_latency_seconds": 0.909,
+      "prompt_tokens": 665,
+      "completion_tokens": 1505,
+      "total_tokens": 2170,
+      "reply": "Mo ní ìbànújẹ pé owó rẹ̀ ti lọ ṣùgbọ́n alágbàṣọ̀ọ̀rẹ̀ kò rí i. Ṣé o lè fún mi ní transaction reference tàbí Session ID?",
+      "thinking_steps": [
+        "Gbọ́ ìṣòro ìgbé owó",
+        "Ṣàyẹ̀wò àlàyé tó wà",
+        "Bèrè ìtàn ìdíyelé"
+      ],
+      "english_summary": "Apologized and asked for transaction reference or Session ID to investigate."
+    },
+    {
+      "id": "yo_pending_with_session",
+      "model": "openai/gpt-oss-120b",
+      "message": "Transfer mi lori Moniepoint ṣi wa pending. Session ID ni B0-TX-2001.",
+      "expected_language": "yo",
+      "language": "yo",
+      "language_ok": true,
+      "required_terms": [
+        "Moniepoint",
+        "Session ID",
+        "B0-TX-2001"
+      ],
+      "entity_preservation": 0.6667,
+      "missing_terms": [
+        "Moniepoint"
+      ],
+      "should_ask_missing": false,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 18,
+      "english_leak_score": 0.0,
+      "score": 0.9167,
+      "batch_latency_seconds": 4.547,
+      "amortized_latency_seconds": 0.909,
+      "prompt_tokens": 665,
+      "completion_tokens": 1505,
+      "total_tokens": 2170,
+      "reply": "Mo ń wo ìpẹ̀yà ìgbé owó rẹ̀ pẹ̀lú Session ID B0-TX-2001. Èmi yóò dá ọ́ lórí àbájáde lẹ́sẹ̀kẹsẹ̀.",
+      "thinking_steps": [
+        "Gbọ́ ìbéèrè ìpẹ̀yà",
+        "Lo Session ID láti ṣàyẹ̀wò",
+        "Ṣe ìmúlò ìtàn"
+      ],
+      "english_summary": "Acknowledged pending transfer and will check status using provided Session ID."
+    },
+    {
+      "id": "yo_kyc_restriction",
+      "model": "openai/gpt-oss-120b",
+      "message": "Account PalmPay mi ti di restricted nitori BVN ati NIN KYC.",
+      "expected_language": "yo",
+      "language": "yo",
+      "language_ok": true,
+      "required_terms": [
+        "PalmPay",
+        "BVN",
+        "NIN",
+        "KYC"
+      ],
+      "entity_preservation": 1.0,
+      "missing_terms": [],
+      "should_ask_missing": false,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 21,
+      "english_leak_score": 0.0,
+      "score": 1.0,
+      "batch_latency_seconds": 4.547,
+      "amortized_latency_seconds": 0.909,
+      "prompt_tokens": 665,
+      "completion_tokens": 1505,
+      "total_tokens": 2170,
+      "reply": "A ti fi àkántì PalmPay rẹ̀ sílẹ̀ nítorí KYC. Jọ̀wọ́, ṣàlàyé BVN rẹ̀ tàbí NIN kí a lè tún un ṣí.",
+      "thinking_steps": [
+        "Gbọ́ ìṣòro KYC",
+        "Ṣàyẹ̀wò BVN/NIN",
+        "Bèrè àlàyé tó kù"
+      ],
+      "english_summary": "Informed account is restricted due to KYC and asked for BVN or NIN to lift restriction."
+    },
+    {
+      "id": "yo_double_debit_missing",
+      "model": "openai/gpt-oss-120b",
+      "message": "Wọn yọ owó lẹ́ẹ̀mejì lori card mi, mi ò mọ transaction reference.",
+      "expected_language": "yo",
+      "language": "yo",
+      "language_ok": true,
+      "required_terms": [
+        "transaction reference"
+      ],
+      "entity_preservation": 1.0,
+      "missing_terms": [],
+      "should_ask_missing": true,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 23,
+      "english_leak_score": 0.0,
+      "score": 1.0,
+      "batch_latency_seconds": 4.547,
+      "amortized_latency_seconds": 0.909,
+      "prompt_tokens": 665,
+      "completion_tokens": 1505,
+      "total_tokens": 2170,
+      "reply": "Mo rí i pé owó yọ lẹ́ẹ̀mejì lórí kaadi rẹ. Ṣé o lè fún mi ní transaction reference tàbí àkókò ìdá owó yìí?",
+      "thinking_steps": [
+        "Gbọ́ ìṣòro ìdá méjì",
+        "Ṣàyẹ̀wò àlàyé",
+        "Bèrè transaction reference"
+      ],
+      "english_summary": "Acknowledged double debit and asked for transaction reference or time to investigate."
+    },
+    {
+      "id": "mixed_wrong_recipient",
+      "model": "openai/gpt-oss-120b",
+      "message": "Mo mistakenly send money to wrong recipient on OPay, please help me.",
+      "expected_language": "yo",
+      "language": "mixed",
+      "language_ok": true,
+      "required_terms": [
+        "OPay"
+      ],
+      "entity_preservation": 0.0,
+      "missing_terms": [
+        "OPay"
+      ],
+      "should_ask_missing": true,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 24,
+      "english_leak_score": 0.0,
+      "score": 0.75,
+      "batch_latency_seconds": 2.971,
+      "amortized_latency_seconds": 0.99,
+      "prompt_tokens": 588,
+      "completion_tokens": 749,
+      "total_tokens": 1337,
+      "reply": "Mo ti gba ìbéèrè rẹ̀, ṣùgbọ́n a nílò Transaction reference tàbí Session ID àti nomba fónú Mafita rẹ̀ kí a lè tọ́pinpin ìtàn náà.",
+      "thinking_steps": [
+        "Checking request",
+        "Requesting transaction details"
+      ],
+      "english_summary": "Asked for transaction reference or session ID and Mafita phone number to investigate wrong recipient."
+    },
+    {
+      "id": "en_failed_transfer",
+      "model": "openai/gpt-oss-120b",
+      "message": "My transfer to Access Bank failed on OPay and I was debited.",
+      "expected_language": "en",
+      "language": "en",
+      "language_ok": true,
+      "required_terms": [
+        "OPay",
+        "Access Bank"
+      ],
+      "entity_preservation": 0.5,
+      "missing_terms": [
+        "OPay"
+      ],
+      "should_ask_missing": true,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 25,
+      "english_leak_score": 0.0,
+      "score": 0.875,
+      "batch_latency_seconds": 2.971,
+      "amortized_latency_seconds": 0.99,
+      "prompt_tokens": 588,
+      "completion_tokens": 749,
+      "total_tokens": 1337,
+      "reply": "I understand the transfer to Access Bank failed and you were debited; please provide the transaction reference or Session ID and your Mafita phone number.",
+      "thinking_steps": [
+        "Reviewing failed transfer",
+        "Collecting reference info"
+      ],
+      "english_summary": "Requested transaction reference or session ID and Mafita phone number to investigate failed transfer."
+    },
+    {
+      "id": "yo_fraud",
+      "model": "openai/gpt-oss-120b",
+      "message": "Jọwọ ẹ ran mi lọwọ, scammer gba gbogbo owó mi lori OPay.",
+      "expected_language": "yo",
+      "language": "yo",
+      "language_ok": true,
+      "required_terms": [
+        "OPay"
+      ],
+      "entity_preservation": 1.0,
+      "missing_terms": [],
+      "should_ask_missing": true,
+      "missing_details_ok": true,
+      "voice_friendly": true,
+      "word_count": 28,
+      "english_leak_score": 0.0,
+      "score": 1.0,
+      "batch_latency_seconds": 2.971,
+      "amortized_latency_seconds": 0.99,
+      "prompt_tokens": 588,
+      "completion_tokens": 749,
+      "total_tokens": 1337,
+      "reply": "Mo gba pé scammer gba owó rẹ̀ lori OPay; jọ̀wọ́ fún wa ní Transaction reference tàbí Session ID àti nomba fónú Mafita rẹ̀ kí a lè ṣe ìwádìí.",
+      "thinking_steps": [
+        "Ṣàyẹ̀wò ìfọ̀rọ̀wérọ̀",
+        "Níbéèrè àlàyé"
+      ],
+      "english_summary": "Asked for transaction reference or session ID and Mafita phone number to investigate fraud."
+    },
+    {
+      "id": "mixed_wrong_recipient",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "message": "Mo mistakenly send money to wrong recipient on OPay, please help me.",
+      "expected_language": "yo",
+      "language": "",
+      "language_ok": false,
+      "required_terms": [
+        "OPay"
+      ],
+      "entity_preservation": 0.0,
+      "missing_terms": [
+        "OPay"
+      ],
+      "should_ask_missing": true,
+      "missing_details_ok": false,
+      "voice_friendly": false,
+      "word_count": 0,
+      "english_leak_score": 1.0,
+      "score": 0.0,
+      "batch_latency_seconds": 2.39,
+      "amortized_latency_seconds": 0.797,
+      "prompt_tokens": 528,
+      "completion_tokens": 353,
+      "total_tokens": 881,
+      "reply": "",
+      "thinking_steps": null,
+      "english_summary": null
+    },
+    {
+      "id": "en_failed_transfer",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "message": "My transfer to Access Bank failed on OPay and I was debited.",
+      "expected_language": "en",
+      "language": "",
+      "language_ok": false,
+      "required_terms": [
+        "OPay",
+        "Access Bank"
+      ],
+      "entity_preservation": 0.0,
+      "missing_terms": [
+        "OPay",
+        "Access Bank"
+      ],
+      "should_ask_missing": true,
+      "missing_details_ok": false,
+      "voice_friendly": false,
+      "word_count": 0,
+      "english_leak_score": 0.0,
+      "score": 0.1,
+      "batch_latency_seconds": 2.39,
+      "amortized_latency_seconds": 0.797,
+      "prompt_tokens": 528,
+      "completion_tokens": 353,
+      "total_tokens": 881,
+      "reply": "",
+      "thinking_steps": null,
+      "english_summary": null
+    },
+    {
+      "id": "yo_fraud",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "message": "Jọwọ ẹ ran mi lọwọ, scammer gba gbogbo owó mi lori OPay.",
+      "expected_language": "yo",
+      "language": "",
+      "language_ok": false,
+      "required_terms": [
+        "OPay"
+      ],
+      "entity_preservation": 0.0,
+      "missing_terms": [
+        "OPay"
+      ],
+      "should_ask_missing": true,
+      "missing_details_ok": false,
+      "voice_friendly": false,
+      "word_count": 0,
+      "english_leak_score": 1.0,
+      "score": 0.0,
+      "batch_latency_seconds": 2.39,
+      "amortized_latency_seconds": 0.797,
+      "prompt_tokens": 528,
+      "completion_tokens": 353,
+      "total_tokens": 881,
+      "reply": "",
+      "thinking_steps": null,
+      "english_summary": null
+    }
+  ]
+}

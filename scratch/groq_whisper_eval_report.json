@@ -1,0 +1,302 @@
+{
+  "summary": {
+    "whisper-large-v3:transcribe": {
+      "samples": 5,
+      "avg_latency_seconds": 2.93,
+      "avg_wer": 0.8898,
+      "avg_cer": 0.4514,
+      "avg_entity_preservation": 0.1
+    },
+    "whisper-large-v3:translate": {
+      "samples": 5,
+      "avg_latency_seconds": 3.9258,
+      "avg_english_token_f1": 0.1336,
+      "avg_entity_preservation": 0.1
+    },
+    "whisper-large-v3-turbo:transcribe": {
+      "samples": 5,
+      "avg_latency_seconds": 2.8256,
+      "avg_wer": 0.8544,
+      "avg_cer": 0.3739,
+      "avg_entity_preservation": 0.0
+    }
+  },
+  "failures": [
+    {
+      "model": "whisper-large-v3-turbo",
+      "task": "translate",
+      "id": "Q01",
+      "error": "HTTPStatusError: Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/audio/translations'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400"
+    },
+    {
+      "model": "whisper-large-v3-turbo",
+      "task": "translate",
+      "id": "Q02",
+      "error": "HTTPStatusError: Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/audio/translations'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400"
+    },
+    {
+      "model": "whisper-large-v3-turbo",
+      "task": "translate",
+      "id": "Q03",
+      "error": "HTTPStatusError: Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/audio/translations'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400"
+    },
+    {
+      "model": "whisper-large-v3-turbo",
+      "task": "translate",
+      "id": "Q04",
+      "error": "HTTPStatusError: Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/audio/translations'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400"
+    },
+    {
+      "model": "whisper-large-v3-turbo",
+      "task": "translate",
+      "id": "Q05",
+      "error": "HTTPStatusError: Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/audio/translations'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400"
+    }
+  ],
+  "rows": [
+    {
+      "id": "Q01",
+      "model": "whisper-large-v3",
+      "task": "transcribe",
+      "target": "yoruba",
+      "latency_seconds": 2.64,
+      "reference": "Ẹ jọ̀ọ́, gbígbé owó mi kùnà lórí OPay. Owó mi sì ti sọnù.",
+      "output": "Eji bibi awami kunolori opi, awami sitisoni.",
+      "entity_preservation": 0.0,
+      "entities_missing": [
+        "opay"
+      ],
+      "wer": 1.0,
+      "cer": 0.5094,
+      "english_token_f1": null
+    },
+    {
+      "id": "Q02",
+      "model": "whisper-large-v3",
+      "task": "transcribe",
+      "target": "yoruba",
+      "latency_seconds": 2.847,
+      "reference": "Mo gbé owó láti PalmPay sí Access Bank, ṣùgbọ́n ó kùnà. Owó mi sì ti lọ.",
+      "output": "Mwbe owo lati pampe si Asset Bank shugwa okuno owo mi sitilo.",
+      "entity_preservation": 0.0,
+      "entities_missing": [
+        "access bank",
+        "palmpay"
+      ],
+      "wer": 0.8824,
+      "cer": 0.4348,
+      "english_token_f1": null
+    },
+    {
+      "id": "Q03",
+      "model": "whisper-large-v3",
+      "task": "transcribe",
+      "target": "yoruba",
+      "latency_seconds": 3.027,
+      "reference": "Owó mi ti sọnù lórí Moniepoint, lẹ́yìn gbígbé owó tó kùnà.",
+      "output": "Awo mi tisonu lori Money Point. Leni gbibe owo tokuna.",
+      "entity_preservation": 0.0,
+      "entities_missing": [
+        "moniepoint"
+      ],
+      "wer": 0.9167,
+      "cer": 0.4107,
+      "english_token_f1": null
+    },
+    {
+      "id": "Q04",
+      "model": "whisper-large-v3",
+      "task": "transcribe",
+      "target": "yoruba",
+      "latency_seconds": 2.967,
+      "reference": "PalmPay mi ti dínà nítorí KYC. Mi ò lè gbé owó jáde.",
+      "output": "Pampe, mi ti dina ni tori KYC mi o legbi owo jade.",
+      "entity_preservation": 0.5,
+      "entities_missing": [
+        "palmpay"
+      ],
+      "wer": 0.75,
+      "cer": 0.28,
+      "english_token_f1": null
+    },
+    {
+      "id": "Q05",
+      "model": "whisper-large-v3",
+      "task": "transcribe",
+      "target": "yoruba",
+      "latency_seconds": 3.169,
+      "reference": "Mo ṣì owó firánṣẹ́ sí akọó̀lẹ́ mìíràn lórí OPay.",
+      "output": "Mo siyo wo franchesi a kowale miro lo liyo pe.",
+      "entity_preservation": 0.0,
+      "entities_missing": [
+        "opay"
+      ],
+      "wer": 0.9,
+      "cer": 0.6222,
+      "english_token_f1": null
+    },
+    {
+      "id": "Q01",
+      "model": "whisper-large-v3",
+      "task": "translate",
+      "target": "english",
+      "latency_seconds": 3.279,
+      "reference": "Please my transfer failed on OPay and my money has been debited.",
+      "output": "I am a citizen.",
+      "entity_preservation": 0.0,
+      "entities_missing": [
+        "opay"
+      ],
+      "wer": null,
+      "cer": null,
+      "english_token_f1": 0.0
+    },
+    {
+      "id": "Q02",
+      "model": "whisper-large-v3",
+      "task": "translate",
+      "target": "english",
+      "latency_seconds": 5.72,
+      "reference": "I transferred money from PalmPay to Access Bank but it failed and my money was debited.",
+      "output": "Mugbe owo lati pampe si Assess Bank. Shugbo kuno, owo mi sitilo.",
+      "entity_preservation": 0.0,
+      "entities_missing": [
+        "access bank",
+        "palmpay"
+      ],
+      "wer": null,
+      "cer": null,
+      "english_token_f1": 0.0714
+    },
+    {
+      "id": "Q03",
+      "model": "whisper-large-v3",
+      "task": "translate",
+      "target": "english",
+      "latency_seconds": 5.627,
+      "reference": "My money is lost on Moniepoint after a failed transfer.",
+      "output": "Awamiti Sonu Lori Money Point Lengi Gbibe Owotokuna",
+      "entity_preservation": 0.0,
+      "entities_missing": [
+        "moniepoint"
+      ],
+      "wer": null,
+      "cer": null,
+      "english_token_f1": 0.1111
+    },
+    {
+      "id": "Q04",
+      "model": "whisper-large-v3",
+      "task": "translate",
+      "target": "english",
+      "latency_seconds": 2.437,
+      "reference": "My PalmPay is restricted because of KYC, I cannot withdraw money.",
+      "output": "I am a member of KYC, I am a member of the OJAD.",
+      "entity_preservation": 0.5,
+      "entities_missing": [
+        "palmpay"
+      ],
+      "wer": null,
+      "cer": null,
+      "english_token_f1": 0.25
+    },
+    {
+      "id": "Q05",
+      "model": "whisper-large-v3",
+      "task": "translate",
+      "target": "english",
+      "latency_seconds": 2.566,
+      "reference": "I mistakenly sent money to another account on OPay.",
+      "output": "I'm not going to let you go.",
+      "entity_preservation": 0.0,
+      "entities_missing": [
+        "opay"
+      ],
+      "wer": null,
+      "cer": null,
+      "english_token_f1": 0.2353
+    },
+    {
+      "id": "Q01",
+      "model": "whisper-large-v3-turbo",
+      "task": "transcribe",
+      "target": "yoruba",
+      "latency_seconds": 2.623,
+      "reference": "Ẹ jọ̀ọ́, gbígbé owó mi kùnà lórí OPay. Owó mi sì ti sọnù.",
+      "output": "Ejigbibu awa mi kuno lori okpe, awa mi sitisonu.",
+      "entity_preservation": 0.0,
+      "entities_missing": [
+        "opay"
+      ],
+      "wer": 0.8571,
+      "cer": 0.4717,
+      "english_token_f1": null
+    },
+    {
+      "id": "Q02",
+      "model": "whisper-large-v3-turbo",
+      "task": "transcribe",
+      "target": "yoruba",
+      "latency_seconds": 2.555,
+      "reference": "Mo gbé owó láti PalmPay sí Access Bank, ṣùgbọ́n ó kùnà. Owó mi sì ti lọ.",
+      "output": "Mogbé ọwọ láti Pampé s'íí Assets Bank ṣùgbọ̀ ókùnọ̀ ọwọ̀ mi sítì lọ.",
+      "entity_preservation": 0.0,
+      "entities_missing": [
+        "access bank",
+        "palmpay"
+      ],
+      "wer": 0.7647,
+      "cer": 0.2899,
+      "english_token_f1": null
+    },
+    {
+      "id": "Q03",
+      "model": "whisper-large-v3-turbo",
+      "task": "transcribe",
+      "target": "yoruba",
+      "latency_seconds": 3.766,
+      "reference": "Owó mi ti sọnù lórí Moniepoint, lẹ́yìn gbígbé owó tó kùnà.",
+      "output": "Ảwọ́ mi ti sọ́nù lóri Mònny Point lẹ́yìn gbibbé owò tókú náà.",
+      "entity_preservation": 0.0,
+      "entities_missing": [
+        "moniepoint"
+      ],
+      "wer": 0.8333,
+      "cer": 0.2679,
+      "english_token_f1": null
+    },
+    {
+      "id": "Q04",
+      "model": "whisper-large-v3-turbo",
+      "task": "transcribe",
+      "target": "yoruba",
+      "latency_seconds": 3.177,
+      "reference": "PalmPay mi ti dínà nítorí KYC. Mi ò lè gbé owó jáde.",
+      "output": "Pampa mi ti dína ni tòri K.Y.C. mi o lègbé owó jade.",
+      "entity_preservation": 0.0,
+      "entities_missing": [
+        "kyc",
+        "palmpay"
+      ],
+      "wer": 0.9167,
+      "cer": 0.24,
+      "english_token_f1": null
+    },
+    {
+      "id": "Q05",
+      "model": "whisper-large-v3-turbo",
+      "task": "transcribe",
+      "target": "yoruba",
+      "latency_seconds": 2.007,
+      "reference": "Mo ṣì owó firánṣẹ́ sí akọó̀lẹ́ mìíràn lórí OPay.",
+      "output": "Mo siyogwa fri nášè si akawwailè minran lori yo pè.",
+      "entity_preservation": 0.0,
+      "entities_missing": [
+        "opay"
+      ],
+      "wer": 0.9,
+      "cer": 0.6,
+      "english_token_f1": null
+    }
+  ]
+}

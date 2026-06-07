@@ -1,0 +1,579 @@
+[
+  {
+    "id": "E01",
+    "text": "Ẹ jọwọ, transfer mi lati OPay si GTBank kuna, ṣugbọn owo ti kuro ninu wallet mi.",
+    "translation": "Please, my transfer from OPay to GTBank failed, but the money left my wallet.",
+    "voice": "femi",
+    "category": "provider_bank_failed_transfer",
+    "expected_entities": [
+      "OPay",
+      "GTBank",
+      "wallet balance",
+      "failed transfer"
+    ],
+    "tone_marked_text": "Ẹ jọwọ, transfer mi lati OPay si GTBank kuna, ṣugbọn owo ti kuro ninu wallet mi.",
+    "audio_filename": "E01_femi_provider_bank_failed_transfer.wav"
+  },
+  {
+    "id": "E02",
+    "text": "Mo fi PalmPay ranṣẹ si Zenith Bank, Session ID wa lori receipt ṣugbọn beneficiary ko tii gba alert.",
+    "translation": "I sent money with PalmPay to Zenith Bank; the Session ID is on the receipt but the beneficiary has not received an alert.",
+    "voice": "sade",
+    "category": "session_id_receipt_trace",
+    "expected_entities": [
+      "PalmPay",
+      "Zenith Bank",
+      "Session ID",
+      "receipt",
+      "beneficiary",
+      "credit"
+    ],
+    "tone_marked_text": "Mo fi PalmPay ránṣẹ́ sí Zenith Bank, Session ID wà lórí receipt ṣùgbọ́n beneficiary kò tíì gba alert.",
+    "audio_filename": "E02_sade_session_id_receipt_trace.wav"
+  },
+  {
+    "id": "E03",
+    "text": "Moniepoint POS agent na mi double debit, mo fẹ raise dispute.",
+    "translation": "A Moniepoint POS agent debited me twice, and I want to raise a dispute.",
+    "voice": "segun",
+    "category": "pos_double_debit",
+    "expected_entities": [
+      "Moniepoint",
+      "POS",
+      "double debit",
+      "dispute"
+    ],
+    "tone_marked_text": "Moniepoint POS agent na mi double debit, mo fẹ raise dispute.",
+    "audio_filename": "E03_segun_pos_double_debit.wav"
+  },
+  {
+    "id": "E04",
+    "text": "Kuda account mi ni pending transfer si Access Bank lati ana.",
+    "translation": "My Kuda account has had a pending transfer to Access Bank since yesterday.",
+    "voice": "funmi",
+    "category": "pending_transfer",
+    "expected_entities": [
+      "Kuda",
+      "pending",
+      "Access Bank"
+    ],
+    "tone_marked_text": "Kuda account mi ni pending transfer si Access Bank lati ana.",
+    "audio_filename": "E04_funmi_pending_transfer.wav"
+  },
+  {
+    "id": "E05",
+    "text": "Mo fẹ mọ bi mo ṣe le link BVN ati NIN mi lori Paga fun KYC tier upgrade.",
+    "translation": "I want to know how to link my BVN and NIN on Paga for a KYC tier upgrade.",
+    "voice": "femi",
+    "category": "identity_kyc",
+    "expected_entities": [
+      "Paga",
+      "BVN",
+      "NIN",
+      "KYC"
+    ],
+    "tone_marked_text": "Mo fẹ́ mọ bí mo ṣe lè link BVN àti NIN mi lórí Paga fún KYC tier upgrade.",
+    "audio_filename": "E05_femi_identity_kyc.wav"
+  },
+  {
+    "id": "E06",
+    "text": "Pocket app mi ko gba OTP, nitori naa mi o le reset password mi.",
+    "translation": "My Pocket app is not receiving OTP, so I cannot reset my password.",
+    "voice": "sade",
+    "category": "otp_password_issue",
+    "expected_entities": [
+      "Pocket",
+      "OTP",
+      "password"
+    ],
+    "tone_marked_text": "Pocket app mi kò gba OTP, nítorí náà mi ò lè reset password mi.",
+    "audio_filename": "E06_sade_otp_password_issue.wav"
+  },
+  {
+    "id": "E07",
+    "text": "NowNow wallet mi ti frozen, customer care sọ pe account restricted ni.",
+    "translation": "My NowNow wallet is frozen, and customer care said the account is restricted.",
+    "voice": "segun",
+    "category": "account_restricted",
+    "expected_entities": [
+      "NowNow",
+      "wallet balance",
+      "customer care",
+      "account restricted"
+    ],
+    "tone_marked_text": "NowNow wallet mi ti frozen, customer care sọ pé account restricted ni.",
+    "audio_filename": "E07_segun_account_restricted.wav"
+  },
+  {
+    "id": "E08",
+    "text": "KongaPay debit card mi ko ṣiṣẹ lori ATM ti UBA.",
+    "translation": "My KongaPay debit card is not working on a UBA ATM.",
+    "voice": "funmi",
+    "category": "card_atm_issue",
+    "expected_entities": [
+      "KongaPay",
+      "debit card",
+      "ATM",
+      "UBA"
+    ],
+    "tone_marked_text": "KongaPay debit card mi ko ṣiṣẹ lori ATM ti UBA.",
+    "audio_filename": "E08_funmi_card_atm_issue.wav"
+  },
+  {
+    "id": "E09",
+    "text": "FETS transfer mi si Fidelity Bank successful ninu app, ṣugbọn receiver ko ri credit.",
+    "translation": "My FETS transfer to Fidelity Bank shows successful in the app, but the receiver did not receive credit.",
+    "voice": "femi",
+    "category": "successful_but_not_received",
+    "expected_entities": [
+      "FETS",
+      "Fidelity Bank",
+      "successful",
+      "credit",
+      "beneficiary"
+    ],
+    "tone_marked_text": "FETS transfer mi sí Fidelity Bank successful nínú app, ṣùgbọ́n receiver kò rí credit.",
+    "audio_filename": "E09_femi_successful_but_not_received.wav"
+  },
+  {
+    "id": "E10",
+    "text": "Teasy Mobile USSD code ko ṣiṣẹ fun balance enquiry mi.",
+    "translation": "The Teasy Mobile USSD code is not working for my balance enquiry.",
+    "voice": "sade",
+    "category": "ussd_balance",
+    "expected_entities": [
+      "Teasy Mobile",
+      "USSD",
+      "wallet balance"
+    ],
+    "tone_marked_text": "Teasy Mobile USSD code kò ṣiṣẹ́ fún balance enquiry mi.",
+    "audio_filename": "E10_sade_ussd_balance.wav"
+  },
+  {
+    "id": "E11",
+    "text": "Xpress Wallet ran owo si FCMB, ṣugbọn gateway error ṣẹlẹ.",
+    "translation": "Xpress Wallet sent money to FCMB, but a gateway error occurred.",
+    "voice": "segun",
+    "category": "gateway_error",
+    "expected_entities": [
+      "Xpress Wallet",
+      "FCMB",
+      "timeout"
+    ],
+    "tone_marked_text": "Xpress Wallet rán owó sí FCMB, ṣùgbọ́n gateway error ṣẹlẹ̀.",
+    "audio_filename": "E11_segun_gateway_error.wav"
+  },
+  {
+    "id": "E12",
+    "text": "Chams Mobile transaction reference mi ko han ninu transaction history.",
+    "translation": "My Chams Mobile transaction reference is not showing in transaction history.",
+    "voice": "funmi",
+    "category": "missing_transaction_history",
+    "expected_entities": [
+      "Chams Mobile",
+      "transaction reference",
+      "transaction history"
+    ],
+    "tone_marked_text": "Chams Mobile transaction reference mi ko han ninu transaction history.",
+    "audio_filename": "E12_funmi_missing_transaction_history.wav"
+  },
+  {
+    "id": "E13",
+    "text": "Mkudi payment si First Bank wa ni processing fun wakati mẹta.",
+    "translation": "My Mkudi payment to First Bank has been processing for three hours.",
+    "voice": "femi",
+    "category": "processing_delay",
+    "expected_entities": [
+      "Mkudi",
+      "First Bank",
+      "pending"
+    ],
+    "tone_marked_text": "Mkudi payment sí First Bank wà ní processing fún wákàtí mẹ́ta.",
+    "audio_filename": "E13_femi_processing_delay.wav"
+  },
+  {
+    "id": "E14",
+    "text": "Parkway wallet mi nilo reversal nitori transfer si Ecobank kuna.",
+    "translation": "My Parkway wallet needs a reversal because the transfer to Ecobank failed.",
+    "voice": "sade",
+    "category": "reversal_request",
+    "expected_entities": [
+      "Parkway",
+      "reversal",
+      "failed transfer",
+      "Ecobank"
+    ],
+    "tone_marked_text": "Parkway wallet mi nilo reversal nitori transfer si Ecobank kuna.",
+    "audio_filename": "E14_sade_reversal_request.wav"
+  },
+  {
+    "id": "E15",
+    "text": "MoMo PSB agent sọ pe NIP transfer mi si Sterling Bank ti lọ.",
+    "translation": "The MoMo PSB agent said my NIP transfer to Sterling Bank has gone through.",
+    "voice": "segun",
+    "category": "nip_transfer",
+    "expected_entities": [
+      "MoMo PSB",
+      "NIP",
+      "Sterling Bank",
+      "successful"
+    ],
+    "tone_marked_text": "MoMo PSB agent sọ pé NIP transfer mi sí Sterling Bank ti lọ.",
+    "audio_filename": "E15_segun_nip_transfer.wav"
+  },
+  {
+    "id": "E16",
+    "text": "SmartCash PSB ko jẹ ki n yi transaction PIN mi pada.",
+    "translation": "SmartCash PSB is not allowing me to change my transaction PIN.",
+    "voice": "funmi",
+    "category": "pin_issue",
+    "expected_entities": [
+      "SmartCash PSB",
+      "PIN"
+    ],
+    "tone_marked_text": "SmartCash PSB kò jẹ́ kí n yí transaction PIN mi padà.",
+    "audio_filename": "E16_funmi_pin_issue.wav"
+  },
+  {
+    "id": "E17",
+    "text": "MoneyMaster PSB si Polaris Bank failed, mo nilo refund.",
+    "translation": "My MoneyMaster PSB transfer to Polaris Bank failed, and I need a refund.",
+    "voice": "femi",
+    "category": "refund_request",
+    "expected_entities": [
+      "MoneyMaster PSB",
+      "Polaris Bank",
+      "failed transfer",
+      "reversal"
+    ],
+    "tone_marked_text": "MoneyMaster PSB sí Polaris Bank failed, mo nílò refund.",
+    "audio_filename": "E17_femi_refund_request.wav"
+  },
+  {
+    "id": "E18",
+    "text": "9PSB wallet mi ko gba credit lati Union Bank.",
+    "translation": "My 9PSB wallet did not receive credit from Union Bank.",
+    "voice": "sade",
+    "category": "credit_not_received",
+    "expected_entities": [
+      "9PSB",
+      "wallet balance",
+      "credit",
+      "Union Bank"
+    ],
+    "tone_marked_text": "9PSB wallet mi kò gba credit láti Union Bank.",
+    "audio_filename": "E18_sade_credit_not_received.wav"
+  },
+  {
+    "id": "E19",
+    "text": "Carbon virtual card mi declined lori Visa payment.",
+    "translation": "My Carbon virtual card was declined on a Visa payment.",
+    "voice": "segun",
+    "category": "virtual_card_decline",
+    "expected_entities": [
+      "Carbon",
+      "virtual card",
+      "Visa"
+    ],
+    "tone_marked_text": "Carbon virtual card mi declined lori Visa payment.",
+    "audio_filename": "E19_segun_virtual_card_decline.wav"
+  },
+  {
+    "id": "E20",
+    "text": "FairMoney account mi de daily limit nigba ti mo fẹ san si Wema Bank.",
+    "translation": "My FairMoney account reached its daily limit when I wanted to pay Wema Bank.",
+    "voice": "funmi",
+    "category": "daily_limit",
+    "expected_entities": [
+      "FairMoney",
+      "daily limit",
+      "Wema Bank"
+    ],
+    "tone_marked_text": "FairMoney account mi de daily limit nígbà tí mo fẹ́ san sí Wema Bank.",
+    "audio_filename": "E20_funmi_daily_limit.wav"
+  },
+  {
+    "id": "E21",
+    "text": "ALAT by Wema app mi ko fi receipt han fun transfer si Stanbic IBTC.",
+    "translation": "My ALAT by Wema app did not show a receipt for the transfer to Stanbic IBTC.",
+    "voice": "femi",
+    "category": "missing_receipt",
+    "expected_entities": [
+      "ALAT",
+      "receipt",
+      "Stanbic IBTC"
+    ],
+    "tone_marked_text": "ALAT by Wema app mi kò fi receipt hàn fún transfer sí Stanbic IBTC.",
+    "audio_filename": "E21_femi_missing_receipt.wav"
+  },
+  {
+    "id": "E22",
+    "text": "VBank si Standard Chartered transfer ni timeout.",
+    "translation": "The VBank to Standard Chartered transfer timed out.",
+    "voice": "sade",
+    "category": "timeout",
+    "expected_entities": [
+      "VBank",
+      "Standard Chartered",
+      "timeout"
+    ],
+    "tone_marked_text": "VBank sí Standard Chartered transfer ní timeout.",
+    "audio_filename": "E22_sade_timeout.wav"
+  },
+  {
+    "id": "E23",
+    "text": "Eyowo transaction mi ni unauthorized debit lori account mi.",
+    "translation": "My Eyowo transaction has an unauthorized debit on my account.",
+    "voice": "segun",
+    "category": "unauthorized_debit",
+    "expected_entities": [
+      "Eyowo",
+      "unauthorized debit"
+    ],
+    "tone_marked_text": "Ẹyọtọwọ́ transaction mi ni unauthorized debit lori account mi.",
+    "audio_filename": "E23_segun_unauthorized_debit.wav"
+  },
+  {
+    "id": "E24",
+    "text": "Nomba POS fun Verve card mi ṣe chargeback laifọwọyi.",
+    "translation": "The Nomba POS created a chargeback for my Verve card automatically.",
+    "voice": "funmi",
+    "category": "chargeback",
+    "expected_entities": [
+      "Nomba",
+      "POS",
+      "Verve",
+      "chargeback"
+    ],
+    "tone_marked_text": "Nọ́mbà POS fún Verve card mi ṣe chargeback laifọwọyi.",
+    "audio_filename": "E24_funmi_chargeback.wav"
+  },
+  {
+    "id": "E25",
+    "text": "Paystack payment mi lori Mastercard ko complete.",
+    "translation": "My Paystack payment on Mastercard did not complete.",
+    "voice": "femi",
+    "category": "processor_card_issue",
+    "expected_entities": [
+      "Paystack",
+      "Mastercard",
+      "pending"
+    ],
+    "tone_marked_text": "Paystack payment mi lori Mastercard kọ complete.",
+    "audio_filename": "E25_femi_processor_card_issue.wav"
+  },
+  {
+    "id": "E26",
+    "text": "Flutterwave checkout sọ successful, ṣugbọn merchant ko ri settlement.",
+    "translation": "Flutterwave checkout said successful, but the merchant did not see settlement.",
+    "voice": "sade",
+    "category": "merchant_settlement",
+    "expected_entities": [
+      "Flutterwave",
+      "successful"
+    ],
+    "tone_marked_text": "Flutterwave c Murwillumbah so successful, ṣùgbọ́n merchant kò rí settlement.",
+    "audio_filename": "E26_sade_merchant_settlement.wav"
+  },
+  {
+    "id": "E27",
+    "text": "Interswitch quickteller payment mi si PHCN wa ni pending.",
+    "translation": "My Interswitch Quickteller payment to PHCN is pending.",
+    "voice": "segun",
+    "category": "bill_payment_pending",
+    "expected_entities": [
+      "Interswitch",
+      "pending"
+    ],
+    "tone_marked_text": "Interswitch quickteller payment mi si PHCN wa ni pending.",
+    "audio_filename": "E27_segun_bill_payment_pending.wav"
+  },
+  {
+    "id": "E28",
+    "text": "Remita receipt mi fun school fees ko ni RRR number ti o tọ.",
+    "translation": "My Remita receipt for school fees does not have the correct RRR number.",
+    "voice": "funmi",
+    "category": "remita_receipt",
+    "expected_entities": [
+      "Remita",
+      "receipt",
+      "transaction reference"
+    ],
+    "tone_marked_text": "Remita receipt mi fún school fees kò ní RRR number tí ó tẹ́.",
+    "audio_filename": "E28_funmi_remita_receipt.wav"
+  },
+  {
+    "id": "E29",
+    "text": "NIBSS trace nilo Session ID fun transfer lati Jaiz Bank si TAJ Bank.",
+    "translation": "A NIBSS trace needs the Session ID for a transfer from Jaiz Bank to TAJ Bank.",
+    "voice": "femi",
+    "category": "nibss_trace",
+    "expected_entities": [
+      "NIBSS",
+      "Session ID",
+      "Jaiz Bank",
+      "TAJ Bank"
+    ],
+    "tone_marked_text": "BÍBSS trace nílò Session ID fún transfer láti Jaiz Bank sí TAJ Bank.",
+    "audio_filename": "E29_femi_nibss_trace.wav"
+  },
+  {
+    "id": "E30",
+    "text": "NUBAN account number lori Lotus Bank yatọ si orukọ beneficiary.",
+    "translation": "The NUBAN account number on Lotus Bank is different from the beneficiary name.",
+    "voice": "sade",
+    "category": "nuban_beneficiary_mismatch",
+    "expected_entities": [
+      "NUBAN",
+      "Lotus Bank",
+      "beneficiary",
+      "wrong recipient"
+    ],
+    "tone_marked_text": "NUBAN account number lórí Lotus Bank yàtọ̀ sí orúkọ beneficiary.",
+    "audio_filename": "E30_sade_nuban_beneficiary_mismatch.wav"
+  },
+  {
+    "id": "E31",
+    "text": "Alternative Bank transfer mi si Providus Bank nilo court order nitori wrong recipient.",
+    "translation": "My Alternative Bank transfer to Providus Bank needs a court order because of a wrong recipient.",
+    "voice": "segun",
+    "category": "wrong_recipient_legal",
+    "expected_entities": [
+      "Alternative Bank",
+      "Providus Bank",
+      "court order",
+      "wrong recipient"
+    ],
+    "tone_marked_text": "Alternative Bank transfer mi si Providus Bank nilo court order nitori wrong recipient.",
+    "audio_filename": "E31_segun_wrong_recipient_legal.wav"
+  },
+  {
+    "id": "E32",
+    "text": "Parallex Bank app sọ account restricted nitori suspicious scam report.",
+    "translation": "The Parallex Bank app says the account is restricted because of a suspicious scam report.",
+    "voice": "funmi",
+    "category": "restriction_fraud",
+    "expected_entities": [
+      "Parallex Bank",
+      "account restricted",
+      "scam"
+    ],
+    "tone_marked_text": "Parallex Bank app sọ account restricted nitori Pokhran scam report.",
+    "audio_filename": "E32_funmi_restriction_fraud.wav"
+  },
+  {
+    "id": "E33",
+    "text": "SunTrust Bank si Signature Bank payment ni reference number ṣugbọn ko si receipt.",
+    "translation": "The SunTrust Bank to Signature Bank payment has a reference number but no receipt.",
+    "voice": "femi",
+    "category": "reference_without_receipt",
+    "expected_entities": [
+      "SunTrust Bank",
+      "Signature Bank",
+      "transaction reference",
+      "receipt"
+    ],
+    "tone_marked_text": "SunTrust Bank sí Signature Bank payment ní reference number ṣùgbọ́n kò sí receipt.",
+    "audio_filename": "E33_femi_reference_without_receipt.wav"
+  },
+  {
+    "id": "E34",
+    "text": "Optimus Bank transaction si Premium Trust Bank wa ninu dispute center.",
+    "translation": "The Optimus Bank transaction to Premium Trust Bank is in the dispute center.",
+    "voice": "sade",
+    "category": "bank_dispute",
+    "expected_entities": [
+      "Optimus Bank",
+      "Premium Trust Bank",
+      "dispute"
+    ],
+    "tone_marked_text": "Optimus Bank transaction sí Premium Trust Bank wà nínú dispute center.",
+    "audio_filename": "E34_sade_bank_dispute.wav"
+  },
+  {
+    "id": "E35",
+    "text": "Titan Trust Bank alert de, ṣugbọn balance lori Unity Bank ko yipada.",
+    "translation": "The Titan Trust Bank alert arrived, but the balance on Unity Bank did not change.",
+    "voice": "segun",
+    "category": "alert_balance_mismatch",
+    "expected_entities": [
+      "Titan Trust Bank",
+      "Unity Bank",
+      "credit",
+      "wallet balance"
+    ],
+    "tone_marked_text": "Titan Trust Bank alert de, ṣùgbọ́n balance lórí Unity Bank kò yípadà.",
+    "audio_filename": "E35_segun_alert_balance_mismatch.wav"
+  },
+  {
+    "id": "E36",
+    "text": "Citibank transfer si Globus Bank ni successful, ṣugbọn Keystone Bank intermediary sọ pending.",
+    "translation": "The Citibank transfer to Globus Bank is successful, but the Keystone Bank intermediary says pending.",
+    "voice": "funmi",
+    "category": "intermediary_pending",
+    "expected_entities": [
+      "Citibank",
+      "Globus Bank",
+      "Keystone Bank",
+      "successful",
+      "pending"
+    ],
+    "tone_marked_text": "Citibank transfer si Globus Bank ni successful, ṣugbọn Keystone Bank intermediary sọ pending.",
+    "audio_filename": "E36_funmi_intermediary_pending.wav"
+  },
+  {
+    "id": "E37",
+    "text": "Mo san pẹlu QR Code lori POS, ṣugbọn merchant sọ pe ko ri credit.",
+    "translation": "I paid with a QR Code on POS, but the merchant said they did not receive credit.",
+    "voice": "femi",
+    "category": "qr_pos_credit",
+    "expected_entities": [
+      "QR Code",
+      "POS",
+      "credit"
+    ],
+    "tone_marked_text": "Mo san pẹlu QR Code lori POS, ṣugbọn merchant sọ pe ko ri credit.",
+    "audio_filename": "E37_femi_qr_pos_credit.wav"
+  },
+  {
+    "id": "E38",
+    "text": "Bot yii ko ran mi lọwọ, mo fẹ ba live chat customer care sọrọ.",
+    "translation": "This bot did not help me; I want to speak with live chat customer care.",
+    "voice": "sade",
+    "category": "support_escalation",
+    "expected_entities": [
+      "bot",
+      "customer care"
+    ],
+    "tone_marked_text": "Bot yìí kò rán mi lọ́wọ́, mo fẹ́ bá live chat customer care sọ̀rọ̀.",
+    "audio_filename": "E38_sade_support_escalation.wav"
+  },
+  {
+    "id": "E39",
+    "text": "Transaction PIN mi ati password mi ti reset, ṣugbọn OTP ko wọle.",
+    "translation": "My transaction PIN and password were reset, but the OTP did not arrive.",
+    "voice": "segun",
+    "category": "security_reset",
+    "expected_entities": [
+      "PIN",
+      "password",
+      "OTP"
+    ],
+    "tone_marked_text": "Transaction PIN mi ati password mi ti reset, ṣugbọn OTP ko wọle.",
+    "audio_filename": "E39_segun_security_reset.wav"
+  },
+  {
+    "id": "E40",
+    "text": "Mo ri debit ti mi o mọ lori virtual card, mo fẹ open complaint.",
+    "translation": "I saw a debit I do not recognize on my virtual card, and I want to open a complaint.",
+    "voice": "funmi",
+    "category": "virtual_card_unknown_debit",
+    "expected_entities": [
+      "debit",
+      "virtual card",
+      "dispute"
+    ],
+    "tone_marked_text": "Mo rí debit tí mi ò mọ̀ lórí virtual card, mo fẹ́ open complaint.",
+    "audio_filename": "E40_funmi_virtual_card_unknown_debit.wav"
+  }
+]

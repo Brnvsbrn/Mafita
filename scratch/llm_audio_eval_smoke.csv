@@ -1,0 +1,5 @@
+id,audio_filename,voice,category,model,target,batch_latency_seconds,amortized_latency_seconds,wer,cer,english_token_f1,entity_preservation,entities_missing,reference,output
+Q01,Q01_femi_failed_transfer_opay.wav,femi,failed_transfer_opay,gemini-3.1-flash-lite,yoruba,5.8,5.8,0.5714,0.283,,0.0,['opay'],"Ẹ jọ̀ọ́, gbígbé owó mi kùnà lórí OPay. Owó mi sì ti sọnù.","Ẹ jẹ́ kí gbogbo ọwọ́ mi kún lórí òpè, ọwọ́ mi sì ti sọnu."
+Q01,Q01_femi_failed_transfer_opay.wav,femi,failed_transfer_opay,gemini-3.1-flash-lite,english,6.882,6.882,,,0.4348,1.0,[],Please my transfer failed on OPay and my money has been debited.,"My OPay account has been restricted, and I cannot access it."
+Q01,Q01_femi_failed_transfer_opay.wav,femi,failed_transfer_opay,gemini-3.5-flash,yoruba,6.033,6.033,0.7857,0.4906,,1.0,[],"Ẹ jọ̀ọ́, gbígbé owó mi kùnà lórí OPay. Owó mi sì ti sọnù.","Ẹ jẹ gbigbe owo mi kun lori OPay, o"
+Q01,Q01_femi_failed_transfer_opay.wav,femi,failed_transfer_opay,gemini-3.5-flash,english,6.182,6.182,,,0.7273,1.0,[],Please my transfer failed on OPay and my money has been debited.,"My transfer failed on OPay, and my money is missing."

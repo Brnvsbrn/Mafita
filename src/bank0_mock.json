@@ -1,0 +1,551 @@
+{
+  "company": {
+    "name": "Mafita",
+    "support_languages": [
+      "yo",
+      "en"
+    ],
+    "currency": "NGN"
+  },
+  "customers": [
+    {
+      "customer_id": "CUS-001",
+      "name": "Femi Adewale",
+      "phone": "+2348010000001",
+      "account_created_at": "2024-02-12",
+      "account_status": "active",
+      "bvn_status": "verified",
+      "nin_status": "verified",
+      "kyc_tier": 3,
+      "risk_flags": []
+    },
+    {
+      "customer_id": "CUS-002",
+      "name": "Sade Bello",
+      "phone": "+2348010000002",
+      "account_created_at": "2023-11-08",
+      "account_status": "active",
+      "bvn_status": "verified",
+      "nin_status": "verified",
+      "kyc_tier": 3,
+      "risk_flags": []
+    },
+    {
+      "customer_id": "CUS-003",
+      "name": "Segun Martins",
+      "phone": "+2348010000003",
+      "account_created_at": "2024-09-17",
+      "account_status": "active",
+      "bvn_status": "verified",
+      "nin_status": "verified",
+      "kyc_tier": 2,
+      "risk_flags": []
+    },
+    {
+      "customer_id": "CUS-004",
+      "name": "Funmi Lawal",
+      "phone": "+2348010000004",
+      "account_created_at": "2025-01-21",
+      "account_status": "active",
+      "bvn_status": "verified",
+      "nin_status": "verified",
+      "kyc_tier": 2,
+      "risk_flags": []
+    },
+    {
+      "customer_id": "CUS-005",
+      "name": "Aisha Yusuf",
+      "phone": "+2347055234918",
+      "account_created_at": "2024-05-03",
+      "account_status": "restricted",
+      "bvn_status": "name_mismatch",
+      "nin_status": "pending_review",
+      "kyc_tier": 1,
+      "risk_flags": [
+        "kyc_name_mismatch"
+      ]
+    },
+    {
+      "customer_id": "CUS-006",
+      "name": "Tunde Okafor",
+      "phone": "+2348031456789",
+      "account_created_at": "2023-07-14",
+      "account_status": "restricted",
+      "bvn_status": "verified",
+      "nin_status": "verified",
+      "kyc_tier": 2,
+      "risk_flags": [
+        "suspicious_activity_review"
+      ]
+    }
+  ],
+  "wallets": [
+    {
+      "wallet_id": "WAL-001",
+      "customer_id": "CUS-001",
+      "available_balance": 84000,
+      "ledger_balance": 84000,
+      "status": "active"
+    },
+    {
+      "wallet_id": "WAL-002",
+      "customer_id": "CUS-002",
+      "available_balance": 126000,
+      "ledger_balance": 126000,
+      "status": "active"
+    },
+    {
+      "wallet_id": "WAL-003",
+      "customer_id": "CUS-003",
+      "available_balance": 51000,
+      "ledger_balance": 51000,
+      "status": "active"
+    },
+    {
+      "wallet_id": "WAL-004",
+      "customer_id": "CUS-004",
+      "available_balance": 158500,
+      "ledger_balance": 208500,
+      "status": "active"
+    },
+    {
+      "wallet_id": "WAL-005",
+      "customer_id": "CUS-005",
+      "available_balance": 0,
+      "ledger_balance": 73500,
+      "status": "restricted"
+    },
+    {
+      "wallet_id": "WAL-006",
+      "customer_id": "CUS-006",
+      "available_balance": 0,
+      "ledger_balance": 91000,
+      "status": "restricted"
+    }
+  ],
+  "transactions": [
+    {
+      "transaction_id": "TX-1001",
+      "customer_id": "CUS-001",
+      "reference": "OPY7834KL",
+      "type": "bank_transfer",
+      "amount": 15000,
+      "reported_time": "1:47pm",
+      "provider": "OPay",
+      "recipient_bank": "Zenith Bank",
+      "recipient_name": "Family recipient",
+      "status": "settlement_pending",
+      "settlement_status": "held_at_interbank_settlement",
+      "recipient_credited": false,
+      "debit_posted": true,
+      "retry_advice": "do_not_retry",
+      "expected_resolution": "1-3 hours or auto-reversal by midnight",
+      "created_at": "2026-06-01T13:47:00+01:00"
+    },
+    {
+      "transaction_id": "TX-1002",
+      "customer_id": "CUS-002",
+      "reference": "PAL4829QA",
+      "type": "bank_transfer",
+      "amount": 22000,
+      "reported_time": "10:18am",
+      "provider": "PalmPay",
+      "recipient_bank": "Access Bank",
+      "recipient_name": "Business vendor",
+      "status": "settlement_pending",
+      "settlement_status": "receiving_bank_ack_pending",
+      "recipient_credited": false,
+      "debit_posted": true,
+      "retry_advice": "do_not_retry",
+      "expected_resolution": "within 2 hours",
+      "created_at": "2026-06-02T10:18:00+01:00"
+    },
+    {
+      "transaction_id": "TX-1003",
+      "customer_id": "CUS-003",
+      "reference": "MFT6082RD",
+      "type": "bank_transfer",
+      "amount": 8750,
+      "reported_time": "6:05pm",
+      "provider": "Mafita",
+      "recipient_bank": "GTBank",
+      "recipient_name": "Friend",
+      "status": "settlement_pending",
+      "settlement_status": "nibss_queue_delay",
+      "recipient_credited": false,
+      "debit_posted": true,
+      "retry_advice": "do_not_retry",
+      "expected_resolution": "same day",
+      "created_at": "2026-06-02T18:05:00+01:00"
+    },
+    {
+      "transaction_id": "TX-2001",
+      "customer_id": "CUS-002",
+      "reference": "MPT9021XZ",
+      "type": "bank_transfer",
+      "amount": 50000,
+      "reported_time": "3:15pm",
+      "provider": "Moniepoint",
+      "recipient_bank": "UBA",
+      "recipient_name": "Rent recipient",
+      "status": "pending",
+      "settlement_status": "processing",
+      "recipient_credited": false,
+      "debit_posted": true,
+      "retry_advice": "do_not_retry",
+      "expected_resolution": "check again in 30 minutes",
+      "created_at": "2026-06-03T15:15:00+01:00"
+    },
+    {
+      "transaction_id": "TX-2002",
+      "customer_id": "CUS-003",
+      "reference": "OPA7145MN",
+      "type": "bank_transfer",
+      "amount": 12000,
+      "reported_time": "8:40am",
+      "provider": "OPay",
+      "recipient_bank": "Sterling Bank",
+      "recipient_name": "School fees recipient",
+      "status": "pending",
+      "settlement_status": "bank_network_delay",
+      "recipient_credited": false,
+      "debit_posted": true,
+      "retry_advice": "do_not_retry",
+      "expected_resolution": "20-45 minutes",
+      "created_at": "2026-06-04T08:40:00+01:00"
+    },
+    {
+      "transaction_id": "TX-3001",
+      "customer_id": "CUS-001",
+      "reference": "MNP4410BV",
+      "type": "bank_transfer",
+      "amount": 32000,
+      "reported_time": "Monday 10am",
+      "provider": "Mafita",
+      "recipient_bank": "Wema Bank",
+      "recipient_name": "Transfer recipient",
+      "status": "failed",
+      "settlement_status": "reversal_processing",
+      "recipient_credited": false,
+      "debit_posted": true,
+      "reversal_status": "processing",
+      "created_at": "2026-06-01T10:00:00+01:00"
+    },
+    {
+      "transaction_id": "TX-3002",
+      "customer_id": "CUS-004",
+      "reference": "RVL7832TX",
+      "type": "bank_transfer",
+      "amount": 18500,
+      "reported_time": "Tuesday 4:20pm",
+      "provider": "Mafita",
+      "recipient_bank": "Fidelity Bank",
+      "recipient_name": "Transfer recipient",
+      "status": "failed",
+      "settlement_status": "partner_bank_reversal_pending",
+      "recipient_credited": false,
+      "debit_posted": true,
+      "reversal_status": "processing",
+      "created_at": "2026-06-02T16:20:00+01:00"
+    },
+    {
+      "transaction_id": "TX-4001",
+      "customer_id": "CUS-006",
+      "reference": "OPY2291TR",
+      "type": "pos_withdrawal",
+      "amount": 50000,
+      "reported_time": "yesterday 6pm",
+      "provider": "OPay",
+      "pos_terminal_id": "POS-7712",
+      "status": "declined_pos_debited_wallet",
+      "settlement_status": "partner_bank_trace_required",
+      "pos_agent_credited": false,
+      "debit_posted": true,
+      "required_evidence": [
+        "decline_slip",
+        "debit_alert"
+      ],
+      "created_at": "2026-06-05T18:00:00+01:00"
+    },
+    {
+      "transaction_id": "TX-4002",
+      "customer_id": "CUS-004",
+      "reference": "POS8044KD",
+      "type": "pos_withdrawal",
+      "amount": 30000,
+      "reported_time": "today 9:10am",
+      "provider": "Mafita POS",
+      "pos_terminal_id": "POS-8840",
+      "status": "declined_pos_debited_wallet",
+      "settlement_status": "partner_bank_trace_required",
+      "pos_agent_credited": false,
+      "debit_posted": true,
+      "required_evidence": [
+        "decline_slip",
+        "debit_alert"
+      ],
+      "created_at": "2026-06-06T09:10:00+01:00"
+    },
+    {
+      "transaction_id": "TX-4003",
+      "customer_id": "CUS-003",
+      "reference": "MPT5520HF",
+      "type": "pos_withdrawal",
+      "amount": 20000,
+      "reported_time": "Friday 7:30pm",
+      "provider": "Moniepoint POS",
+      "pos_terminal_id": "POS-5520",
+      "status": "declined_pos_debited_wallet",
+      "settlement_status": "partner_bank_trace_required",
+      "pos_agent_credited": false,
+      "debit_posted": true,
+      "required_evidence": [
+        "decline_slip",
+        "debit_alert"
+      ],
+      "created_at": "2026-06-05T19:30:00+01:00"
+    }
+  ],
+  "ledger_entries": [
+    {
+      "entry_id": "LED-1001-D",
+      "customer_id": "CUS-001",
+      "transaction_id": "TX-1001",
+      "direction": "debit",
+      "amount": 15000,
+      "status": "posted"
+    },
+    {
+      "entry_id": "LED-1002-D",
+      "customer_id": "CUS-002",
+      "transaction_id": "TX-1002",
+      "direction": "debit",
+      "amount": 22000,
+      "status": "posted"
+    },
+    {
+      "entry_id": "LED-1003-D",
+      "customer_id": "CUS-003",
+      "transaction_id": "TX-1003",
+      "direction": "debit",
+      "amount": 8750,
+      "status": "posted"
+    },
+    {
+      "entry_id": "LED-2001-D",
+      "customer_id": "CUS-002",
+      "transaction_id": "TX-2001",
+      "direction": "debit",
+      "amount": 50000,
+      "status": "posted"
+    },
+    {
+      "entry_id": "LED-2002-D",
+      "customer_id": "CUS-003",
+      "transaction_id": "TX-2002",
+      "direction": "debit",
+      "amount": 12000,
+      "status": "posted"
+    },
+    {
+      "entry_id": "LED-3001-D",
+      "customer_id": "CUS-001",
+      "transaction_id": "TX-3001",
+      "direction": "debit",
+      "amount": 32000,
+      "status": "posted"
+    },
+    {
+      "entry_id": "LED-3002-D",
+      "customer_id": "CUS-004",
+      "transaction_id": "TX-3002",
+      "direction": "debit",
+      "amount": 18500,
+      "status": "posted"
+    },
+    {
+      "entry_id": "LED-4001-D",
+      "customer_id": "CUS-006",
+      "transaction_id": "TX-4001",
+      "direction": "debit",
+      "amount": 50000,
+      "status": "posted"
+    },
+    {
+      "entry_id": "LED-4002-D",
+      "customer_id": "CUS-004",
+      "transaction_id": "TX-4002",
+      "direction": "debit",
+      "amount": 30000,
+      "status": "posted"
+    },
+    {
+      "entry_id": "LED-4003-D",
+      "customer_id": "CUS-003",
+      "transaction_id": "TX-4003",
+      "direction": "debit",
+      "amount": 20000,
+      "status": "posted"
+    }
+  ],
+  "reversals": [
+    {
+      "reversal_id": "REV-3001",
+      "transaction_id": "TX-3001",
+      "ticket_id": "CMP4192A",
+      "status": "processing",
+      "stage": "with_partner_bank",
+      "eta": "end of next business day",
+      "initiated_at": "2026-06-02T09:15:00+01:00",
+      "working_day_count": 3
+    },
+    {
+      "reversal_id": "REV-3002",
+      "transaction_id": "TX-3002",
+      "ticket_id": "CMP8305K",
+      "status": "processing",
+      "stage": "partner_bank_reversal_pending",
+      "eta": "3-5 working days",
+      "initiated_at": "2026-06-03T11:40:00+01:00",
+      "working_day_count": 2
+    }
+  ],
+  "support_tickets": [
+    {
+      "ticket_id": "CMP4192A",
+      "customer_id": "CUS-001",
+      "transaction_id": "TX-3001",
+      "category": "pending_reversal",
+      "priority": "normal",
+      "summary": "Reversal initiated and currently with partner bank.",
+      "status": "in_progress",
+      "evidence": [],
+      "slack_escalation": null,
+      "created_at": "2026-06-01T11:23:00+01:00"
+    },
+    {
+      "ticket_id": "CMP8305K",
+      "customer_id": "CUS-004",
+      "transaction_id": "TX-3002",
+      "category": "pending_reversal",
+      "priority": "normal",
+      "summary": "Partner bank reversal pending.",
+      "status": "in_progress",
+      "evidence": [],
+      "slack_escalation": null,
+      "created_at": "2026-06-03T09:05:00+01:00"
+    },
+    {
+      "ticket_id": "TCK-0003",
+      "customer_id": "Femi",
+      "transaction_id": null,
+      "category": "human_escalation",
+      "priority": "high",
+      "summary": "Verification test: Slack integration is live and successfully configured.",
+      "status": "open",
+      "evidence": [],
+      "slack_escalation": {
+        "status": "slack_sent",
+        "sent_at": "2026-06-07T23:24:58",
+        "payload": {
+          "channel": "#disputes",
+          "ticket_id": "TCK-0003",
+          "customer_id": "Femi",
+          "customer_phone": null,
+          "category": "human_escalation",
+          "priority": "high",
+          "summary": "Verification test: Slack integration is live and successfully configured.",
+          "transaction_id": null,
+          "evidence_count": 0
+        }
+      },
+      "created_at": "2026-06-07T23:24:56"
+    }
+  ],
+  "account_restrictions": [
+    {
+      "restriction_id": "RST-005",
+      "customer_id": "CUS-005",
+      "reason": "BVN name mismatch with account profile",
+      "status": "active",
+      "required_documents": [
+        "government_id",
+        "written_explanation"
+      ],
+      "resolution": "Compliance review required."
+    },
+    {
+      "restriction_id": "RST-006",
+      "customer_id": "CUS-006",
+      "reason": "Suspicious activity flag after unusual POS dispute pattern",
+      "status": "active",
+      "required_documents": [
+        "government_id",
+        "written_explanation"
+      ],
+      "resolution": "Risk team review required."
+    }
+  ],
+  "kyc_document_submissions": [
+    {
+      "submission_id": "KYC-005",
+      "customer_id": "CUS-005",
+      "status": "not_submitted",
+      "missing": [
+        "government_id",
+        "written_explanation"
+      ]
+    },
+    {
+      "submission_id": "KYC-006",
+      "customer_id": "CUS-006",
+      "status": "not_submitted",
+      "missing": [
+        "government_id",
+        "written_explanation"
+      ]
+    }
+  ],
+  "pos_terminals": [
+    {
+      "terminal_id": "POS-7712",
+      "agent_id": "AGT-009",
+      "agent_name": "Mafita Agent Mushin 12",
+      "status": "active",
+      "last_settlement_status": "declined_no_agent_credit"
+    },
+    {
+      "terminal_id": "POS-8840",
+      "agent_id": "AGT-022",
+      "agent_name": "Mafita Agent Ibadan 4",
+      "status": "active",
+      "last_settlement_status": "declined_no_agent_credit"
+    },
+    {
+      "terminal_id": "POS-5520",
+      "agent_id": "AGT-031",
+      "agent_name": "Moniepoint Partner Lekki 7",
+      "status": "active",
+      "last_settlement_status": "declined_no_agent_credit"
+    }
+  ],
+  "partner_bank_status": [
+    {
+      "bank_name": "Zenith Bank",
+      "status": "delayed_acknowledgement",
+      "updated_at": "2026-06-01T13:55:00+01:00"
+    },
+    {
+      "bank_name": "Access Bank",
+      "status": "intermittent_delay",
+      "updated_at": "2026-06-02T10:30:00+01:00"
+    },
+    {
+      "bank_name": "GTBank",
+      "status": "nibss_queue_delay",
+      "updated_at": "2026-06-02T18:10:00+01:00"
+    }
+  ],
+  "disputes": [],
+  "cards": []
+}

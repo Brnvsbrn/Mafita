@@ -1,0 +1,1510 @@
+{
+  "metadata": {
+    "purpose": "Domain lexicon for Nigerian fintech ASR post-processing. Low-risk closed-set entities can be autocorrected; high-risk identifiers should be confirmed.",
+    "sources": [
+      "CBN Payment Service Providers list",
+      "CBN Deposit Money Banks list as at April 26, 2024",
+      "YPIT N-ATLaS/Whisper benchmark observed ASR errors"
+    ],
+    "notes": [
+      "Do not include general Yoruba words like owó/ọwọ́ here. Those are language-understanding issues, not closed-set financial entities.",
+      "This lexicon should be extended from future benchmark errors, not treated as final."
+    ],
+    "unsafe_observed_mistranscriptions": {
+      "VBank": [
+        "the bank",
+        "fi banka"
+      ],
+      "BVN": [
+        "ven"
+      ],
+      "Kuda": [
+        "colder c"
+      ]
+    }
+  },
+  "entities": [
+    {
+      "canonical": "OPay",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "opay",
+        "o pay",
+        "ope",
+        "opi",
+        "opin",
+        "opey",
+        "opesi",
+        "o pe",
+        "o pin",
+        "opé",
+        "òpè",
+        "òpín",
+        "apo pe",
+        "apple payment",
+        "ko pe",
+        "ope transfer",
+        "ope pos",
+        "lo pe",
+        "mo lo pe"
+      ]
+    },
+    {
+      "canonical": "PalmPay",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "palmpay",
+        "palm pay",
+        "pampe",
+        "pampé",
+        "pampi",
+        "pam pay",
+        "palm pe",
+        "palmpe",
+        "panpe",
+        "pampey",
+        "paunpe",
+        "paumpe",
+        "pampe si",
+        "pampe receipt"
+      ]
+    },
+    {
+      "canonical": "Moniepoint",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "moniepoint",
+        "monie point",
+        "money point",
+        "moneypoint",
+        "moni point",
+        "monipoint",
+        "mani point",
+        "moni pont",
+        "mọní pọnt",
+        "money poin",
+        "money poing",
+        "moni po",
+        "monipoin",
+        "pon ejan"
+      ]
+    },
+    {
+      "canonical": "Kuda",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "kuda",
+        "kuda bank",
+        "cuda",
+        "kooda",
+        "kúdà",
+        "kuda microfinance bank",
+        "kuda app",
+        "kuda debit",
+        "koda",
+        "kolda"
+      ]
+    },
+    {
+      "canonical": "Paga",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "paga",
+        "paga tech",
+        "pagatech",
+        "pagar",
+        "paga wallet",
+        "pa ga",
+        "paga ussd",
+        "paga account"
+      ]
+    },
+    {
+      "canonical": "Pocket",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "pocket",
+        "abeg",
+        "abeg app",
+        "abeg technologies",
+        "pocket app",
+        "poketapu",
+        "poketa",
+        "pocketapu",
+        "pọkẹtapù",
+        "poketi",
+        "poketti",
+        "poket",
+        "poketi app"
+      ]
+    },
+    {
+      "canonical": "NowNow",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "nownow",
+        "now now",
+        "now-now",
+        "now no",
+        "nao nao",
+        "na na",
+        "na now",
+        "naa naa",
+        "na naa",
+        "naa now"
+      ]
+    },
+    {
+      "canonical": "KongaPay",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "kongapay",
+        "konga pay",
+        "konga pe",
+        "konga payment"
+      ]
+    },
+    {
+      "canonical": "FETS",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "fets",
+        "f e t s",
+        "funds and electronic transfer",
+        "funds electronic transfer",
+        "fi ti s",
+        "fiti s",
+        "f i t s"
+      ]
+    },
+    {
+      "canonical": "Teasy Mobile",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "teasy",
+        "teasy mobile",
+        "teesi",
+        "tisi mobile",
+        "ti si moba",
+        "tisi moba"
+      ]
+    },
+    {
+      "canonical": "Xpress Wallet",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "xpress",
+        "xpress wallet",
+        "express wallet",
+        "express waleti",
+        "express walet",
+        "xpress mts",
+        "express mts"
+      ]
+    },
+    {
+      "canonical": "Chams Mobile",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "chams mobile",
+        "chams",
+        "champs mobile",
+        "champ s mobile",
+        "chamsmobile",
+        "cham mobile",
+        "chimes mobile",
+        "chimes mo bao",
+        "chimes"
+      ]
+    },
+    {
+      "canonical": "Mkudi",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "mkudi",
+        "m kudi",
+        "em kudi",
+        "m-kudi",
+        "nkudi",
+        "nkúdí",
+        "nkudipementi"
+      ]
+    },
+    {
+      "canonical": "Parkway",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "parkway",
+        "parkway projects",
+        "park way",
+        "parkway wallet",
+        "pako ewoleti",
+        "pako ewoleti"
+      ]
+    },
+    {
+      "canonical": "MoMo PSB",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "momo",
+        "momo psb",
+        "mtn momo",
+        "mtn mobile money",
+        "momo agent",
+        "mo mu p s b",
+        "momu psb",
+        "mo mu pshb",
+        "momu pshb",
+        "mo mu psb"
+      ]
+    },
+    {
+      "canonical": "SmartCash PSB",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "smartcash",
+        "smart cash",
+        "smartcash psb",
+        "airtel smartcash",
+        "airtel smart cash"
+      ]
+    },
+    {
+      "canonical": "MoneyMaster PSB",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "moneymaster",
+        "money master",
+        "money master psb",
+        "glo moneymaster",
+        "mon maa n sitapi",
+        "mon master psb",
+        "mo ni masta psb",
+        "moni masta psb"
+      ]
+    },
+    {
+      "canonical": "9PSB",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "9psb",
+        "9 psb",
+        "nine psb",
+        "9mobile psb",
+        "9 payment service bank",
+        "nai pi sb",
+        "naipi sb",
+        "ni p s b",
+        "n p s b"
+      ]
+    },
+    {
+      "canonical": "Carbon",
+      "type": "digital_bank",
+      "risk": "low",
+      "aliases": [
+        "carbon",
+        "carbon bank",
+        "carbon app",
+        "carbon wallet",
+        "karbonar",
+        "karbon app",
+        "carbonar"
+      ]
+    },
+    {
+      "canonical": "FairMoney",
+      "type": "digital_bank",
+      "risk": "low",
+      "aliases": [
+        "fairmoney",
+        "fair money",
+        "fairmoney bank",
+        "fair money app",
+        "femoni",
+        "fẹmọni",
+        "femony",
+        "fe money",
+        "femoney"
+      ]
+    },
+    {
+      "canonical": "ALAT",
+      "type": "digital_bank",
+      "risk": "low",
+      "aliases": [
+        "alat",
+        "alat by wema",
+        "alat wema",
+        "a lat"
+      ]
+    },
+    {
+      "canonical": "VBank",
+      "type": "digital_bank",
+      "risk": "low",
+      "aliases": [
+        "vbank",
+        "v bank",
+        "vfd bank",
+        "vfd microfinance"
+      ]
+    },
+    {
+      "canonical": "Eyowo",
+      "type": "digital_bank",
+      "risk": "low",
+      "aliases": [
+        "eyowo",
+        "e yowo",
+        "ayowo",
+        "eyowo wallet",
+        "eyo towo",
+        "ẹyọ towọ",
+        "iyowo",
+        "eyo aapu",
+        "eyo app"
+      ]
+    },
+    {
+      "canonical": "Nomba",
+      "type": "provider",
+      "risk": "low",
+      "aliases": [
+        "nomba",
+        "nomba pos",
+        "nomba wallet"
+      ]
+    },
+    {
+      "canonical": "Paystack",
+      "type": "payment_processor",
+      "risk": "low",
+      "aliases": [
+        "paystack",
+        "pay stack",
+        "paystak",
+        "pay stock",
+        "pista",
+        "pestac",
+        "pestack",
+        "pestak"
+      ]
+    },
+    {
+      "canonical": "Flutterwave",
+      "type": "payment_processor",
+      "risk": "low",
+      "aliases": [
+        "flutterwave",
+        "flutter wave",
+        "fluterwave",
+        "flutter way",
+        "flotterwavc",
+        "flotterwave",
+        "flotterway",
+        "flotter wave"
+      ]
+    },
+    {
+      "canonical": "Interswitch",
+      "type": "payment_processor",
+      "risk": "low",
+      "aliases": [
+        "interswitch",
+        "inter switch",
+        "interswich",
+        "inter-swich",
+        "intaswt",
+        "itasuliti",
+        "itaswiti",
+        "ita suliti"
+      ]
+    },
+    {
+      "canonical": "Remita",
+      "type": "payment_processor",
+      "risk": "low",
+      "aliases": [
+        "remita",
+        "remitta",
+        "remiter",
+        "remita payment"
+      ]
+    },
+    {
+      "canonical": "NIBSS",
+      "type": "payment_infrastructure",
+      "risk": "low",
+      "aliases": [
+        "nibss",
+        "n i b s s",
+        "nibs",
+        "bibia strase",
+        "nibss trace",
+        "nibss instant payment",
+        "nigeria inter bank settlement system",
+        "dbs",
+        "bifiisi",
+        "bifisi",
+        "bibisi"
+      ]
+    },
+    {
+      "canonical": "Verve",
+      "type": "card_scheme",
+      "risk": "low",
+      "aliases": [
+        "verve",
+        "verve card",
+        "verb card",
+        "vav card",
+        "wa fukaadi",
+        "wafukadi",
+        "veff card",
+        "vaf card",
+        "waaf card",
+        "waafkard"
+      ]
+    },
+    {
+      "canonical": "Visa",
+      "type": "card_scheme",
+      "risk": "low",
+      "aliases": [
+        "visa",
+        "visa card",
+        "viza",
+        "fisi card",
+        "fisicard"
+      ]
+    },
+    {
+      "canonical": "Mastercard",
+      "type": "card_scheme",
+      "risk": "low",
+      "aliases": [
+        "mastercard",
+        "master card",
+        "massa card",
+        "masterkad",
+        "masquerade",
+        "masakadkadi",
+        "masakad card",
+        "masakadi"
+      ]
+    },
+    {
+      "canonical": "Access Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "access bank",
+        "access",
+        "asset bank",
+        "assets bank",
+        "ases bank",
+        "acces bank",
+        "akses bank",
+        "transcass bank",
+        "assess bank",
+        "acess bank",
+        "acess banko"
+      ]
+    },
+    {
+      "canonical": "Fidelity Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "fidelity bank",
+        "fidelity",
+        "fideliti bank"
+      ]
+    },
+    {
+      "canonical": "FCMB",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "fcmb",
+        "f c m b",
+        "cfc nb",
+        "first city monument bank",
+        "fcmb bank"
+      ]
+    },
+    {
+      "canonical": "First Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "first bank",
+        "firstbank",
+        "first bank nigeria",
+        "fest bank",
+        "fast bank"
+      ]
+    },
+    {
+      "canonical": "GTBank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "gtbank",
+        "gt bank",
+        "g t bank",
+        "guaranty trust bank",
+        "guarantee trust bank",
+        "gtco",
+        "giti bank",
+        "gti ban",
+        "jiti bank"
+      ]
+    },
+    {
+      "canonical": "UBA",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "uba",
+        "u b a",
+        "uba bank",
+        "united bank for africa",
+        "united bank of africa"
+      ]
+    },
+    {
+      "canonical": "Zenith Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "zenith bank",
+        "zenith",
+        "zenit bank",
+        "senit bank",
+        "senate bank",
+        "zenith bank alaad"
+      ]
+    },
+    {
+      "canonical": "Citibank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "citibank",
+        "citi bank",
+        "city bank",
+        "citybank"
+      ]
+    },
+    {
+      "canonical": "Ecobank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "ecobank",
+        "eco bank",
+        "eko bank",
+        "eko banki"
+      ]
+    },
+    {
+      "canonical": "Globus Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "globus bank",
+        "globus",
+        "global bank",
+        "gulobos banki",
+        "gulobus bank",
+        "gulobos bank"
+      ]
+    },
+    {
+      "canonical": "Keystone Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "keystone bank",
+        "keystone",
+        "key stone bank"
+      ]
+    },
+    {
+      "canonical": "Polaris Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "polaris bank",
+        "polaris",
+        "polarise bank",
+        "po karis bank",
+        "pokaris bank"
+      ]
+    },
+    {
+      "canonical": "Stanbic IBTC",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "stanbic",
+        "stanbic ibtc",
+        "stanbic ibtc bank",
+        "ibtc",
+        "stanbic i b t c",
+        "stimbik iptc",
+        "stimbik ibtc",
+        "stim bic iptc"
+      ]
+    },
+    {
+      "canonical": "Standard Chartered",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "standard chartered",
+        "standard chartered bank",
+        "standard chattered",
+        "standard chart aded",
+        "standard charted",
+        "standard chart bank"
+      ]
+    },
+    {
+      "canonical": "Sterling Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "sterling bank",
+        "sterling",
+        "starling bank",
+        "stilene bank",
+        "stirimbank",
+        "stirim bank",
+        "sterim bank"
+      ]
+    },
+    {
+      "canonical": "Titan Trust Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "titan trust",
+        "titan trust bank",
+        "titan bank"
+      ]
+    },
+    {
+      "canonical": "Union Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "union bank",
+        "union bank of nigeria",
+        "union"
+      ]
+    },
+    {
+      "canonical": "Unity Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "unity bank",
+        "unity"
+      ]
+    },
+    {
+      "canonical": "Wema Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "wema bank",
+        "wema",
+        "we maa banka",
+        "wema alat"
+      ]
+    },
+    {
+      "canonical": "Premium Trust Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "premium trust",
+        "premium trust bank",
+        "premium bank",
+        "premier trust bank"
+      ]
+    },
+    {
+      "canonical": "Optimus Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "optimus bank",
+        "optimus",
+        "optimum bank"
+      ]
+    },
+    {
+      "canonical": "Providus Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "providus bank",
+        "providus",
+        "provider bank"
+      ]
+    },
+    {
+      "canonical": "Parallex Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "parallex bank",
+        "parallex",
+        "parallel bank",
+        "paralex bankapp",
+        "paralex bank",
+        "parlance bank",
+        "parlax bank"
+      ]
+    },
+    {
+      "canonical": "SunTrust Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "suntrust bank",
+        "sun trust",
+        "suntrust",
+        "suntruths banks",
+        "suntruths bank",
+        "sunkrothed bank",
+        "sunkroth bank",
+        "sun krothed bank"
+      ]
+    },
+    {
+      "canonical": "Signature Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "signature bank",
+        "signature",
+        "signitor bank"
+      ]
+    },
+    {
+      "canonical": "Jaiz Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "jaiz bank",
+        "jaiz",
+        "jays bank",
+        "aje bank",
+        "jaisi bank",
+        "jaise bank",
+        "jai si bank"
+      ]
+    },
+    {
+      "canonical": "TAJ Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "taj bank",
+        "taj",
+        "t a j bank",
+        "ti aje bank"
+      ]
+    },
+    {
+      "canonical": "Lotus Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "lotus bank",
+        "lotus"
+      ]
+    },
+    {
+      "canonical": "Alternative Bank",
+      "type": "bank",
+      "risk": "low",
+      "aliases": [
+        "alternative bank",
+        "the alternative bank",
+        "alternative"
+      ]
+    },
+    {
+      "canonical": "BVN",
+      "type": "identity",
+      "risk": "low",
+      "aliases": [
+        "bvn",
+        "b v n",
+        "bvn number",
+        "bibi emi",
+        "bibi ẹmi",
+        "bivien",
+        "bivin",
+        "lingbi vn",
+        "bi vn",
+        "bank verification number",
+        "bi bi",
+        "bibi",
+        "bi fi",
+        "bifi emi",
+        "bifi mi",
+        "bi fi emi"
+      ]
+    },
+    {
+      "canonical": "NIN",
+      "type": "identity",
+      "risk": "low",
+      "aliases": [
+        "nin",
+        "n i n",
+        "ni mi",
+        "nini",
+        "national identification number",
+        "ni im",
+        "ni in",
+        "ni imo",
+        "nin mi"
+      ]
+    },
+    {
+      "canonical": "KYC",
+      "type": "identity",
+      "risk": "low",
+      "aliases": [
+        "kyc",
+        "k y c",
+        "kay why see",
+        "know your customer",
+        "tier upgrade",
+        "kyc tier",
+        "kys",
+        "ky si",
+        "kiwaisi",
+        "ki wai si"
+      ]
+    },
+    {
+      "canonical": "USSD",
+      "type": "channel",
+      "risk": "low",
+      "aliases": [
+        "ussd",
+        "u s s d",
+        "usd",
+        "us sd",
+        "ussd code"
+      ]
+    },
+    {
+      "canonical": "ATM",
+      "type": "channel",
+      "risk": "low",
+      "aliases": [
+        "atm",
+        "a t m",
+        "at m",
+        "atm machine"
+      ]
+    },
+    {
+      "canonical": "POS",
+      "type": "channel",
+      "risk": "low",
+      "aliases": [
+        "pos",
+        "p o s",
+        "pos machine",
+        "agent pos"
+      ]
+    },
+    {
+      "canonical": "QR Code",
+      "type": "channel",
+      "risk": "low",
+      "aliases": [
+        "qr",
+        "qr code",
+        "q r code",
+        "scan to pay"
+      ]
+    },
+    {
+      "canonical": "Session ID",
+      "type": "transaction_term",
+      "risk": "medium",
+      "aliases": [
+        "session id",
+        "session i d",
+        "seson id",
+        "seshon id",
+        "sesion id",
+        "recession id",
+        "seson n d",
+        "seson nd",
+        "sẹsọ̀n id",
+        "sẹ́sọ̀n id",
+        "seson n n n di",
+        "saeson n n n di",
+        "seso idwa",
+        "seso naidi",
+        "sesan id",
+        "sessional id",
+        "sesonaidi",
+        "sesonaili",
+        "seson n n di",
+        "sesan adi",
+        "ses id",
+        "seshan id",
+        "sese naidi",
+        "sesun aidi",
+        "sese nadi",
+        "sesun aid",
+        "sesun id"
+      ]
+    },
+    {
+      "canonical": "NIP",
+      "type": "transaction_term",
+      "risk": "low",
+      "aliases": [
+        "nip",
+        "n i p",
+        "nibss instant payment",
+        "instant payment",
+        "nipa",
+        "ni pa",
+        "nibi",
+        "nibbi"
+      ]
+    },
+    {
+      "canonical": "NUBAN",
+      "type": "transaction_term",
+      "risk": "medium",
+      "aliases": [
+        "nuban",
+        "n u b a n",
+        "nigerian uniform bank account number",
+        "nuba",
+        "nuba akooti",
+        "nuba account"
+      ]
+    },
+    {
+      "canonical": "transaction reference",
+      "type": "transaction_term",
+      "risk": "medium",
+      "aliases": [
+        "transaction reference",
+        "reference number",
+        "ref number",
+        "transaction id",
+        "transfer reference",
+        "payment reference",
+        "transport referens",
+        "re feresi",
+        "rarẹ number",
+        "rrr number",
+        "referens",
+        "refuransi",
+        "refuranisi",
+        "rerens",
+        "transfrense",
+        "tranfrense",
+        "transaction referens",
+        "referin",
+        "transaction referin",
+        "tansasan rerens"
+      ]
+    },
+    {
+      "canonical": "receipt",
+      "type": "transaction_term",
+      "risk": "low",
+      "aliases": [
+        "receipt",
+        "reciept",
+        "risiti",
+        "rii sit",
+        "irin sitan",
+        "ri sii",
+        "research",
+        "transaction receipt",
+        "payment receipt",
+        "risiiti",
+        "ri siiti",
+        "sirisiti",
+        "irisi ti",
+        "risi ti",
+        "ri si ti",
+        "siri siti"
+      ]
+    },
+    {
+      "canonical": "reversal",
+      "type": "support_term",
+      "risk": "low",
+      "aliases": [
+        "reversal",
+        "reverser",
+        "revasa",
+        "rivasa",
+        "ree vasa",
+        "rii basa",
+        "refund",
+        "reversed",
+        "rii vasal",
+        "ri vasal",
+        "reversal o",
+        "reva sal",
+        "feri fasa",
+        "ferii vasao",
+        "rii vasao",
+        "feri vasal"
+      ]
+    },
+    {
+      "canonical": "failed transfer",
+      "type": "support_term",
+      "risk": "low",
+      "aliases": [
+        "failed transfer",
+        "transfer failed",
+        "field transfer",
+        "transfami kuna",
+        "gbigbe owo kuna",
+        "owo kuna",
+        "transaction failed",
+        "failed transaction",
+        "field transport",
+        "tiranfa",
+        "fi o tiranfa",
+        "failed transfa"
+      ]
+    },
+    {
+      "canonical": "pending",
+      "type": "status",
+      "risk": "low",
+      "aliases": [
+        "pending",
+        "pendin",
+        "nipendin",
+        "processing",
+        "pro sesin",
+        "in progress"
+      ]
+    },
+    {
+      "canonical": "successful",
+      "type": "status",
+      "risk": "low",
+      "aliases": [
+        "successful",
+        "success",
+        "succesful",
+        "sucessful",
+        "sosesifo",
+        "suxs sufi",
+        "approved",
+        "suxsessful",
+        "success full",
+        "sansesosifo",
+        "sosifol",
+        "suxsesufu",
+        "sosefo",
+        "soseful",
+        "suksesufu"
+      ]
+    },
+    {
+      "canonical": "timeout",
+      "type": "status",
+      "risk": "low",
+      "aliases": [
+        "timeout",
+        "time out",
+        "timooti",
+        "network timeout",
+        "system error",
+        "gateway error",
+        "geetu ero",
+        "thyme out",
+        "taimaaotu",
+        "thymeout"
+      ]
+    },
+    {
+      "canonical": "chargeback",
+      "type": "support_term",
+      "risk": "low",
+      "aliases": [
+        "chargeback",
+        "charge back",
+        "card dispute",
+        "charge bank",
+        "chargebak"
+      ]
+    },
+    {
+      "canonical": "dispute",
+      "type": "support_term",
+      "risk": "low",
+      "aliases": [
+        "dispute",
+        "complaint",
+        "raisi dispuuti",
+        "dispuuti",
+        "open complaint",
+        "opun complaint",
+        "raise dispute",
+        "open dispute",
+        "report issue",
+        "feedback now",
+        "disput",
+        "dispi",
+        "dispio",
+        "dispiyo",
+        "dispi o"
+      ]
+    },
+    {
+      "canonical": "transaction history",
+      "type": "support_term",
+      "risk": "low",
+      "aliases": [
+        "transaction history",
+        "transaction e streaming",
+        "shanshenshen istri",
+        "transaction istri",
+        "transaction streaming",
+        "transport history",
+        "statement",
+        "account statement",
+        "transaction history food stop",
+        "transaction istre",
+        "istre"
+      ]
+    },
+    {
+      "canonical": "customer care",
+      "type": "support_term",
+      "risk": "low",
+      "aliases": [
+        "customer care",
+        "custom market",
+        "custom care",
+        "customer kea",
+        "customer car",
+        "life chart kostuma",
+        "kostuma",
+        "support agent",
+        "live chat",
+        "support",
+        "custom made",
+        "kostomakie",
+        "kostoma kebod",
+        "customer made",
+        "kostoma",
+        "kostoma ke",
+        "kostoma care",
+        "custom ma"
+      ]
+    },
+    {
+      "canonical": "bot",
+      "type": "support_term",
+      "risk": "low",
+      "aliases": [
+        "bot",
+        "booti",
+        "boti",
+        "bọti",
+        "bọ́ọ̀tì",
+        "chatbot",
+        "bod",
+        "kebod",
+        "boot",
+        "keyboard"
+      ]
+    },
+    {
+      "canonical": "debit card",
+      "type": "payment_term",
+      "risk": "low",
+      "aliases": [
+        "debit card",
+        "debate card",
+        "debits card",
+        "atm card",
+        "bank card"
+      ]
+    },
+    {
+      "canonical": "virtual card",
+      "type": "payment_term",
+      "risk": "low",
+      "aliases": [
+        "virtual card",
+        "vatua card",
+        "vatual card",
+        "online card",
+        "dollar card",
+        "bachelocard",
+        "bachelor card",
+        "bach lo card"
+      ]
+    },
+    {
+      "canonical": "debit",
+      "type": "payment_term",
+      "risk": "low",
+      "aliases": [
+        "debit",
+        "debiti",
+        "debite",
+        "debit ti",
+        "débìtì",
+        "deducted",
+        "money deducted",
+        "debi",
+        "debits"
+      ]
+    },
+    {
+      "canonical": "credit",
+      "type": "payment_term",
+      "risk": "low",
+      "aliases": [
+        "credit",
+        "credited",
+        "money received",
+        "alert"
+      ]
+    },
+    {
+      "canonical": "double debit",
+      "type": "payment_term",
+      "risk": "low",
+      "aliases": [
+        "double debit",
+        "dobudebiti",
+        "dọbudẹbiti",
+        "debited twice",
+        "charged twice",
+        "owo lemeji",
+        "double debi",
+        "double debiti"
+      ]
+    },
+    {
+      "canonical": "wallet balance",
+      "type": "account_term",
+      "risk": "low",
+      "aliases": [
+        "wallet balance",
+        "wallet",
+        "waleti",
+        "wálẹtì",
+        "wale tun",
+        "balance",
+        "balans",
+        "account balance",
+        "available balance",
+        "walet balans",
+        "wallet balans",
+        "wale balance",
+        "walet balance",
+        "wallet balance balance"
+      ]
+    },
+    {
+      "canonical": "account restricted",
+      "type": "account_term",
+      "risk": "low",
+      "aliases": [
+        "account restricted",
+        "account blocked",
+        "account frozen",
+        "account locked",
+        "limited account",
+        "restriction",
+        "account restricte",
+        "akounti restricted",
+        "akoonti stricte",
+        "akonti stricte",
+        "account stricte"
+      ]
+    },
+    {
+      "canonical": "daily limit",
+      "type": "account_term",
+      "risk": "low",
+      "aliases": [
+        "daily limit",
+        "de lilimiti",
+        "transfer limit",
+        "daily transfer limit",
+        "limit reached",
+        "tier limit",
+        "daylilimit",
+        "day lily meat"
+      ]
+    },
+    {
+      "canonical": "OTP",
+      "type": "security_term",
+      "risk": "medium",
+      "aliases": [
+        "otp",
+        "o t p",
+        "one time password",
+        "verification code"
+      ]
+    },
+    {
+      "canonical": "PIN",
+      "type": "security_term",
+      "risk": "medium",
+      "aliases": [
+        "pin",
+        "p i n",
+        "transaction pin",
+        "payment pin"
+      ]
+    },
+    {
+      "canonical": "password",
+      "type": "security_term",
+      "risk": "medium",
+      "aliases": [
+        "password",
+        "passcode",
+        "login password"
+      ]
+    },
+    {
+      "canonical": "unauthorized debit",
+      "type": "fraud_term",
+      "risk": "low",
+      "aliases": [
+        "unauthorized debit",
+        "unknown debit",
+        "unrecognized debit",
+        "honored terrorist debit",
+        "debit i do not know",
+        "strange debit",
+        "onafiriisi debit",
+        "unterized debit"
+      ]
+    },
+    {
+      "canonical": "scam",
+      "type": "fraud_term",
+      "risk": "low",
+      "aliases": [
+        "scam",
+        "skam",
+        "sikam",
+        "cam report",
+        "fraud",
+        "fraudulent transaction"
+      ]
+    },
+    {
+      "canonical": "wrong recipient",
+      "type": "transfer_issue",
+      "risk": "low",
+      "aliases": [
+        "wrong recipient",
+        "wrong account",
+        "wrong account number",
+        "wrong name",
+        "rong recipient",
+        "rong beneficiary",
+        "incorrect beneficiary",
+        "wrong beneficiary",
+        "rangun recipient"
+      ]
+    },
+    {
+      "canonical": "beneficiary",
+      "type": "transfer_term",
+      "risk": "low",
+      "aliases": [
+        "beneficiary",
+        "benifishire",
+        "benifisiari",
+        "recipient",
+        "receiver",
+        "person i sent to",
+        "olugba",
+        "benifise",
+        "benifise ri",
+        "benefitary"
+      ]
+    },
+    {
+      "canonical": "court order",
+      "type": "legal_term",
+      "risk": "low",
+      "aliases": [
+        "court order",
+        "police report",
+        "legal order",
+        "mareva injunction",
+        "kotooda",
+        "court oda"
+      ]
+    }
+  ],
+  "high_risk_patterns": [
+    {
+      "name": "amount",
+      "pattern": "\\b(?:ngn|n|₦)?\\s?\\d{1,3}(?:,\\d{3})+(?:\\.\\d+)?\\b|\\b\\d+(?:\\.\\d+)?\\s?(?:naira|ngn)\\b"
+    },
+    {
+      "name": "account_number",
+      "pattern": "\\b\\d{10}\\b"
+    },
+    {
+      "name": "session_id_digits",
+      "pattern": "\\b999\\d{27}\\b"
+    },
+    {
+      "name": "transaction_reference",
+      "pattern": "\\b(?:PMP|OPY|MON|TX)[-_]?[A-Z0-9]{6,}\\b"
+    }
+  ]
+}
