@@ -99,7 +99,8 @@ def heuristic_plan(query):
         "user_response_brief": "Local heuristic planner used because live Gemini was not requested or unavailable.",
     }
     validated = validate_plan(plan, corrected["corrected_transcript"])
-    execution = execute_validated_plan(validated, corrected["corrected_transcript"], dry_run=True)
+    dry_run = os.environ.get("DEMO_DRY_RUN", "false").lower() == "true"
+    execution = execute_validated_plan(validated, corrected["corrected_transcript"], dry_run=dry_run)
     return {
         "mode": "local_heuristic",
         "raw_asr_output": query,
@@ -624,7 +625,8 @@ def live_plan(query):
     corrected = correct_entities(query)
     raw_plan = plan_with_groq(query)
     validated = validate_plan(raw_plan, corrected["corrected_transcript"])
-    execution = execute_validated_plan(validated, corrected["corrected_transcript"], dry_run=True)
+    dry_run = os.environ.get("DEMO_DRY_RUN", "false").lower() == "true"
+    execution = execute_validated_plan(validated, corrected["corrected_transcript"], dry_run=dry_run)
     return {
         "mode": "live_groq",
         "raw_asr_output": query,
