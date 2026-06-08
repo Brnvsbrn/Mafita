@@ -314,9 +314,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 800px;
   width: 100%;
-  margin: 0 auto;
 }
 
 .empty-state {
@@ -358,15 +356,18 @@ button {
 .message {
   display: flex;
   flex-direction: column;
-  max-width: 75%;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .message.user {
-  align-self: flex-end;
+  align-items: flex-end;
 }
 
 .message.assistant {
-  align-self: flex-start;
+  align-items: flex-start;
 }
 
 .message-text {
@@ -449,7 +450,10 @@ button {
   align-items: center;
   gap: 8px;
   padding: 10px 0;
-  align-self: flex-start;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .thinking-dot {
