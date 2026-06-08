@@ -754,7 +754,8 @@ def transcribe_audio(audio_bytes, ext):
                 data = {
                     "model": "whisper-large-v3",
                     "language": "yo",
-                    "response_format": "json"
+                    "response_format": "json",
+                    "prompt": "Àwọn ìbéèrè ati ìsòro nípa gbigbe owo, account restriction, KYC, gbigbe owo to kuna, ati gbigbe owo si eyan miiran lori OPay, PalmPay, Moniepoint."
                 }
                 with open(tmp_path, "rb") as f:
                     response = httpx.post(
