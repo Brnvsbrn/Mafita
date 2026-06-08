@@ -13,11 +13,17 @@ GREETING_PATTERNS = [
 ]
 
 
-def cached_response_for(query):
+def cached_response_for(query, history=None):
     clean = str(query or "").strip()
     lowered = clean.lower()
-    if any(pattern.search(clean) for pattern in GREETING_PATTERNS):
-        return _greeting_response("yo" if _looks_yoruba(lowered) else "en")
+    
+    has_assistant_msg = any(msg.get("role") == "assistant" for msg in history) if history else False
+    is_first_msg = not has_assistant_msg
+    is_greeting = any(pattern.search(clean) for pattern in GREETING_PATTERNS)
+    
+    if is_first_msg or is_greeting:
+        # For the demo: force Yoruba greeting so the high-fidelity cached audio plays back successfully
+        return _greeting_response("yo")
     return None
 
 

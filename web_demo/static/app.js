@@ -279,7 +279,7 @@ function setBusy(value) {
 
 function resizeInput() {
   inputEl.style.height = "auto";
-  inputEl.style.height = `${Math.min(inputEl.scrollHeight, 180)}px`;
+  inputEl.style.height = `${Math.min(inputEl.scrollHeight, 120)}px`;
 }
 
 function updateSendState() {

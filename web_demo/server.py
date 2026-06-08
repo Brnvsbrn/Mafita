@@ -548,7 +548,7 @@ def should_plan(query, history, support_context, session_id=None):
 
 
 def chat_response(query, use_live=False, history=None, voice="femi", session_id=None):
-    cached = cached_response_for(query)
+    cached = cached_response_for(query, history)
     if cached:
         response = {
             "mode": "cached_response",
@@ -755,7 +755,7 @@ def transcribe_audio(audio_bytes, ext):
                     "model": "whisper-large-v3",
                     "language": "yo",
                     "response_format": "json",
-                    "prompt": "Àwọn ìbéèrè ati ìsòro nípa gbigbe owo, account restriction, KYC, gbigbe owo to kuna, ati gbigbe owo si eyan miiran lori OPay, PalmPay, Moniepoint."
+                    "prompt": "Ẹ jọ̀ọ́, ẹ ràn mí lọ́wọ́. Mo ní ìṣòro pẹ̀lú gbígbé owó mi lórí OPay, PalmPay, tàbí Moniepoint. Àkọọ́lẹ̀ mi ti dínà. Báwo ni mo ṣe lè tún akọọ́lẹ̀ mi ṣe?"
                 }
                 with open(tmp_path, "rb") as f:
                     response = httpx.post(
@@ -766,7 +766,9 @@ def transcribe_audio(audio_bytes, ext):
                         timeout=60
                     )
                 response.raise_for_status()
-                return response.json().get("text", "").strip()
+                text = response.json().get("text", "").strip()
+                print(f"Groq Whisper ASR Output: {text}")
+                return text
         except Exception as fallback_exc:
             print(f"Groq Whisper fallback also failed: {fallback_exc}")
         raise exc
