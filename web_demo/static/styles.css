@@ -314,6 +314,9 @@ button {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .empty-state {
@@ -343,6 +346,7 @@ button {
 
 .chat-page.empty .composer-container {
   position: static;
+  transform: none;
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
@@ -477,10 +481,12 @@ button {
 .composer-container {
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 800px;
   padding: 16px 24px;
-  background: #fff;
+  background: transparent;
   display: flex;
   flex-direction: column;
   gap: 8px;

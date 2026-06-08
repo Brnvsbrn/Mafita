@@ -49,15 +49,19 @@ function renderSlackCard(escalationData, messageEl) {
   header.className = "slack-card-header";
   header.innerHTML = `
       <div class="slack-logo-container">
-          <i data-lucide="slack"></i>
-          <span>SLACK HANDOFF ESCALATION</span>
+          <i data-lucide="message-circle"></i>
+          <span>Customer Issue Escalated</span>
       </div>
-      <span class="slack-badge ${isReal ? 'real' : 'mock'}">${isReal ? 'Posted to Slack' : 'Mock Dispatched'}</span>
+      <span class="slack-badge ${isReal ? 'real' : 'mock'}">${isReal ? 'Dispatched' : 'Simulated'}</span>
   `;
   
   const body = document.createElement("div");
   body.className = "slack-card-body";
-  body.innerHTML = `Escalated to support channel <strong>${payload.channel || '#disputes'}</strong> via Mafita SlackBot.`;
+  const category = payload.category || "";
+  const isKyc = category === "kyc_restriction" || category === "kyc_update";
+  body.innerHTML = isKyc 
+      ? `Escalated to the KYC review team.` 
+      : `Escalated to the Support team.`;
   
   const fields = document.createElement("div");
   fields.className = "slack-card-fields";
