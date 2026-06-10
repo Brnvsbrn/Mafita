@@ -47,9 +47,5 @@ node_modules/
 .DS_Store
 
 # Large datasets & scratch files
-scratch/*.zip
-scratch/tts_cache/
-scratch/test_stt_fallback.py
-scratch/test_slack_escalation.py
-scratch/test_hf_inference.py
+scratch/
 continuation v1.txt

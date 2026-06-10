@@ -1,3 +1,0 @@
-id,audio_filename,voice,category,model,target,batch_latency_seconds,amortized_latency_seconds,wer,cer,english_token_f1,entity_preservation,entities_missing,reference,output
-Q11,Q11_segun_transaction_history.wav,segun,transaction_history,gemini-3.5-flash,yoruba,7.701,3.851,0.2,0.1667,,1.0,[],"Mo fẹ́ rí transaction history mi, láti oṣù tó kọjá.",Mo fẹ́ rí transaction history mi láti oṣù
-Q12,Q12_funmi_app_issue.wav,funmi,app_issue,gemini-3.5-flash,yoruba,7.701,3.851,1.0,1.0,,0.0,['opay'],"App OPay mi ń crash, nígbà tí mo bá fẹ́ gbé owó.",
